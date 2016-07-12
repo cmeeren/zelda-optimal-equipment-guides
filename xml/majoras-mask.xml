@@ -1,0 +1,1230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide>
+
+    <!-- a unique ID which separates this guide from other guides -->
+    <guideID>mm</guideID>
+
+    <!-- Extra description to be shown in the intro -->
+    <guideDescription>This is the Nintendo 64 guide. There is a separate 3DS guide. This guide maintains a natural playthrough order, but everything will be mentioned at the earliest possible moment you can get it. Due to the whole game essentially being timed, you might not be able to follow this guide's order completely. (The order is somewhat optimized, though not particularly stressful to experienced players.) Items limited by specific times will be labelled e.g. D1 (first day), N12 (first or second nights), or D (any day), so that you can skip a bit back and forth to get time-limited items if you have to. Trading items (which are not permanent) will not be shown in summaries after each game segment.</guideDescription>
+
+    <!-- Categories to display in summaries after each gameSegment, and their titles -->
+    <summaryLists>
+        <summaryList id="cbutton">C button items</summaryList>
+        <summaryList id="equipment">Equipment</summaryList>
+        <summaryList id="masks">Masks</summaryList>
+        <summaryList id="quest">Quest/other</summaryList>
+    </summaryLists>
+
+    <!-- Game variations to show correct entry <description>s
+
+            Example definition:
+                <gameVariation id="wiiUNormal">Wii U Normal Mode</gameVariation>
+
+            Example usage:
+                <description gameVariations='gc,wiiUNormal'>
+                <item gameVariations='gc,wiiUNormal'>
+
+            When used on <item> elements, all related entries as well as the summary section item will be hidden
+            when selecting another game variation in the guide.
+
+            You cannot use 'all' as an id (reserved for internal use in the Java application).
+    -->
+    <gameVariations>
+    </gameVariations>
+
+    <!-- Filters to to show/hide certain items
+
+            Example usage:
+                <entry filters='mandatory,bugs' ...>
+                <item filters='mandatory,bugs' ...>
+
+            When used in <item> elements, will hide all entries that reference this item.
+     -->
+    <filters>
+        <filter id="oldSummaryItem">Old items in summary sections </filter>  <!-- Don't use this directly -->
+        <filter id="mandatory">Mandatory items (items you get at specific points in the game)</filter>
+        <filter id="heartpieces">Hearts Pieces</filter>
+        <filter id="heartcontainers">Heart Containers</filter>
+        <filter id="songs">Songs</filter>
+        <filter id="fairies">Stray Fairies</filter>
+        <filter id="masks">Masks</filter>
+        <filter id="maps">Tingle Maps</filter>
+        <filter id="mapcompass">Dungeon Map/Compass</filter>
+    </filters>
+
+    <!-- Definition of all items used in this guide -->
+    <items>
+        <!-- Summary type: C button items -->
+        <item id="dekunuts" summaryType="cbutton">
+            <name>Deku Nuts</name>  <!-- Should always be plural -->
+        </item>
+        <item id="bombs" summaryType="cbutton">
+            <name>Bombs</name>  <!-- Should always be plural -->
+        </item>
+        <item id="bombchus" summaryType="cbutton">
+            <name>Bombchus</name>  <!-- Should always be plural -->
+        </item>
+        <item id="ocarina" summaryType="cbutton">
+            <name>Ocarina of Time</name>
+        </item>
+        <item id="dekusticks" summaryType="cbutton">
+            <name>Deku Sticks</name>  <!-- Should always be plural -->
+        </item>
+        <item id="bottles" unique="false" summaryType="cbutton">
+            <name>Bottle</name>
+        </item>
+        <item id="pictograph" summaryType="cbutton">
+            <name>Pictograph Box</name>
+        </item>
+        <item id="magicbeans" summaryType="cbutton">
+            <name>Magic Beans</name>  <!-- Should always be plural -->
+        </item>
+        <item id="bow" summaryType="cbutton">
+            <name>Hero's Bow</name>
+        </item>
+        <item id="firearrows" summaryType="cbutton">
+            <name>Fire Arrows</name>  <!-- Should always be plural -->
+        </item>
+        <item id="icearrows" summaryType="cbutton">
+            <name>Ice Arrows</name>
+        </item>
+        <item id="lightarrows" summaryType="cbutton">
+            <name>Light Arrows</name>
+        </item>
+        <item id="lensoftruth" summaryType="cbutton">
+            <name>Lens of Truth</name>
+        </item>
+        <item id="powderkegs" summaryType="cbutton">
+            <name>Powder Kegs</name>
+        </item>
+        <item id="hookshot" summaryType="cbutton">
+            <name>Hookshot</name>
+        </item>
+        <item id="sword-fairy" summaryType="cbutton">
+            <name>Great Fairy's Sword</name>
+        </item>
+
+        <!-- Summary type: Equipment -->
+        <item id="sword" summaryType="equipment" startNum="1">
+            <name>Kokiri Sword</name>
+            <name id="razor">Razor Sword</name>
+            <name id="gilded">Gilded Sword</name>
+        </item>
+        <item id="shield" summaryType="equipment" startNum="1">
+            <name>Hero's Shield</name>
+            <name id="mirror">Mirror Shield</name>
+        </item>
+        <item id="bombbag" summaryType="equipment">
+            <name>Bomb Bag (20)</name>
+            <name id="30">Bomb Bag (30)</name>
+            <name id="40">Bomb Bag (40)</name>
+        </item>
+        <item id="quiver" summaryType="equipment">
+            <name>Quiver (30)</name>
+            <name id="40">Quiver (40)</name>
+            <name id="50">Quiver (50)</name>
+        </item>
+        <item id="wallet" summaryType="equipment">
+            <name>Adult Wallet</name>
+            <name id="giant">Giant Wallet</name>
+        </item>
+
+        <!-- Summary type: Quest/other -->
+        <item id="hearts" summaryType="quest" unique="false" startNum="3" numParts="4">
+            <name>Heart</name>
+            <name id="doubledefense">
+                <singular>Heart (double defense)</singular>
+                <plural>Hearts (double defense)</plural>
+            </name>
+        </item>
+        <item id="heartpieces" partsOf="hearts" unique="false" filters="heartpieces">
+            <!-- Only directly showed in listing ("Piece of Heart #2" etc.), not summaries. -->
+            <name>
+                <singular>Piece of Heart</singular>
+                <plural>Pieces of Heart</plural>
+            </name>
+        </item>
+        <item id="heartcontainer" partsOf="hearts" filters="heartcontainers">
+            <!-- Only directly showed in listing (e.g. "Heart Container: After the boss"), not summaries.
+             We use unique=True (implicit) to hide count (to avoid "Heart Container #2" etc.)-->
+            <name>Heart Container</name>
+        </item>
+        <item id="magic" summaryType="quest">
+            <name>Magic Meter</name>
+            <name id="double">Double Magic Meter</name>
+        </item>
+        <item id="spinattackupgrade" summaryType="quest">
+            <name>Spin Attack Upgrade</name>
+        </item>
+        <item id="bombersnotebook" summaryType="quest">
+            <name>Bomber's Notebook</name>
+        </item>
+        <item id="song-time" summaryType="quest" filters="songs">
+            <name>Song of Time</name>
+        </item>
+        <item id="song-healing" summaryType="quest" filters="songs">
+            <name>Song of Healing</name>
+        </item>
+        <item id="song-epona" summaryType="quest" filters="songs">
+            <name>Epona's Song</name>
+        </item>
+        <item id="song-soaring" summaryType="quest" filters="songs">
+            <name>Song of Soaring</name>
+        </item>
+        <item id="song-storms" summaryType="quest" filters="songs">
+            <name>Song of Storms</name>
+        </item>
+        <item id="song-sonata" summaryType="quest" filters="songs">
+            <name>Sonata of Awakening</name>
+        </item>
+        <item id="song-goron" summaryType="quest" filters="songs">
+            <name>Goron Lullaby</name>
+        </item>
+        <item id="song-bossa" summaryType="quest" filters="songs">
+            <name>New Wave Bossa Nova</name>
+        </item>
+        <item id="song-emptiness" summaryType="quest" filters="songs">
+            <name>Elegy of Emptiness</name>
+        </item>
+        <item id="song-order" summaryType="quest" filters="songs">
+            <name>Oath to Order</name>
+        </item>
+
+        <!-- Summary type: Masks -->
+        <item id="mask-deku" summaryType="masks" filters="masks">
+            <name>Deku Mask</name>
+        </item>
+        <item id="mask-goron" summaryType="masks" filters="masks">
+            <name>Goron Mask</name>
+        </item>
+        <item id="mask-zora" summaryType="masks" filters="masks">
+            <name>Zora Mask</name>
+        </item>
+        <item id="mask-postman" summaryType="masks" filters="masks">
+            <name>Postman's Hat</name>
+        </item>
+        <item id="mask-allnight" summaryType="masks" filters="masks">
+            <name>All-Night Mask</name>
+        </item>
+        <item id="mask-blast" summaryType="masks" filters="masks">
+            <name>Blast Mask</name>
+        </item>
+        <item id="mask-stone" summaryType="masks" filters="masks">
+            <name>Stone Mask</name>
+        </item>
+        <item id="mask-fairy" summaryType="masks" filters="masks">
+            <name>Great Fairy's Mask</name>
+        </item>
+        <item id="mask-keaton" summaryType="masks" filters="masks">
+            <name>Keaton Mask</name>
+        </item>
+        <item id="mask-bremen" summaryType="masks" filters="masks">
+            <name>Bremen Mask</name>
+        </item>
+        <item id="mask-bunny" summaryType="masks" filters="masks">
+            <name>Bunny Hood</name>
+        </item>
+        <item id="mask-frog" summaryType="masks" filters="masks">
+            <name>Don Gero's Mask</name>
+        </item>
+        <item id="mask-scents" summaryType="masks" filters="masks">
+            <name>Mask of Scents</name>
+        </item>
+        <item id="mask-romani" summaryType="masks" filters="masks">
+            <name>Romani's Mask</name>
+        </item>
+        <item id="mask-circus" summaryType="masks" filters="masks">
+            <name>Circus Leader's Mask</name>
+        </item>
+        <item id="mask-kafei" summaryType="masks" filters="masks">
+            <name>Kafei's Mask</name>
+        </item>
+        <item id="mask-couple" summaryType="masks" filters="masks">
+            <name>Couple's Mask</name>
+        </item>
+        <item id="mask-truth" summaryType="masks" filters="masks">
+            <name>Mask of Truth</name>
+        </item>
+        <item id="mask-kamaro" summaryType="masks" filters="masks">
+            <name>Kamaro's Mask</name>
+        </item>
+        <item id="mask-gibdo" summaryType="masks" filters="masks">
+            <name>Gibdo Mask</name>
+        </item>
+        <item id="mask-garo" summaryType="masks" filters="masks">
+            <name>Garo's Mask</name>
+        </item>
+        <item id="mask-captain" summaryType="masks" filters="masks">
+            <name>Captain's Hat</name>
+        </item>
+        <item id="mask-giant" summaryType="masks" filters="masks">
+            <name>Giant's Mask</name>
+        </item>
+        <item id="mask-fiercedeity" summaryType="masks" filters="masks">
+            <name>Fierce Deity's Mask</name>
+        </item>
+
+        <!-- Non-summary items -->
+        <item id="dungeonmap" filters="mapcompass">
+            <name>Dungeon Map</name>
+        </item>
+        <item id="compass" filters="mapcompass">
+            <name>Compass</name>
+        </item>
+        <item id="fairy-woodfall" unique="false" filters="fairies">
+            <name>
+                <singular>Stray Fairy</singular>
+                <plural>Stray Fairies</plural>
+            </name>
+        </item>
+        <item id="fairy-snowhead" unique="false" filters="fairies">
+            <name>
+                <singular>Stray Fairy</singular>
+                <plural>Stray Fairies</plural>
+            </name>
+        </item>
+        <item id="fairy-greatbay" unique="false" filters="fairies">
+            <name>
+                <singular>Stray Fairy</singular>
+                <plural>Stray Fairies</plural>
+            </name>
+        </item>
+        <item id="fairy-stonetower" unique="false" filters="fairies">
+            <name>
+                <singular>Stray Fairy</singular>
+                <plural>Stray Fairies</plural>
+            </name>
+        </item>
+        <item id="moonstear">
+            <name>Moon's Tear</name>
+        </item>
+        <item id="deed-town">
+            <name>Town Land Title Deed</name>
+        </item>
+        <item id="deed-swamp">
+            <name>Swamp Land Title Deed</name>
+        </item>
+        <item id="deed-mountain">
+            <name>Mountain Land Title Deed</name>
+        </item>
+        <item id="deed-ocean">
+            <name>Ocean Land Title Deed</name>
+        </item>
+        <item id="map-clocktown" filters="maps">
+            <name>Clock Town Map</name>
+        </item>
+        <item id="map-woodfall" filters="maps">
+            <name>Woodfall Map</name>
+        </item>
+        <item id="map-romani" filters="maps">
+            <name>Romani Ranch Map</name>
+        </item>
+        <item id="map-greatbay" filters="maps">
+            <name>Great Bay Map</name>
+        </item>
+        <item id="map-snowhead" filters="maps">
+            <name>Snowhead Map</name>
+        </item>
+        <item id="map-stonetower" filters="maps">
+            <name>Stone Tower Map</name>
+        </item>
+
+    </items>
+
+    <!-- The game segments containing the actual guide entries -->
+    <gameSegments>
+
+        <gameSegment id="clocktown">
+            <heading>Clock Town</heading>
+            <entry id="dekunuts" itemRef="dekunuts">
+                <name>Deku Nuts</name>
+                <description>Two rooms after becoming a Deku Scrub, in a chest.</description>
+            </entry>
+            <entry id="magic" itemRef="magic">
+                <description>Rescue the Stray Fairy in Laundry Pool (day) or East Clock Town (night) and take it to the Great Fairy in North Clock Town.</description>
+            </entry>
+            <entry id="dekuscrubplayground-day1" checkbox="false" filters="heartpieces">
+                <prefix>D1</prefix>
+                <description>Play the first part of the game at the Deku Scrub Playground in North Clock Town (needed for {{hp-dekuscrubplayground}}).</description>
+            </entry>
+            <entry id="moonstear" itemRef="moonstear" filters="heartpieces">
+                <description>Observatory, look at the Skull Kid (needed for {{hp-deed-town}} and {{hp-toilet}}).</description>
+            </entry>
+            <entry id="deed-town" itemRef="deed-town" filters="heartpieces">
+                <description>South Clock Town, trade it for the {{moonstear}} (needed for {{hp-deed-town}} and {{hp-toilet}}).</description>
+            </entry>
+            <entry id="hp-deed-town" itemRef="heartpieces">
+                <description>Above the entrance to the Clock Tower.</description>
+            </entry>
+            <entry id="map-clocktown" itemRef="map-clocktown">
+                <description>Purchase from Tingle in North Clock Town (5 Rupees).</description>
+            </entry>
+            <entry id="map-woodfall" itemRef="map-woodfall">
+                <description>Purchase from Tingle in North Clock Town (40 Rupees).</description>
+            </entry>
+            <entry id="bombbag" itemRef="bombbag">
+                <name>Bomb Bag</name>
+                <description>Purchase from the Bomb Shop in West Clock Town (50 Rupees).</description>
+            </entry>
+            <entry id="bombs" itemRef="bombs" checkbox="false">
+                <description>Together with the Bomb Bag.</description>
+            </entry>
+            <entry id="bombchus" itemRef="bombchus">
+                <description>Purchase from the Bomb Shop in West Clock Town (40 Rupees).</description>
+            </entry>
+            <entry id="hp-postman" itemRef="heartpieces">
+                <prefix>DN1 3PM-12AM</prefix>
+                <description>Play the Postman's game while he has a break in his office. This is much easier with the {{mask-bunny}} (the time will always be shown), which you'll get in the next cycle. You'll get a reminder then.</description>
+            </entry>
+            <entry id="hp-toilet" itemRef="heartpieces">
+                <prefix>N 12AM-6AM</prefix>
+                <description>Give the {{deed-town}} to the hand at the Stock Pot Inn after midnight.</description>
+            </entry>
+            <entry id="dekuscrubplayground-day2" checkbox="false" filters="heartpieces">
+                <prefix>D2</prefix>
+                <description>Play the second part of the game at the Deku Scrub Playground in North Clock Town (needed for {{hp-dekuscrubplayground}}).</description>
+            </entry>
+            <entry id="hp-dekuscrubplayground" itemRef="heartpieces">
+                <prefix>D3</prefix>
+                <description>Play the final part of the game at the Deku Scrub Playground.</description>
+            </entry>
+            <entry id="ocarinaoftime" itemRef="ocarina" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="song-time" itemRef="song-time" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="song-healing" itemRef="song-healing" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="mask-deku" itemRef="mask-deku" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="beforewoodfall">
+            <heading>Gearing up for the Woodfall Temple</heading>
+
+            <entry type="subheading">Getting items</entry>
+
+            <entry id="info-songoftime" checkbox="false">
+                <description>You may now use the Song of Double Time and the Song of Inverted Time whenever you wish to slow down and skip time (speak to a Scarecrow if you don't know or don't remember).</description>
+            </entry>
+            <entry id="owl-clocktown" checkbox="false">
+                <description>Slash the Owl Statue in Clock Town.</description>
+            </entry>
+            <entry id="mask-fairy" itemRef="mask-fairy">
+                <description>Rescue the Stray Fairy in Clock Town and take it to the Great Fairy.</description>
+            </entry>
+            <entry id="bombersnotebook" itemRef="bombersnotebook">
+                <description>Play hide-and-seek with the five kids again, as a human.</description>
+            </entry>
+            <entry id="hp-swordsman" itemRef="heartpieces">
+                <description>Swordsman's School in West Clock Town.</description>
+            </entry>
+            <entry id="hp-northclocktown-tree" itemRef="heartpieces">
+                <description>In a tree by the playground in North Clock Town.</description>
+            </entry>
+            <entry id="mask-kafei" itemRef="mask-kafei">
+                <prefix>DN12 10AM–8PM</prefix>
+                <description>In the Mayor's Residence in East Clock Town.</description>
+            </entry>
+            <entry id="info-deed-town" checkbox="false" filters="heartpieces">
+                <description>Get the {{deed-town}} again (needed for {{hp-dekuscrub-deed-town}}).</description>
+            </entry>
+            <entry id="wallet-adult" itemRef="wallet">
+                <description>Deposit 200 Rupees in the bank in West Clock Town.</description>
+            </entry>
+            <entry id="hp-dekuscrub-deed-town" itemRef="heartpieces">
+                <description>In the Observatory, look for the flying Deku Scrub (who traded you the Town Land Title Deed). Exit Clock Town and find the hole it entered. Purchase it from him for 100 Rupees.</description>
+            </entry>
+            <entry id="mask-blast" itemRef="mask-blast">
+                <prefix>N1 12:30AM</prefix>
+                <description>Attack the robber in North Clock Town.</description>
+            </entry>
+            <entry id="mask-kamaro" itemRef="mask-kamaro">
+                <prefix>N12 12AM-6AM</prefix>
+                <description>Leave Clock Town to the north and play the Song of Healing for the man on the mushroom.</description>
+            </entry>
+            <entry id="hp-terminanorth-dodongo" itemRef="heartpieces">
+                <description>North Termina Field, drop down a hole by the ramp down from Clock Town and kill the two Dodongos in the cave.</description>
+            </entry>
+            <entry id="hp-rosasisters" itemRef="heartpieces">
+                <prefix>N12</prefix>
+                <description>West Clock Town, use the Kamaro's Mask and dance for the Rosa Sisters.</description>
+            </entry>
+            <entry id="bigbombbag" itemRef="bombbag" add="0" changeNameID="30">
+                <name>Big Bomb Bag</name>
+                <description>Purchase it from the Bomb Shop in West Clock Town after getting the {{mask-blast}} (90 Rupees).</description>
+            </entry>
+            <entry id="mask-bremen" itemRef="mask-bremen">
+                <prefix>N12</prefix>
+                <description>Laundry Pool, talk to Guru-Guru.</description>
+            </entry>
+            <entry id="hp-terminasouth-peahat" itemRef="heartpieces">
+                <prefix>D</prefix>
+                <description>Southwestern Termina Field, in the grass outside the entrance to Milk Road, drop down into the hole by the butterflies and kill the Peahat.</description>
+            </entry>
+            <entry id="dekusticks" itemRef="dekusticks">
+                <description>If the above Peahat didn't drop any, stun any Deku Baba with a Deku Nut and kill it.</description>
+            </entry>
+            <entry id="owl-milkroad" checkbox="false">
+                <description>Slash the Owl Statue in Milk Road.</description>
+            </entry>
+            <entry id="map-romani" itemRef="map-romani">
+                <description>Purchase from Tingle in Milk Road (20 Rupees).</description>
+            </entry>
+            <entry id="map-greatbay" itemRef="map-greatbay">
+                <description>Purchase from Tingle in Milk Road (40 Rupees).</description>
+            </entry>
+            <entry id="mask-bunny" itemRef="mask-bunny">
+                <prefix>DN3 6AM-8PM</prefix>
+                <description>Romani Ranch, in the Cucco Shack. Use the Bremen Mask to make all of the 10 chickens follow you and grow up.</description>
+            </entry>
+            <entry id="hp-doggyracetrack" itemRef="heartpieces">
+                <prefix>DN3 6AM–8PM</prefix>
+                <description>Romani Ranch, Doggy Racetrack. Win at least 150 Rupees without losing. This can be done in one race by betting 50 Rupees and winning, or betting 80 Rupees and getting 2nd place. It's much easier after getting the {{mask-truth}} after Snowhead Temple (you'll get a reminder then). With the Mask of Truth, you can speak to the dogs, and the dogs that say "Ruff" (as opposed to "Rrr-Ruff" or "Hoo-whine") have a good chance of winning. If the golden dog says "Ruff" it's guaranteed to finish 1st or 2nd (mostly 1st), and the black dog always loses no matter what it says.</description>
+            </entry>
+            <entry id="hp-swampentrance" itemRef="heartpieces">
+                <description>On the road between Termina Field and Southern Swamp, climb to the top of the tree.</description>
+            </entry>
+            <entry id="map-snowhead" itemRef="map-snowhead">
+                <description>Purchase from Tingle on the road between Termina Field and Southern Swamp (40 Rupees).</description>
+            </entry>
+            <entry id="owl-southernswamp" checkbox="false">
+                <description>Slash the Owl Statue in Southern Swamp.</description>
+            </entry>
+            <entry id="deed-swamp" itemRef="deed-swamp" filters="heartpieces">
+                <description>Outside the Swamp Tourist Center. Trade it for the {{deed-town}} (needed for {{hp-deed-swamp}}).</description>
+            </entry>
+            <entry id="hp-deed-swamp" itemRef="heartpieces">
+                <description>On the roof of the Swamp Tourist Center.</description>
+            </entry>
+            <entry id="info-hp-bank" checkbox="false" filters="heartpieces">
+                <description>You'll get {{hp-bank}} after depositing 5000 Rupees in the bank. You'll be able to check this off at the end of the guide.</description>
+            </entry>
+            <entry id="info-songoftime-beforewoodfall" checkbox="false">
+                <description>Play the Song of Time to return to the first day.</description>
+            </entry>
+
+            <entry type="subheading">Heading for Woodfall</entry>
+
+            <entry id="info-hp-postman" checkbox="false" filters="heartpieces">
+                <description>Now that you have the {{mask-bunny}} it's easier to get {{hp-postman}} since the clock will always be visible when playing the Postman's game.</description>
+            </entry>
+            <entry id="bottle-swamp" itemRef="bottles" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="pictograph" itemRef="pictograph">
+                <description>Talk to Koume in the Swamp Tourist Center after saving her.</description>
+            </entry>
+            <entry id="hp-dekupalace" itemRef="heartpieces">
+                <description>Through the left-hand door as you enter the Deku Palace, at the end of the maze.</description>
+            </entry>
+            <entry id="magicbeans" itemRef="magicbeans" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="song-sonata" itemRef="song-sonata" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-pictograph-dekuking" itemRef="heartpieces">
+                <description>Take a picture of the Deku King and show to the man in the Swamp Tourist Center.</description>
+            </entry>
+            <entry id="song-soaring" itemRef="song-soaring">
+                <description>Check the stone below the owl when you meet it.</description>
+            </entry>
+            <entry id="hp-woodfall-northeast" itemRef="heartpieces">
+                <description>In a chest northeast in the Woodfall area.</description>
+            </entry>
+            <entry id="owl-woodfall" checkbox="false">
+                <description>Slash the Owl Statue in Woodfall.</description>
+            </entry>
+            <entry id="hp-sonata-statues" itemRef="heartpieces">
+                <description>Play the Sonata of Awakening as Deku Link for the stones in four holes in Termina Field: 1) Between the entrances to Milk Road and Southern Swamp (by the wall), 2) right outside the Observatory (in the corner), 3) just outside the exit from North Clock Town, and 4) just north of the exit from West Clock Town, below a boulder.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="woodfall">
+            <heading>Woodfall Temple</heading>
+            <entry id="woodfall-fairy-entrance" itemRef="fairy-woodfall">
+                <description>Use the Great Fairy's Mask at the entrance.</description>
+            </entry>
+            <entry id="woodfall-fairy-chest" itemRef="fairy-woodfall">
+                <description>In a chest at the right side of the first room.</description>
+            </entry>
+            <entry id="woodfall-fairy-main-plant" itemRef="fairy-woodfall">
+                <description>In the room with the large wooden flower, kill the Deku Baba down to the left.</description>
+            </entry>
+            <entry id="woodfall-fairy-main-pots" itemRef="fairy-woodfall">
+                <description>In the room with the large wooden flower, in the pots in the southeast corner.</description>
+            </entry>
+            <entry id="woodfall-fairy-east" itemRef="fairy-woodfall">
+                <description>In the room to the east of the wooden flower room, shoot the beehive.</description>
+            </entry>
+            <entry id="woodfall-map" itemRef="dungeonmap">
+                <description>Two rooms east of the wooden flower room.</description>
+            </entry>
+            <entry id="woodfall-fairy-walkways-skulltula" itemRef="fairy-woodfall">
+                <description>In the room where you have to push the central block (west of the wooden flower room), kill the Skulltula.</description>
+            </entry>
+            <entry id="woodfall-fairy-walkways-beehive" itemRef="fairy-woodfall">
+                <description>Same room as {{woodfall-fairy-walkways-skulltula}}, shoot the beehives above the walkways.</description>
+            </entry>
+            <entry id="woodfall-compass" itemRef="compass">
+                <description>In the room south of where you have to push the central block.</description>
+            </entry>
+            <entry id="woodfall-fairy-dark" itemRef="fairy-woodfall">
+                <description>In the dark room with the Black Boes, kill all the enemies.</description>
+            </entry>
+            <entry id="woodfall-fairy-main-bubble" itemRef="fairy-woodfall">
+                <description>In a bubble on the top floor of the main room.</description>
+            </entry>
+            <entry id="bow" itemRef="bow" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="quiver" itemRef="quiver" checkbox="false" filters="mandatory">
+                <name>Quiver</name>
+                <description>Together with the Hero's Bow.</description>
+            </entry>
+            <entry id="woodfall-fairy-bow" itemRef="fairy-woodfall">
+                <description>In the wooden flower room, step on the switch in the northwest corner.</description>
+            </entry>
+            <entry id="woodfall-fairy-walkways-bubble" itemRef="fairy-woodfall">
+                <description>In the room where you have to push the central block, in a bubble in the water. Swim and dive to get it.</description>
+            </entry>
+            <entry id="woodfall-fairy-alcoves" itemRef="fairy-woodfall" add="3">
+                <description>In the alcoves in the room before the boss.</description>
+            </entry>
+            <entry id="woodfall-fairy-fire" itemRef="fairy-woodfall">
+                <description>In a pillar of fire in the room before the boss. Shoot the bubble and use the Great Fairy's Mask.</description>
+            </entry>
+            <entry id="woodfall-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="beforesnowhead">
+            <heading>Gearing up for the Snowhead Temple</heading>
+
+            <entry type="subheading">Finishing up in the the Swamp</entry>
+
+            <entry id="song-order" itemRef="song-order" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="spin-attack-upgrade" itemRef="spinattackupgrade">
+                <description>Return all the Stray Fairies to the Fairy's Fountain in Woodfall (launch from where you launched to Woodfall Temple).</description>
+            </entry>
+            <entry id="mask-scents" itemRef="mask-scents">
+                <description>After leaving the Deku Palace, go right across the lily pads and enter the cave.</description>
+            </entry>
+            <entry id="hp-swamptourist-archery" itemRef="heartpieces">
+                <description>Play the archery game in the Swamp Tourist Center.</description>
+            </entry>
+            <entry id="info-songoftime-beforesnowhead" checkbox="false">
+                <description>Play the Song of Time to return to the first day.</description>
+            </entry>
+
+            <entry type="subheading">Heading for Snowhead</entry>
+
+            <entry id="honeydarling-day1" checkbox="false" filters="heartpieces">
+                <prefix>DN1 6AM-10PM</prefix>
+                <description>Play the first part of Honey and Darling's game in East Clock Town (needed for {{hp-honeydarling}}).</description>
+            </entry>
+            <entry id="largequiver" itemRef="quiver" changeNameID="40" add="0">
+                <prefix>DN 6AM-10PM</prefix>
+                <name>Large Quiver</name>
+                <description>Town Shooting Gallery in East Clock Town, set a new high score (at least 40 points).</description>
+            </entry>
+            <entry id="hp-townshootinggallery" itemRef="heartpieces">
+                <prefix>DN 6AM-10PM</prefix>
+                <description>Town Shooting Gallery in East Clock Town, get a perfect score (50 points).</description>
+            </entry>
+            <entry id="info-deed-swamp" checkbox="false" filters="heartpieces">
+                <description>Get the {{deed-swamp}} again (needed for {{hp-deed-mountain}}).</description>
+            </entry>
+            <entry id="largestquiver" itemRef="quiver" changeNameID="50" add="0">
+                <name>Largest Quiver</name>
+                <description>Swamp Shooting Gallery, set a new high score (at least 2,120 points).</description>
+            </entry>
+            <entry id="hp-swampshootinggallery" itemRef="heartpieces">
+                <description>Swamp Shooting Gallery, get a perfect score (at least 2,180 points).</description>
+            </entry>
+            <entry id="owl-mountainvillage" checkbox="false">
+                <description>Slash the Owl Statue in Mountain Village.</description>
+            </entry>
+            <entry id="lensoftruth" itemRef="lensoftruth" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="mask-goron" itemRef="mask-goron" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="biggestbombbag" itemRef="bombbag" add="0" changeNameID="40">
+                <name>Biggest Bomb Bag</name>
+                <description>Purchase it from the Deku Scrub in Goron Village as Goron Link (200 Rupees).</description>
+            </entry>
+            <entry id="deed-mountain" itemRef="deed-mountain" filters="heartpieces">
+                <description>Talk to the Deku Scrub in Goron Village as Deku Link and trade it for the {{deed-swamp}} (needed for {{hp-deed-mountain}}).</description>
+            </entry>
+            <entry id="hp-deed-mountain" itemRef="heartpieces">
+                <description>Launch from the Deku Flower you just acquired in Goron Village.</description>
+            </entry>
+            <entry id="song-goron" itemRef="song-goron" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="mask-frog" itemRef="mask-frog">
+                <description>In the Goron Shrine, light all the torches and smash the spinning decorations. Take the Rock Sirloin to the freezing Goron in Mountain Village.</description>
+            </entry>
+            <entry id="hp-treasurechestshop" itemRef="heartpieces">
+                <prefix>DN 6AM-10PM</prefix>
+                <description>Play the Treasure Chest Game in East Clock Town as a Goron.</description>
+            </entry>
+            <entry id="honeydarling-day2" checkbox="false" filters="heartpieces">
+                <prefix>DN2 6AM-10PM</prefix>
+                <description>Play the second part of Honey and Darling's game (needed for {{hp-honeydarling}}).</description>
+            </entry>
+            <entry id="hp-honeydarling" itemRef="heartpieces">
+                <prefix>DN3 6AM-10PM</prefix>
+                <description>Play the final part of Honey and Darling's game.</description>
+            </entry>
+            <entry id="owl-snowhead" checkbox="false">
+                <description>Slash the Owl Statue at Snowhead.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="snowhead">
+            <heading>Snowhead Temple</heading>
+            <entry id="info-snowhead-day1" checkbox="false">
+                <description>Try to complete the temple on day/night 1, it'll save you some time in the next section.</description>
+            </entry>
+            <entry id="snowhead-fairy-bridge-column" itemRef="fairy-snowhead">
+                <description>In the bridge room to the right after the dungeon entrance, in the center column.</description>
+            </entry>
+            <entry id="snowhead-fairy-bridge-north" itemRef="fairy-snowhead">
+                <description>In the same room as {{snowhead-fairy-bridge-column}}, below the northern ledge.</description>
+            </entry>
+            <entry id="snowhead-map" itemRef="dungeonmap">
+                <description>In the room upstairs from the first bridge you have to jump across.</description>
+            </entry>
+            <entry id="snowhead-fairy-map" itemRef="fairy-snowhead">
+                <description>In the same room as the Dungeon Map (upstairs from the first bridge room).</description>
+            </entry>
+            <entry id="info-snowhead-fairy-doubleblock" checkbox="false" filters="fairies">
+                <description>In the room with the two blocks stacked on top of each other, push/pull the blocks all the way to the other side of the room, revealing a chest with {{snowhead-fairy-doubleblock}} which you'll get later.</description>
+            </entry>
+            <entry id="snowhead-compass" itemRef="compass">
+                <description>In the room to the left of the dungeon entrance.</description>
+            </entry>
+            <entry id="snowhead-fairy-compass-crate" itemRef="fairy-snowhead">
+                <description>In the same room as the Compass (to the left of the dungeon entrance), blow up the crate on top of the pillar by the stairs up.</description>
+            </entry>
+            <entry id="snowhead-fairy-compass-upstairs" itemRef="fairy-snowhead">
+                <description>Upstairs from the room with the Compass (in the room where you have to shoot icicles in the ceiling), in a hidden alcove revealed with the Lens of Truth.</description>
+            </entry>
+            <entry id="snowhead-fairy-ceiling" itemRef="fairy-snowhead">
+                <description>In the switch puzzle room (through the locked door from {{snowhead-fairy-compass-upstairs}}), in the ceiling (use the Lens of Truth).</description>
+            </entry>
+            <entry id="firearrows" itemRef="firearrows" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="snowhead-fairy-after-miniboss" itemRef="fairy-snowhead">
+                <description>After leaving the miniboss room, go straight to get to the room upstairs from the first bridge room. Use the Lens of Truth to climb the platforms.</description>
+            </entry>
+            <entry id="snowhead-fairy-compass-ice" itemRef="fairy-snowhead">
+                <description>In the room where you got the Compass (left of the dungeon entrance), step on a switch covered by ice and push the block around to get to the chest.</description>
+            </entry>
+            <entry id="snowhead-fairy-doubleblock" itemRef="fairy-snowhead">
+                <description>After {{snowhead-fairy-compass-ice}}, push the block around some more to get to the next room. Jump across the double blocks (which you moved into place earlier if you followed this guide) and open the chest.</description>
+            </entry>
+            <entry id="snowhead-fairy-bottom" itemRef="fairy-snowhead">
+                <description>At the bottom floor of the central room, step on a switch in the lava.</description>
+            </entry>
+            <entry id="snowhead-fairy-bottom-launch" itemRef="fairy-snowhead">
+                <description>From {{snowhead-fairy-bottom}}, enter the west door, launch upwards and kill all the enemies.</description>
+            </entry>
+            <entry id="snowhead-fairy-eenos" itemRef="fairy-snowhead">
+                <description>In the room with all the Eenos, use the Lens of Truth to find a hole in the wall near some icicles.</description>
+            </entry>
+            <entry id="snowhead-fairy-dinolfos" itemRef="fairy-snowhead" add="2">
+                <description>In the room  with the two Dinolfos (adjacent to {{snowhead-fairy-eenos}}). They drop the fairies when killed.</description>
+            </entry>
+            <entry id="snowhead-fairy-topcolumn" itemRef="fairy-snowhead">
+                <description>When you're at the top of the central column, use the Lens of Truth to find a hole below to the northwest.</description>
+            </entry>
+            <entry id="snowhead-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="beforegreatbay">
+            <heading>Gearing up for the Great Bay Temple</heading>
+
+            <entry type="subheading">Finishing up in the the mountain</entry>
+
+            <entry id="doublemagic" itemRef="magic" changeNameID="double" add="0">
+                <description>Return all the Stray Fairies to the Fairy's Fountain at Snowhead.</description>
+            </entry>
+            <entry id="info-beforegreatbay-dn1" checkbox="false">
+                <description>If it's not day/night 1 anymore, play the Song of Time and defeat Goht again.</description>
+            </entry>
+            <entry id="razorsword" itemRef="sword" changeNameID="razor" add="0">
+                <prefix>DN1</prefix>
+                <description>Order it in Mountain Village (100 Rupees). While waiting for it, do the next items on the list.</description>
+            </entry>
+            <entry id="bottle-goronrace" itemRef="bottles">
+                <appendToName>(with Gold Dust, which you'll need for the {{gildedsword}})</appendToName>
+                <description>Open up the Goron Racetrack and win the race.</description>
+            </entry>
+            <entry id="powderkegs" itemRef="powderkegs">
+                <description>Return to the Goron who gave you the first Powder Keg to be able to purchase and carry Powder Kegs anytime.</description>
+            </entry>
+            <entry id="gildedsword" itemRef="sword" changeNameID="gilded" add="0">
+                <prefix>DN2</prefix>
+                <description>Retrieve your Razor Sword on day/night 2, give the Gold Dust to the blacksmith and get the Gilded Sword at sunrise on day 3.</description>
+            </entry>
+            <entry id="note-hp-mountaingoronvillage" checkbox="false" filters="heartpieces">
+                <description>If you want, you can get {{hp-mountaingoronvillage}} now, but it requires you to pick up the {{mask-zora}}, which might feel better story-wise if you wait. But if you want to get it just after "naturally" getting the Zora Mask, you have to defeat Goht again just for this Heart Piece. The Heart Piece is covered by the guide after the Great Bay Temple, when you have to defeat Goht again anyway for {{hp-frogs}}.</description>
+            </entry>
+            <entry id="info-songoftime-beforegreatbay-1" checkbox="false">
+                <description>Play the Song of Time to return to the first day.</description>
+            </entry>
+
+            <entry type="subheading">Romani Ranch and Ikana Graveyard</entry>
+
+            <entry id="info-powderkeg-romaniranch" checkbox="false">
+                <description>Purchase a Powder Keg from the Bomb Shop in West Clock Town (50 Rupees, needed for getting into Romani Ranch).</description>
+            </entry>
+            <entry id="song-epona" itemRef="song-epona">
+                <prefix>D1</prefix>
+                <description>Talk to Romani at Romani Ranch. Play her game, and agree to help her afterwards.</description>
+            </entry>
+            <entry id="mask-garo" itemRef="mask-garo">
+                <description>Race and defeat the Gorman Brothers.</description>
+            </entry>
+            <entry id="mask-stone" itemRef="mask-stone">
+                <description>On the road to Ikana, use the Lens of Truth by the stone circle and give the guard a Red Potion.</description>
+            </entry>
+            <entry id="mask-captain" itemRef="mask-captain">
+                <description>Ikana Graveyard, play the Sonata of Awakening by Captain Keeta (the huge, sleeping skeleton) and attack/defeat him before he runs away from you. Slow him down with arrows and kill all the Stalchildren that appear (use the Bunny Hood or turn into Goron Link for added speed).</description>
+            </entry>
+            <entry id="song-storms" itemRef="song-storms">
+                <prefix>N1</prefix>
+                <description>Ikana Graveyard, talk to the skeletons with the Captain's Hat. Jump down into the grave, light the torches, and defeat the Iron Knuckle.</description>
+            </entry>
+            <entry id="bottle-romani" itemRef="bottles">
+                <prefix>N1 2:30AM</prefix>
+                <description>Romani Ranch, defeat the ghosts that appear at 2:30AM (also needed for {{mask-romani}}).</description>
+            </entry>
+            <entry id="mask-romani" itemRef="mask-romani">
+                <prefix>D2</prefix>
+                <description>Talk to Cremia in the barn after saving the ranch. Talk to her again at 6PM on day 2 while she leaves. Defend the carriage from the Gorman Brothers.</description>
+            </entry>
+            <entry id="hp-ikanagraveyard" itemRef="heartpieces">
+                <prefix>N2</prefix>
+                <description>Ikana Graveyard, get the skeletons to open the grave. Use the Lens of Truth inside the grave.</description>
+            </entry>
+            <entry id="bottle-ikanagraveyard" itemRef="bottles">
+                <prefix>N3</prefix>
+                <description>Ikana Graveyard, get the skeletons to open the grave. Play Dampé's game.</description>
+            </entry>
+            <entry id="info-songoftime-beforegreatbay-2" checkbox="false">
+                <description>Play the Song of Time to return to the first day.</description>
+            </entry>
+
+            <entry type="subheading">Great Bay and Pirates' Fortress</entry>
+
+            <entry id="note-song-scarecrow" checkbox="false">
+                <description>Make a Scarecrow's Song (e.g. in the Trading Post in Clock Town).</description>
+            </entry>
+            <entry id="northclocktown-save-lady" checkbox="false" filters="masks">
+                <prefix>N1 12:30AM</prefix>
+                <description>Continue with the guide below for now, but make sure to be in North Clock Town before 12:30AM on the first night to attack the robber and save the lady (needed for the {{mask-allnight}}).</description>
+            </entry>
+            <entry id="giantwallet" itemRef="wallet" changeNameID="giant" add="0">
+                <prefix>DN1</prefix>
+                <description>Complete the Oceanside Spider House before the dawn of day 2 and talk to the man by the exit. Be sure to pick up {{hp-oceanspider}} inside.</description>
+            </entry>
+            <entry id="hp-oceanspider" itemRef="heartpieces">
+                <description>Inside the Oceanside Spider House, speak to the six Stalfos and shoot the masks in the correct order.</description>
+            </entry>
+            <entry id="mask-zora" itemRef="mask-zora" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="owl-greatbay" checkbox="false">
+                <description>Slash the Owl Statue by the Marine Research Lab.</description>
+            </entry>
+            <entry id="map-stonetower" itemRef="map-stonetower">
+                <description>Purchase from Tingle by the Marine Research Lab (20 Rupees).</description>
+            </entry>
+            <entry id="info-hp-mountaingoronvillage-2" checkbox="false" filters="heartpieces">
+                <description>If you haven't already you can get {{hp-mountaingoronvillage}} now that you have the Zora Mask, but it requires you to defeat Goht again. The Heart Piece is covered later, when you have to defeat Goht again for {{hp-frogs}} anyway.</description>
+            </entry>
+            <entry id="info-purchasemagicbean" checkbox="false" filters="heartpieces">
+                <description>Warp to Southern Swamp and purchase a Magic Bean from the Business Scrub (needed for {{hp-greatbay-hookshot}}).</description>
+            </entry>
+            <entry id="hp-termina-beehives" itemRef="heartpieces">
+                <description>Termina Field, blow up the boulder by the entrance to the Great Bay. Shoot the beehives and sink down.</description>
+            </entry>
+            <entry id="hp-greatbay-waterfall" itemRef="heartpieces">
+                <description>Great Bay, by the waterfall, dive down and kill the Like Like.</description>
+            </entry>
+            <entry id="hp-marinelab-fish" itemRef="heartpieces">
+                <description>Catch four fish (e.g. by the waterfall) and dump them into the small tank at the Marine Lab.</description>
+            </entry>
+            <entry id="hp-piratesfortress" itemRef="heartpieces">
+                <description>Pirates' Fortress, step on a switch and roll down as Goron Link to reach it in time.</description>
+            </entry>
+            <entry id="hookshot" itemRef="hookshot" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="info-picture-gerudo" checkbox="false">
+                <description>To save a little time, take a picture of a Gerudo while you're in Pirates' Fortress for the next part of the story so you don't have to go back.</description>
+            </entry>
+            <entry id="hp-seasnakes" itemRef="heartpieces">
+                <description>Kill all the sea snakes at Pinnacle Rock.</description>
+            </entry>
+            <entry id="song-bossa" itemRef="song-bossa" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="mask-circus" itemRef="mask-circus">
+                <prefix>N 10PM-5AM</prefix>
+                <description>Play for the Zora in the Milk Bar in East Clock Town.</description>
+            </entry>
+            <entry id="hp-greatbay-hookshot" itemRef="heartpieces">
+                <description>Hookshot along the platforms to the northeast of the Marine Research Lab. Plant a Magic Bean, make it grow with the Song of Storms, and play the Scarecrow's Song on the next ledge.</description>
+            </entry>
+            <entry id="hp-snowhead-scarecrow" itemRef="heartpieces">
+                <description>Go south from the Snowhead Owl Statue, and use the Lens of Truth to find the hidden platforms. Play the Scarecrow's Song to get it.</description>
+            </entry>
+            <entry id="bottle-beavers" itemRef="bottles">
+                <description>Waterfall Rapids, challenge the beaver to a race. Win both races.</description>
+            </entry>
+            <entry id="hp-beavers" itemRef="heartpieces">
+                <description>Waterfall Rapids, challenge the beaver to a race after getting {{bottle-beavers}}. Win both races.</description>
+            </entry>
+            <entry id="mask-truth" itemRef="mask-truth">
+                <description>Complete the Swamp Spider House.</description>
+            </entry>
+            <entry id="info-hp-doggyracetrack" checkbox="false" filters="heartpieces">
+                <description>Now that you have the Mask of Truth you can more easily get {{hp-doggyracetrack}}.</description>
+            </entry>
+            <entry id="mask-allnight" itemRef="mask-allnight">
+                <prefix>N3</prefix>
+                <description>Purchase it from the Curiosity Shop after rescuing the old lady in North Clock Town on the first night (500 Rupees).</description>
+            </entry>
+            <entry id="info-songoftime-beforegreatbay-3" checkbox="false">
+                <description>Play the Song of Time to return to the first day.</description>
+            </entry>
+
+            <entry type="subheading">Anju and Kafei - Bottle</entry>
+
+            <entry id="hp-granny-short" itemRef="heartpieces">
+                <prefix>D12 8AM–6PM</prefix>
+                <description>Talk to Granny in the Stock Pot Inn while wearing the All-Night Mask and choose the short story. Answer correctly at the end.</description>
+            </entry>
+            <entry id="info-kafei-1" checkbox="false">
+                <prefix>D1 2PM</prefix>
+                <description>Anju and Kafei: Enter the Stock Pot Inn at 2PM and talk to Anju while wearing Kafei's Mask after the Postman has been there.</description>
+            </entry>
+            <entry id="info-kafei-2" checkbox="false">
+                <prefix>D1 11:30PM</prefix>
+                <description>Anju and Kafei: Speak to Anju in the Kitchen of the Stock Pot Inn to get Kafei's Mail. Put the mail in any mailbox.</description>
+            </entry>
+            <entry id="info-kafei-3" checkbox="false">
+                <prefix>D2 3PM</prefix>
+                <description>Anju and Kafei: Go to the Laundry Pool and sneak into Kafei's house when he gets the mail from the Postman. Speak to him to get the Pendant of Memories and give it to Anju.</description>
+            </entry>
+            <entry id="hp-granny-long" itemRef="heartpieces">
+                <prefix>D12 8AM–6PM</prefix>
+                <description>Talk to Granny in the Stock Pot Inn while wearing the All-Night Mask and choose the long story. Answer "I dunno" at the end.</description>
+            </entry>
+            <entry id="info-kafei-4" checkbox="false">
+                <prefix>D3 1PM</prefix>
+                <description>Anju and Kafei: Get the express mail from the man in Kafei's house after 1PM.</description>
+            </entry>
+            <entry id="mask-keaton" itemRef="mask-keaton">
+                <prefix>D3 1PM</prefix>
+                <description>From the man in Kafei's house after 1PM.</description>
+            </entry>
+            <entry id="info-kafei-5" checkbox="false">
+                <prefix>D3 7PM</prefix>
+                <description>Anju and Kafei: Enter Ikana Valley and wait for the thief with Kafei until 7 PM (wear the Stone Mask to make absolutely sure you're not seen).</description>
+            </entry>
+            <entry id="bottle-aroma" itemRef="bottles">
+                <prefix>N3</prefix>
+                <description>Give the express mail (which you got together with the {{mask-keaton}}) to Madame Aroma while wearing Kafei's Mask.</description>
+            </entry>
+            <entry id="mask-couple" itemRef="mask-couple">
+                <prefix>N3 around 4:30AM</prefix>
+                <description>From Anju and Kafei in the Stock Pot Inn, second floor, first door on the right.</description>
+            </entry>
+            <entry id="info-songoftime-beforegreatbay-4" checkbox="false">
+                <description>Play the Song of Time to return to the first day.</description>
+            </entry>
+
+            <entry type="subheading">Anju and Kafei - Postman's Hat</entry>
+            <entry id="hp-mayor" itemRef="heartpieces">
+                <prefix>DN 10AM–8PM</prefix>
+                <description>Talk to the Mayor while wearing the Couple's Mask.</description>
+            </entry>
+            <entry id="mask-postman" itemRef="mask-postman">
+                <description>Redo the Kafei quest, but instead of delivering the express mail to Madame Aroma, give it to the postman, and follow him as he delivers it. Talk to him before he leaves the town to get the mask.</description>
+            </entry>
+            <entry id="hp-mailbox" itemRef="heartpieces">
+                <description>Check the mailboxes in Clock Town with the Postman's Hat.</description>
+            </entry>
+            <entry id="hp-keaton" itemRef="heartpieces">
+                <description>Wear the Keaton Mask and cut the moving bushes in North Clock Town (or other places with circles of moving bushes). Answer all questions correctly.</description>
+            </entry>
+            <entry id="info-songoftime-beforegreatbay-5" checkbox="false">
+                <description>Play the Song of Time to return to the first day.</description>
+            </entry>
+
+            <entry type="subheading">Zora Hall</entry>
+
+            <entry id="info-deed-mountain" checkbox="false" filters="heartpieces">
+                <description>Get the {{deed-mountain}} again (needed for {{hp-deed-ocean}}).</description>
+            </entry>
+            <entry id="owl-zorahall" checkbox="false">
+                <description>Slash the Owl Statue outside Zora Hall.</description>
+            </entry>
+            <entry id="deed-ocean" itemRef="deed-ocean" filters="heartpieces">
+                <description>Talk to the Deku Scrub in Zora Hall and trade it for the {{deed-mountain}} (needed for {{hp-deed-ocean}} and {{hp-deed-ikana}}).</description>
+            </entry>
+            <entry id="hp-deed-ocean" itemRef="heartpieces">
+                <description>Launch from the Deku Flower you just acquired in Zora Hall.</description>
+            </entry>
+            <entry id="hp-deed-ikana" itemRef="heartpieces">
+                <description>Ikana Valley, near the bandit hideout from Anju and Kafei's quest. Give the Ocean Land Title Deed to the Deku Scrub, and use the flower.</description>
+            </entry>
+            <entry id="hp-zora-jam" itemRef="heartpieces">
+                <description>Jam with the band in Zora Hall (check the drummer's diary, play with the bass player as Zora Link, and then play the whole thing for the pianist as normal Link).</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="greatbay">
+            <heading>Great Bay Temple</heading>
+            <entry id="greatbay-fairy-firstroom" itemRef="fairy-greatbay">
+                <description>Light the four torches in the first room.</description>
+            </entry>
+            <entry id="greatbay-fairy-secondroom-entrance" itemRef="fairy-greatbay">
+                <description>Below the entrance platform in the second room.</description>
+            </entry>
+            <entry id="greatbay-fairy-secondroom-skulltula" itemRef="fairy-greatbay">
+                <description>Kill the Skulltula to the southeast in the second room.</description>
+            </entry>
+            <entry id="greatbay-fairy-thirdroom-barrel" itemRef="fairy-greatbay">
+                <description>In the giant circular room with the rotating paddle (the third room), in a barrel on the left.</description>
+            </entry>
+            <entry id="greatbay-fairy-thirdroom-bottom" itemRef="fairy-greatbay">
+                <description>Same room as {{greatbay-fairy-thirdroom-barrel}}, in a pot on the bottom.</description>
+            </entry>
+            <entry id="greatbay-map" itemRef="dungeonmap">
+                <description>From the central, circular room with the rotating paddle, swim through the topmost corridor and Hookshot to the chest.</description>
+            </entry>
+            <entry id="greatbay-fairy-map" itemRef="fairy-greatbay">
+                <description>In the pots on the platform opposite the Dungeon Map.</description>
+            </entry>
+            <entry id="greatbay-fairy-corridor" itemRef="fairy-greatbay">
+                <description>After {{greatbay-fairy-map}}, swim through the corridor and kill all enemies in the next room.</description>
+            </entry>
+            <entry id="greatbay-compass" itemRef="compass">
+                <description>In the room after {{greatbay-fairy-corridor}} (after the Dungeon Map, swim through the corridor and go through the next door), Hookshot to the chest.</description>
+            </entry>
+            <entry id="greatbay-fairy-current" itemRef="fairy-greatbay">
+                <description>In the Compass room, shoot the pot in the speeding current by the Dexihands.</description>
+            </entry>
+            <entry id="icearrows" itemRef="icearrows" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="info-frog-greatbay" checkbox="false" filters="heartpieces">
+                <description>After defeating Gekko and he turns into a frog, speak to him with Don Gero's Mask (needed for {{hp-frogs}}).</description>
+            </entry>
+            <entry id="greatbay-fairy-ceilinghole" itemRef="fairy-greatbay">
+                <description>After the defeating Gekko and returning to the central, circular room, go north from the top floor. In the next room, make an ice platform below the northwestern hole in the ceiling and Hookshot up.</description>
+            </entry>
+            <entry id="greatbay-fairy-wheelfreeze-1" itemRef="fairy-greatbay">
+                <description>After reversing the water flow, in the room where you have to freeze the waterfall to stop the water wheel, step onto the northeast elevator, turn south and Hookshot to the torch.</description>
+            </entry>
+            <entry id="greatbay-fairy-wheelfreeze-2" itemRef="fairy-greatbay">
+                <description>In the same room as {{greatbay-fairy-wheelfreeze-1}}, after freezing the waterfall to stop the water wheel, step onto the water wheel and Hookshot to the chest in the alcove to the north.</description>
+            </entry>
+            <entry id="greatbay-fairy-seesaw" itemRef="fairy-greatbay">
+                <description>In the room after {{greatbay-fairy-wheelfreeze-2}}, dive down below one of the seesaws and smash the barrel.</description>
+            </entry>
+            <entry id="greatbay-fairy-greenpipe" itemRef="fairy-greatbay">
+                <description>In the same room as {{greatbay-fairy-seesaw}}, after the green switch, go along the green pipe and jump down into the caged area. Hookshot to the chest.</description>
+            </entry>
+            <entry id="greatbay-fairy-beforeboss-bubble" itemRef="fairy-greatbay">
+                <description>In the room before the boss (south of the circular room), in a bubble below the center platform.</description>
+            </entry>
+            <entry id="greatbay-fairy-beforeboss-corridor" itemRef="fairy-greatbay">
+                <description>In the same room as {{greatbay-fairy-beforeboss-bubble}}, in the corridor back to the central room.</description>
+            </entry>
+            <entry id="greatbay-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="beforestonetower">
+            <heading>Gearing up for the Stone Tower Temple</heading>
+
+            <entry type="subheading">Finishing up in the Great Bay</entry>
+
+            <entry id="doubledefense" itemRef="hearts" changeNameID="doubledefense" add="0">
+                <name>Double defense</name>
+                <description>Return all the Stray Fairies to the Fairy's Fountain in the Great Bay Area (just outside Zora Hall).</description>
+            </entry>
+            <entry id="hp-jumpinggame" itemRef="heartpieces">
+                <description>Play the Fisherman's Jumping Game in the Great Bay area.</description>
+            </entry>
+
+            <entry type="subheading">Springtime in the mountains (again)</entry>
+
+            <entry id="hp-frogs" itemRef="heartpieces">
+                <description>Assuming you talked to the frog in the Great Bay Temple, wear Don Gero's Mask while talking to the frogs in Laundry Pool in Clock Town, on a log in the Southern Swamp, and in the Woodfall Temple after defeating Gekko. Then defeat Goht and talk to the whole Frog Choir in Mountain Village.</description>
+            </entry>
+            <entry id="hp-mountaingoronvillage" itemRef="heartpieces">
+                <description>After defeating Goht, open the sunken chest between Mountain Village and Goron Village.</description>
+            </entry>
+
+            <entry type="subheading">Heading for the Stone Tower</entry>
+
+            <entry id="info-songoftime-beforestonetower" checkbox="false">
+                <description>Feel free to play the Song of Time to return to the first day whenever you need.</description>
+            </entry>
+            <entry id="owl-ikana" checkbox="false">
+                <description>Slash the Owl Statue in Ikana Canyon.</description>
+            </entry>
+            <entry id="mask-gibdo" itemRef="mask-gibdo" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-poegame" itemRef="heartpieces">
+                <description>Play the Poe game in one of the houses in Ikana Canyon.</description>
+            </entry>
+            <entry id="info-well" checkbox="false">
+                <description>For the Beneath the Well mini-dungeon you'll need a bottle of fish, a bottle of milk (bomb a hole in the hollow log south of Clock Town and play Epona's Song for the cows), 10 Deku Nuts (kill the Deku Baba and Mini Baba between the Swamp Tourist Center and the Magic Hags' Potion Shop), 5 Magic Beans (50 Rupees from the Business Scrub in Southern Swamp), and 10 bombs (cut grass or purchase). Shortly after the dungeon you'll also need a Powder Keg (50 Rupees).</description>
+            </entry>
+            <entry id="mirrorshield" itemRef="shield" changeNameID="mirror" add="0" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-ikanacastle" itemRef="heartpieces">
+                <description>After emerging at the roof of the Ancient Castle of Ikana, shoot the switch and use the Deku Flowers to get it.</description>
+            </entry>
+            <entry id="song-emptiness" itemRef="song-emptiness" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="owl-stonetower" checkbox="false">
+                <description>Slash the Owl Statue at the top of the Stone Tower.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="stonetower">
+            <heading>Stone Tower Temple</heading>
+
+            <entry type="subheading">Normal</entry>
+
+            <entry id="stonetower-fairy-entrance" itemRef="fairy-stonetower">
+                <description>Shoot the golden eye straight ahead as you enter.</description>
+            </entry>
+            <entry id="stonetower-fairy-armos" itemRef="fairy-stonetower">
+                <description>In the lava room with the Armos statues, Hookshot up to the right.</description>
+            </entry>
+            <entry id="stonetower-map" itemRef="dungeonmap">
+                <description>In the lava room with the Armos statues, remove the Sun Block.</description>
+            </entry>
+            <entry id="info-stonetower-fairy-dexihand-sunblock" checkbox="false" filters="fairies">
+                <description>In the first room with water, let the Dexihand throw you and hit/bomb the crystal (needed for {{stonetower-fairy-dexihand-sunblock}}).</description>
+            </entry>
+            <entry id="info-stonetower-fairy-waterroom-clone" checkbox="false" filters="fairies">
+                <description>In the big water room, step on the switch at the bottom (needed for {{stonetower-fairy-waterroom-clone}}).</description>
+            </entry>
+            <entry id="stonetower-compass" itemRef="compass">
+                <description>At the top of the big water room, opposite the locked door.</description>
+            </entry>
+            <entry id="stonetower-fairy-mirrorroom" itemRef="fairy-stonetower" add="2">
+                <description>After exiting the big water room through a locked door at the top, shine light on the different Sun Switches and Sun Blocks.</description>
+            </entry>
+            <entry id="stonetower-fairy-lava" itemRef="fairy-stonetower">
+                <description>In the lava room after {{stonetower-fairy-mirrorroom}}, in a chest to the left.</description>
+            </entry>
+            <entry id="stonetower-fairy-lava-switches" itemRef="fairy-stonetower">
+                <description>In the same room as {{stonetower-fairy-lava}}, step on the switches in the lava as Goron Link.</description>
+            </entry>
+            <entry id="lightarrows" itemRef="lightarrows" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="stonetower-fairy-corridor" itemRef="fairy-stonetower">
+                <description>In the corridor after getting the Light Arrows, bomb the crystal below the grate.</description>
+            </entry>
+            <entry id="stonetower-fairy-eyegore" itemRef="fairy-stonetower">
+                <description>After defeating the Eyegore in the corridor after {{stonetower-fairy-corridor}}.</description>
+            </entry>
+            <entry id="stonetower-fairy-dexihand-sunblock" itemRef="fairy-stonetower">
+                <description>Go to the room with the Dexihand (the first room with water) and shoot the Sun Block with a Light Arrow to get to the chest (assuming you hit the switch on the other side of the room earlier).</description>
+            </entry>
+
+            <entry type="subheading">Inverted</entry>
+
+            <entry id="stonetower-fairy-entrance-inverted" itemRef="fairy-stonetower">
+                <description>In the entrance area, shoot the Sun Switch in the "pit" in the ceiling (on the wall facing the entrance) if you haven't already, and open the chest.</description>
+            </entry>
+            <entry id="stonetower-fairy-frozeneye" itemRef="fairy-stonetower">
+                <description>In the next room (with several vents in the floor), shoot the frozen eye with a Fire Arrow.</description>
+            </entry>
+            <entry id="stonetower-fairy-waterroom-clone" itemRef="fairy-stonetower">
+                <description>In the "big water room", which is now a big vent room, fly to the top and make a clone on the switch (assuming you stepped on the switch at the bottom of the water earlier).</description>
+            </entry>
+            <entry id="info-stonetower-fairy-waterroom-sun" checkbox="false" filters="fairies">
+                <description>In the big vent room, shoot a Light Arrow at the Sun Switch on the side of the platform with {{stonetower-fairy-waterroom-clone}} (needed for {{stonetower-fairy-waterroom-sun}}).</description>
+            </entry>
+            <entry id="stonetower-fairy-wizzrobe" itemRef="fairy-stonetower">
+                <description>After defeating the Wizzrobe.</description>
+            </entry>
+            <entry id="info-stonetower-fairy-entrance-armos" checkbox="false" filters="fairies">
+                <description>Step on the switch by the Death Armos in the entrance area (needed for {{stonetower-fairy-entrance-armos}}).</description>
+            </entry>
+            <entry id="info-stonetower-fairy-invert" checkbox="false" filters="fairies">
+                <description>Revert the temple to normal for {{stonetower-fairy-entrance-armos}} and {{stonetower-fairy-waterroom-sun}}, then invert it again.</description>
+            </entry>
+            <entry id="stonetower-fairy-entrance-armos" itemRef="fairy-stonetower">
+                <description>In the chest in the entrance area (assuming you stepped on the switch by the Death Armos earlier).</description>
+            </entry>
+            <entry id="stonetower-fairy-waterroom-sun" itemRef="fairy-stonetower">
+                <description>In the big water room, dive down to the chest on the platform (assuming you hit the Sun Switch in the inverted version of this room).</description>
+            </entry>
+            <entry id="mask-giant" itemRef="mask-giant" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="stonetower-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="endgame">
+            <heading>The final showdown</heading>
+            <entry id="sword-fairy" itemRef="sword-fairy">
+                <description>Return all the Stray Fairies to the Fairy's Fountain in Ikana Canyon.</description>
+            </entry>
+            <entry id="hp-bossrun" itemRef="heartpieces">
+                <description>Defeat all the bosses in the secret shrine in Ikana Canyon.</description>
+            </entry>
+            <entry id="hp-bank" itemRef="heartpieces">
+                <description>Save up 5000 Rupees in the bank.</description>
+            </entry>
+            <entry id="info-moon-masks" checkbox="false" filters="masks">
+                <description>On the Moon, remember to give away all your masks to the kids (needed for {{mask-fiercedeity}}).</description>
+            </entry>
+            <entry id="hp-moon" itemRef="heartpieces" add="4">
+                <description>The Moon, one in each of the kids' rooms.</description>
+            </entry>
+            <entry id="mask-fiercedeity" itemRef="mask-fiercedeity">
+                <description>Talk to the kid under the tree after you have finished all the other rooms and given away all your masks.</description>
+            </entry>
+        </gameSegment>
+
+    </gameSegments>
+
+</guide>

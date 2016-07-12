@@ -1,0 +1,1337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide>
+
+    <!-- Extra description to be shown in the intro -->
+    <guideDescription>This guide maintains a natural playthrough order. For example, Ice Cavern is covered after the Fire Temple, because learning the Serenade of Water before even starting the Forest Temple feels wrong. Everything will still be mentioned at the earliest possible point you can get it, but the summary sections will assume you wait until it's properly covered by the guide.</guideDescription>
+
+    <!-- Categories to display in summaries after each gameSegment, and their titles -->
+    <summaryLists>
+        <summaryList id="cbutton">C button items</summaryList>
+        <summaryList id="equipment">Equipment</summaryList>
+        <summaryList id="quest">Quest/other</summaryList>
+    </summaryLists>
+
+    <!-- Game variations to show correct entry <description>s
+
+            Example definition:
+                <gameVariation id="wiiUNormal">Wii U Normal Mode</gameVariation>
+
+            Example usage:
+                <description gameVariations='gc,wiiUNormal'>
+                <item gameVariations='gc,wiiUNormal'>
+
+            When used on <item> elements, all related entries as well as the summary section item will be hidden
+            when selecting another game variation in the guide.
+
+            You cannot use 'all' as an id (reserved for internal use in the Java application).
+    -->
+    <gameVariations>
+        <gameVariation id="n64">Nintendo 64</gameVariation>
+        <gameVariation id="3ds">3DS</gameVariation>
+    </gameVariations>
+
+    <!-- Filters to to show/hide certain items
+
+            Example usage:
+                <entry filters='mandatory,bugs' ...>
+                <item filters='mandatory,bugs' ...>
+
+            When used in <item> elements, will hide all entries that reference this item.
+     -->
+    <filters>
+        <filter id="oldSummaryItem">Old items in summary sections </filter>  <!-- Don't use this directly -->
+        <filter id="mandatory">Mandatory items (items you get at specific points in the game)</filter>
+        <filter id="heartpieces">Hearts Pieces</filter>
+        <filter id="heartcontainers">Heart Containers</filter>
+        <filter id="songs">Songs</filter>
+        <filter id="skulls">Skulltula Tokens</filter>
+        <filter id="mapcompass">Dungeon Map/Compass</filter>
+    </filters>
+
+    <!-- Definition of all items used in this guide -->
+    <items>
+        <!-- Summary type: C button items -->
+        <item id="dekunuts" summaryType="cbutton">
+            <name>Deku Nuts (20)</name>  <!-- Should always be plural -->
+            <name id="30">Deku Nuts (30)</name>
+            <name id="40">Deku Nuts (40)</name>
+        </item>
+        <item id="dekusticks" summaryType="cbutton">
+            <name>Deku Sticks (10)</name>  <!-- Should always be plural -->
+            <name id="20">Deku Sticks (20)</name>
+            <name id="30">Deku Sticks (30)</name>
+        </item>
+        <item id="slingshot" summaryType="cbutton">
+            <name>Fairy Slingshot</name>
+        </item>
+        <item id="ocarina" summaryType="cbutton">
+            <name>Fairy Ocarina</name>
+            <name id="ocarinaoftime">Ocarina of Time</name>
+        </item>
+        <item id="quest" summaryType="cbutton">
+            <name>Weird Egg</name>
+            <name id="cucco">Cucco</name>
+            <name id="zeldasletter">Zelda's Letter</name>
+            <name id="pocketegg">Pocket Egg</name>
+            <name id="pocketcucco">Pocket Cucco</name>
+            <name id="cojiro">Cojiro</name>
+            <name id="oddmushroom">Odd Mushroom</name>
+            <name id="oddpotion">Odd Potion</name>
+            <name id="poacherssaw">Poacher's Saw</name>
+            <name id="brokensword">Broken Goron's Sword</name>
+            <name id="prescription">Prescription</name>
+            <name id="eyeballfrog">Eyeball Frog</name>
+            <name id="eyedrops">Eye Drops</name>
+            <name id="claimcheck">Claim Check</name>
+        </item>
+        <item id="bottles" unique="false" summaryType="cbutton">
+            <name>Bottle</name>
+        </item>
+        <item id="masks" summaryType="cbutton">
+            <name>Keaton Mask</name>
+            <name id="skull">Skull Mask</name>
+            <name id="spooky">Spooky Mask</name>
+            <name id="bunnyhood">Bunny Hood</name>
+            <name id="truth">Mask of Truth</name>
+        </item>
+        <item id="bombs" summaryType="cbutton">
+            <name>Bombs</name>  <!-- Should always be plural -->
+        </item>
+        <item id="bombchus" summaryType="cbutton">
+            <name>Bombchus</name>  <!-- Should always be plural -->
+        </item>
+        <item id="din" summaryType="cbutton">
+            <name>Din's Fire</name>
+        </item>
+        <item id="farore" summaryType="cbutton">
+            <name>Farore's Wind</name>
+        </item>
+        <item id="nayru" summaryType="cbutton">
+            <name>Nayru's Love</name>
+        </item>
+        <item id="magicbeans" summaryType="cbutton">
+            <name>Magic Beans</name>  <!-- Should always be plural -->
+        </item>
+        <item id="boomerang" summaryType="cbutton">
+            <name>Boomerang</name>
+        </item>
+        <item id="hookshot" summaryType="cbutton">
+            <name>Hookshot</name>
+            <name id="longshot">Longshot</name>
+        </item>
+        <item id="bow" summaryType="cbutton">
+            <name>Fairy Bow</name>
+        </item>
+        <item id="firearrows" summaryType="cbutton">
+            <name>Fire Arrows</name>  <!-- Should always be plural -->
+        </item>
+        <item id="icearrows" summaryType="cbutton">
+            <name>Ice Arrows</name>
+        </item>
+        <item id="lightarrows" summaryType="cbutton">
+            <name>Light Arrows</name>
+        </item>
+        <item id="hammer" summaryType="cbutton">
+            <name>Megaton Hammer</name>
+        </item>
+        <item id="ironboots-3ds" summaryType="cbutton" gameVariations="3ds">
+            <name>Iron Boots</name>
+        </item>
+        <item id="lensoftruth" summaryType="cbutton">
+            <name>Lens of Truth</name>
+        </item>
+        <item id="hoverboots-3ds" summaryType="cbutton" gameVariations="3ds">
+            <name>Hover Boots</name>
+        </item>
+
+        <!-- Summary type: Equipment -->
+        <item id="kokirisword" summaryType="equipment">
+            <name>Kokiri Sword</name>
+        </item>
+        <item id="mastersword" summaryType="equipment">
+            <name>Master Sword</name>
+        </item>
+        <item id="biggoronssword" summaryType="equipment">
+            <name>Biggoron's Sword</name>
+        </item>
+        <item id="dekushield" summaryType="equipment">
+            <name>Deku Shield</name>
+        </item>
+        <item id="hylianshield" summaryType="equipment">
+            <name>Hylian Shield</name>
+        </item>
+        <item id="mirrorshield" summaryType="equipment">
+            <name>Mirror Shield</name>
+        </item>
+        <item id="kokiritunic" summaryType="equipment" startNum="1">
+            <name>Kokiri Tunic</name>
+        </item>
+        <item id="gorontunic" summaryType="equipment">
+            <name>Goron Tunic</name>
+        </item>
+        <item id="zoratunic" summaryType="equipment">
+            <name>Zora Tunic</name>
+        </item>
+        <item id="kokiriboots" summaryType="equipment" startNum="1">
+            <name>Kokiri Boots</name>
+        </item>
+        <item id="ironboots" summaryType="equipment" gameVariations="n64">
+            <name>Iron Boots</name>
+        </item>
+        <item id="hoverboots" summaryType="equipment" gameVariations="n64">
+            <name>Hover Boots</name>
+        </item>
+        <item id="bulletbag" summaryType="equipment">
+            <name>Bullet Bag (30)</name>
+            <name id="40">Bullet Bag (40)</name>
+            <name id="50">Bullet Bag (50)</name>
+        </item>
+        <item id="quiver" summaryType="equipment">
+            <name>Quiver (30)</name>
+            <name id="big">Quiver (40)</name>
+            <name id="biggest">Quiver (50)</name>
+        </item>
+        <item id="bombbag" summaryType="equipment">
+            <name>Bomb Bag (20)</name>
+            <name id="30">Bomb Bag (30)</name>
+            <name id="40">Bomb Bag (40)</name>
+        </item>
+        <item id="goronsbracelet" summaryType="equipment">
+            <name>Goron's Bracelet</name>
+        </item>
+        <item id="gauntlets" summaryType="equipment">
+            <name>Silver Gauntlets</name>
+            <name id="golden">Golden Gauntlets</name>
+        </item>
+        <item id="scale" summaryType="equipment">
+            <name>Silver Scale</name>
+            <name id="golden">Golden Scale</name>
+        </item>
+        <item id="stoneofagony" summaryType="equipment" gameVariations="n64">
+            <name>Stone of Agony</name>
+        </item>
+        <item id="shardofagony" summaryType="equipment" gameVariations="3ds">
+            <name>Shard of Agony</name>
+        </item>
+        <item id="gerudomembership" summaryType="equipment" gameVariations="n64">
+            <name>Gerudo's Membership Card</name>
+        </item>
+        <item id="gerudotoken" summaryType="equipment" gameVariations="3ds">
+            <name>Gerudo Token</name>
+        </item>
+        <item id="wallet" summaryType="equipment" startNum="1">
+            <name>Child's Wallet</name>
+            <name id="adult">Adult's Wallet</name>
+            <name id="giant">Giant's Wallet</name>
+        </item>
+
+        <!-- Summary type: Quest/other -->
+        <item id="hearts" summaryType="quest" unique="false" startNum="3" numParts="4">
+            <name>Heart</name>
+            <name id="doubledefense">
+                <singular>Heart (double defense)</singular>
+                <plural>Hearts (double defense)</plural>
+            </name>
+        </item>
+        <item id="heartpieces" partsOf="hearts" unique="false" filters="heartpieces">
+            <!-- Only directly showed in listing ("Piece of Heart #2" etc.), not summaries. -->
+            <name>
+                <singular>Piece of Heart</singular>
+                <plural>Pieces of Heart</plural>
+            </name>
+        </item>
+        <item id="heartcontainer" partsOf="hearts" filters="heartcontainers">
+            <!-- Only directly showed in listing (e.g. "Heart Container: After the boss"), not summaries.
+             We use unique=True (implicit) to hide count (to avoid "Heart Container #2" etc.)-->
+            <name>Heart Container</name>
+        </item>
+        <item id="skulls" summaryType="quest" unique="false" filters="skulls">
+            <name>Skulltula Token</name>
+        </item>
+        <item id="magic" summaryType="quest">
+            <name>Magic Meter</name>
+            <name id="double">Double Magic Meter</name>
+        </item>
+        <item id="song-zelda" summaryType="quest" filters="songs">
+            <name>Zelda's Lullaby</name>
+        </item>
+        <item id="song-epona" summaryType="quest" filters="songs">
+            <name>Epona's Song</name>
+        </item>
+        <item id="song-saria" summaryType="quest" filters="songs">
+            <name>Saria's Song</name>
+        </item>
+        <item id="song-sun" summaryType="quest" filters="songs">
+            <name>Sun's Song</name>
+        </item>
+        <item id="song-time" summaryType="quest" filters="songs">
+            <name>Song of Time</name>
+        </item>
+        <item id="song-storms" summaryType="quest" filters="songs">
+            <name>Song of Storms</name>
+        </item>
+        <item id="song-scarecrow" summaryType="quest" filters="songs">
+            <name>Scarecrow's Song</name>
+        </item>
+        <item id="song-forest" summaryType="quest" filters="songs">
+            <name>Minuet of Forest</name>
+        </item>
+        <item id="song-fire" summaryType="quest" filters="songs">
+            <name>Bolero of Fire</name>
+        </item>
+        <item id="song-water" summaryType="quest" filters="songs">
+            <name>Serenade of Water</name>
+        </item>
+        <item id="song-spirit" summaryType="quest" filters="songs">
+            <name>Requiem of Spirit</name>
+        </item>
+        <item id="song-shadow" summaryType="quest" filters="songs">
+            <name>Nocturne of Shadow</name>
+        </item>
+        <item id="song-light" summaryType="quest" filters="songs">
+            <name>Prelude of Light</name>
+        </item>
+
+        <!-- Non-summary items -->
+        <item id="dungeonmap" filters="mapcompass">
+            <name>Dungeon Map</name>
+        </item>
+        <item id="compass" filters="mapcompass">
+            <name>Compass</name>
+        </item>
+
+    </items>
+
+    <!-- The game segments containing the actual guide entries -->
+    <gameSegments>
+
+        <gameSegment id="kokiriforest">
+            <heading>Kokiri Forest</heading>
+            <entry id="kokirisword" itemRef="kokirisword" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="dekushield" itemRef="dekushield" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="dekunuts" itemRef="dekunuts">
+                <name>Deku Nuts</name>
+                <description>Purchase at the store (or wait until inside the Deku Tree).</description>
+            </entry>
+            <entry id="dekusticks" itemRef="dekusticks">
+                <name>Deku Sticks</name>
+                <description>Kill a Deku Baba on the way to the Deku Tree.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="dekutree">
+            <heading>The Deku Tree</heading>
+            <entry id="dekutree-map" itemRef="dungeonmap">
+                <description>Main room, floor 2.</description>
+            </entry>
+            <entry id="slingshot" itemRef="slingshot" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bulletbag" itemRef="bulletbag" checkbox="false" filters="mandatory">
+                <name>Bullet Bag</name>
+                <description>Together with the Slingshot.</description>
+            </entry>
+            <entry id="dekutree-compass" itemRef="compass">
+                <description>Inside a room on floor 3.</description>
+            </entry>
+            <entry id="skull-dekutree-compass" itemRef="skulls">
+                <description>In the same room as the Compass.</description>
+            </entry>
+            <entry id="skull-dekutree-b1-1" itemRef="skulls">
+                <description>Floor B1, after jumping through the web in the main room.</description>
+            </entry>
+            <entry id="skull-dekutree-b1-2" itemRef="skulls">
+                <description>In the same room as {{skull-dekutree-b1-1}}.</description>
+            </entry>
+            <entry id="dekutree-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="beforedodongo">
+            <heading>A royal mission with detours</heading>
+
+            <entry id="fairyocarina" itemRef="ocarina" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Hyrule Castle</entry>
+
+            <entry id="skull-castletown-guardroom" itemRef="skulls">
+                <description>Hyrule Castle Town, in the guardhouse (the room with all the pots by the drawbridge).</description>
+            </entry>
+            <entry id="info-hylianshield" checkbox="false">
+                <description>Tip: You don't need to purchase the Hylian Shield now, you'll get it for free soon.</description>
+            </entry>
+            <entry id="bulletbag-upgrade-shootinggallery" itemRef="bulletbag" changeNameID="40" add="0">
+                <name>Bigger Bullet Bag</name>
+                <description>Hyrule Castle Town Shooting Gallery.</description>
+            </entry>
+            <entry id="weirdegg" itemRef="quest" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-town-dog" itemRef="heartpieces">
+                <description>During nighttime in Hyrule Castle Town, find and return the woman's lost dog.</description>
+            </entry>
+            <entry id="info-treasurechestshop" checkbox="false" filters="heartpieces">
+                <description>It's possible to get {{hp-treasurechestshop}} from the Treasure Chest Shop now, but without the Lens of Truth you only have 3% chance of winning.</description>
+            </entry>
+            <entry id="skull-hyrulecastle-tree" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Hyrule Castle, roll into the first tree.</description>
+            </entry>
+            <entry id="cucco" itemRef="quest" changeNameID="cucco" add="0" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="zeldasletter" itemRef="quest" changeNameID="zeldasletter" add="0" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="song-zelda" itemRef="song-zelda" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Kakariko Village</entry>
+
+            <entry id="bottle-kakariko" itemRef="bottles">
+                <description>Talk to the Cucco Lady and find all her Cuccos.</description>
+            </entry>
+            <entry id="song-sun" itemRef="song-sun">
+                <description>Inside the Royal Family's Tomb at the top of the graveyard.</description>
+            </entry>
+            <entry id="hp-graveyard-zombie" itemRef="heartpieces">
+                <description>Below one of the tombstones in the graveyard.</description>
+            </entry>
+            <entry id="hylianshield" itemRef="hylianshield">
+                <description>Below one of the tombstones in the graveyard.</description>
+            </entry>
+            <entry id="hp-graveyard-tour" itemRef="heartpieces">
+                <description>Play Dampé's Heart-Pounding Gravedigging Tour at night.</description>
+            </entry>
+            <entry id="skull-graveyard-bugs" itemRef="skulls">
+                <description>Drop bugs onto the soft soil in the graveyard.</description>
+            </entry>
+            <entry id="skull-kakariko-tree" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Roll into the tree by the entrance to Kakariko Village.</description>
+            </entry>
+            <entry id="skull-kakariko-tower" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>On the watchtower ladder.</description>
+            </entry>
+            <entry id="skull-kakariko-wall" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>On the wall of the house by the exit to Death Mountain.</description>
+            </entry>
+            <entry id="skull-kakariko-construction" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>On the building under construction.</description>
+            </entry>
+            <entry id="skull-kakariko-houseofskulltula" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>On the wall of the House of Skulltula.</description>
+            </entry>
+            <entry id="adultwallet" itemRef="wallet" changeNameID="adult" add="0">
+                <description>In the House of Skulltula after collecting 10 Skulltula Tokens.</description>
+            </entry>
+            <entry id="info-guard-kakariko" checkbox="false">
+                <description>Show Zelda's Letter to the guard by the exit to Death Mountain to get him to open the gate (needed for the Happy Mask Shop to open in Hyrule Castle Town).</description>
+            </entry>
+            <entry id="mask-keaton" itemRef="masks">
+                <description>Get it from the Happy Mask Shop in Hyrule Castle Town.</description>
+            </entry>
+            <entry id="mask-skull" itemRef="masks" changeNameID="skull" add="0">
+                <description>Sell the Keaton Mask to the guard you gave Zelda's Letter to and return to the Happy Mask Shop.</description>
+            </entry>
+
+            <entry type="subheading">Lon Lon Ranch</entry>
+
+            <entry id="bottle-ranch" itemRef="bottles">
+                <description>Play Talon's Super Cucco-findin' Game.</description>
+            </entry>
+            <entry id="skull-ranch-tree" itemRef="skulls">
+                <description>Roll into the tree between the house and the corral.</description>
+            </entry>
+            <entry id="song-epona" itemRef="song-epona">
+                <description>From Malon.</description>
+            </entry>
+            <entry id="hp-ranch-crates" itemRef="heartpieces">
+                <description>In the building in the southwest corner of the ranch.</description>
+            </entry>
+            <entry id="skull-ranch-corral" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>At the south end of the corral.</description>
+            </entry>
+
+            <entry type="subheading">Lost Woods</entry>
+
+            <entry id="skull-kokiri-knowitall" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Kokiri Forest, on the back of the Know-It-All-brothers' house.</description>
+            </entry>
+            <entry id="skull-kokiri-bugs" itemRef="skulls">
+                <description>Kokiri Forest, drop bugs onto the soft soil.</description>
+            </entry>
+            <entry id="bulletbag-upgrade-lostwoods" itemRef="bulletbag" changeNameID="50" add="0">
+                <name>Biggest Bullet Bag</name>
+                <description>Enter Lost Woods and go right. Shoot the bull's eye to score 100 points three times in a row.</description>
+            </entry>
+            <entry id="hp-lostwoods-play" itemRef="heartpieces">
+                <description>In the same area as the {{bulletbag-upgrade-lostwoods}}, drop down and play with the Skull Kids three times.</description>
+            </entry>
+            <entry id="skull-lostwoods-bugs1" itemRef="skulls">
+                <description>Enter Lost Woods and go right-left-right-left-left. Drop bugs onto the soft soil.</description>
+            </entry>
+            <entry id="dekustick-upgrade-skullmask" itemRef="dekusticks" changeNameID="20" add="0">
+                <name>Deku Stick capacity upgrade (20)</name>
+                <description>From {{skull-lostwoods-bugs1}} (right-left-right-left-left from the entrance to Lost Woods), drop down into the hole near the butterflies, wear the Skull Mask and step forward.</description>
+            </entry>
+            <entry id="song-saria" itemRef="song-saria" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-lostwoods-skullkid" itemRef="heartpieces">
+                <description>Enter Lost Woods and go left. Step onto the tree stump and play Saria's Song.</description>
+            </entry>
+            <entry id="skullmask-sell" checkbox="false">
+                <description>Sell the Skull Mask to the Skull Kid who gave you {{hp-lostwoods-skullkid}} (go left from the entrance to Lost Woods).</description>
+            </entry>
+            <entry id="skull-lostwoods-bugs2" itemRef="skulls">
+                <description>Go south from {{hp-lostwoods-skullkid}} (left-left from the entrance to Lost Woods) and drop bugs onto the soft soil.</description>
+            </entry>
+            <entry id="dekustick-upgrade-dekuscrub" itemRef="dekusticks" changeNameID="30" add="0">
+                <name>Deku Stick capacity upgrade (30)</name>
+                <description>Same area as {{skull-lostwoods-bugs2}}. Defeat the Deku Scrub and purchase the upgrade for 40 rupees.</description>
+            </entry>
+
+            <entry type="subheading">Some last errands</entry>
+
+            <entry id="mask-spooky" itemRef="masks" changeNameID="spooky" add="0">
+                <description>Get it from the Happy Mask Shop (assuming you sold the Skull Mask earlier).</description>
+            </entry>
+            <entry id="mask-bunny" itemRef="masks" changeNameID="bunnyhood" add="0">
+                <description>Sell the Spooky Mask to the boy in the Kakariko Graveyard (during daytime) and return to the Happy Mask Shop.</description>
+            </entry>
+            <entry id="hp-gerudo-cucco" itemRef="heartpieces">
+                <description>Gerudo Valley, use the Cucco to float to the ledge with the crate and smash it.</description>
+            </entry>
+            <entry id="skull-gerudo-bugs" itemRef="skulls">
+                <description>Gerudo Valley, use the Cucco to float down to the cow drop bugs onto the soft soil.</description>
+            </entry>
+            <entry id="hp-gerudo-waterfall" itemRef="heartpieces">
+                <description>Gerudo Valley, inside the waterfall (climb the ladder behind it).</description>
+            </entry>
+            <entry id="skull-hylia-bugs" itemRef="skulls">
+                <description>Lake Hylia, drop bugs onto the soft soil by the Lakeside Laboratory.</description>
+            </entry>
+            <entry id="song-scarecrow" itemRef="song-scarecrow">
+                <description>Show your Ocarina to Bonooru the Scarecrow.</description>
+            </entry>
+            <entry id="hp-fish" itemRef="heartpieces">
+                <description>Catch a fish weighing at least 10 pounds in the Fishing Pond in Lake Hylia.</description>
+            </entry>
+            <entry id="skull-hylia-island" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Lake Hylia, on the lone platform far out in the lake.</description>
+            </entry>
+            <entry id="stoneofagony" itemRef="stoneofagony">
+                <description>In the House of Skulltula after collecting 20 Skulltula Tokens.</description>
+            </entry>
+            <entry id="shardofagony" itemRef="shardofagony">
+                <description>In the House of Skulltula after collecting 20 Skulltula Tokens.</description>
+            </entry>
+            <entry id="goronsbracelet" itemRef="goronsbracelet" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="skull-dodongo-outside" itemRef="skulls">
+                <description>Drop bugs onto the soft soil just outside Dodongo's Cavern.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="dodongoscavern">
+            <heading>Dodongo's Cavern</heading>
+            <entry id="dodongo-dungeonmap" itemRef="dungeonmap">
+                <description>Left side of the main room.</description>
+            </entry>
+            <entry id="skull-dodongo-east" itemRef="skulls">
+                <description>From the main room, go east (blow up the wall) and kill a Baby Dodongo by bombable wall in the corridor to blow it up (or wait until getting the bombs later in the dungeon).</description>
+            </entry>
+            <entry id="dodongo-compass" itemRef="compass">
+                <description>In a room adjacent to where you have to bomb a giant pillar to lower it.</description>
+            </entry>
+            <entry id="skull-dodongo-vines" itemRef="skulls">
+                <description>After getting the compass and climbing the stairs, on the vines near the top door.</description>
+            </entry>
+            <entry id="bombs" itemRef="bombs" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bombbag" itemRef="bombbag" checkbox="false" filters="mandatory">
+                <name>Bomb Bag</name>
+                <description>Together with the bombs.</description>
+            </entry>
+            <entry id="skull-dodongo-mouth" itemRef="skulls">
+                <description>In one of the rooms after going into the Dodongo statue's mouth, behind a bombable wall.</description>
+            </entry>
+            <entry id="dodongo-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="beforejabujabu">
+            <heading>Gearing up for Jabu Jabu's Belly</heading>
+            <entry id="skull-goron-boulders" itemRef="skulls">
+                <description>Goron City, in the room on the top floor with all the boulders.</description>
+            </entry>
+            <entry id="bombbag-goron" itemRef="bombbag" changeNameID="30" add="0">
+                <name>Big Bomb Bag</name>
+                <description>Goron City, bomb the rolling Goron.</description>
+            </entry>
+            <entry id="hp-goron-urn" itemRef="heartpieces">
+                <description>Goron City, light the torches at the bottom and throw a bomb in the spinning pot.</description>
+            </entry>
+            <entry id="dekunuts-upgrade-bomb" itemRef="dekunuts" changeNameID="30" add="0">
+                <name>Deku Nuts capacity upgrade (30)</name>
+                <description>Enter Lost Woods from Goron City, go left-left-straight-left and blow up the rock. (Return the way you came for the next items in the guide.)</description>
+            </entry>
+            <entry id="magicmeter" itemRef="magic">
+                <description>In the Great Fairy's Fountain on the summit of Death Mountain.</description>
+            </entry>
+            <entry id="skull-dmcrater-crate" itemRef="skulls">
+                <description>Death Mountain Crater, smash the first crate you run into.</description>
+            </entry>
+            <entry id="hp-kakariko-owl" itemRef="heartpieces">
+                <description>Kakariko Village, after riding Kaepora Gaebora, enter the hole in the house you landed on.</description>
+            </entry>
+            <entry id="hp-bombchu" itemRef="heartpieces">
+                <description>Random prize at the Bombchu Gallery.</description>
+            </entry>
+            <entry id="bombchus" itemRef="bombchus">
+                <description>Random prize at the Bombchu Gallery.</description>
+            </entry>
+            <entry id="bombbag-bombchu" itemRef="bombbag" changeNameID="40" add="0">
+                <name>Biggest Bomb Bag</name>
+                <description>Random prize at the Bombchu Gallery.</description>
+            </entry>
+            <entry id="dinsfire" itemRef="din">
+                <description>Hyrule Castle, blow up the boulder to the east.</description>
+            </entry>
+            <entry id="hp-fence-hylia" itemRef="heartpieces">
+                <description>Hyrule Field, bomb the middle of the fenced-in area by Lake Hylia and drop down.</description>
+            </entry>
+            <entry id="skull-zorariver-tree" itemRef="skulls">
+                <description>Zora's River, roll into the first tree.</description>
+            </entry>
+            <entry id="magicbeans" itemRef="magicbeans">
+                <description>Purchase in Zora's River.</description>
+            </entry>
+            <entry id="info-magicbeans-plant" checkbox="false">
+                <description>Plant magic beans in the following locations (the items they will make accessible later are given in parentheses - feel free to skip what's unimportant to you): By the bean seller (shortcut), Kakariko Graveyard ({{hp-graveyard-magicbean}}), outside Dodongo's Cavern ({{hp-dm-magicbean}}), Lost Woods left-left (shortcut), Lost Woods right-left-right-left-left ({{skull-lostwoods-magicbean}}), Kokiri Forest (Rupees), Gerudo Valley ({{hp-gerudo-waterfall}}, which you probably already have), and Lake Hylia ({{hp-hylia-magicbean}}).</description>
+            </entry>
+            <entry id="hp-zorasriver-cucco-middle" itemRef="heartpieces">
+                <description>Zora's River, use the Cucco to get to the platform halfway up.</description>
+            </entry>
+            <entry id="hp-zorasriver-cucco-upper" itemRef="heartpieces">
+                <description>Zora's River, use the Cucco to get to the platform at the end of the river.</description>
+            </entry>
+            <entry id="skull-zorasriver-ladder" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Zora's River, at the end, on a ladder.</description>
+            </entry>
+            <entry id="hp-zorasdomain-torches" itemRef="heartpieces">
+                <description>Light the torches in Zora's Domain.</description>
+            </entry>
+            <entry id="silverscale" itemRef="scale" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bottle-zora" itemRef="bottles" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="skull-zorasfountain-tree" itemRef="skulls">
+                <description>Zora's Fountain, roll into a tree on the southeast end of the lake.</description>
+            </entry>
+            <entry id="faroreswind" itemRef="farore">
+                <description>Zora's Fountain, blow up the wall at the southeast end of the lake.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="jabujabu">
+            <heading>Jabu-Jabu's Belly</heading>
+            <entry id="skull-jabujabu-ruto" itemRef="skulls">
+                <description>In the room after you first pick up Princess Ruto.</description>
+            </entry>
+            <entry id="boomerang" itemRef="boomerang" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="jabujabu-dungeonmap" itemRef="dungeonmap">
+                <description>In another room off the branching paths (like the Boomerang).</description>
+            </entry>
+            <entry id="jabujabu-compass" itemRef="compass">
+                <description>In another room off the branching paths (like the Boomerang).</description>
+            </entry>
+            <entry id="skull-jabujabu-tentacle-1" itemRef="skulls">
+                <description>After jumping down a hole previously occupied by a tentacle.</description>
+            </entry>
+            <entry id="skull-jabujabu-tentacle-2" itemRef="skulls">
+                <description>In the same room as {{skull-jabujabu-tentacle-1}}.</description>
+            </entry>
+            <entry id="skull-jabujabu-boss" itemRef="skulls">
+                <description>In the room before the boss.</description>
+            </entry>
+            <entry id="jabujabu-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="endyounglink">
+            <heading>End of Young Link</heading>
+            <entry id="skull-zorasfountain-log" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Zora's Fountain, use the Boomerang while standing on the log near Jabu-Jabu.</description>
+            </entry>
+            <entry id="skull-dekutree-boomerang" itemRef="skulls">
+                <description>In the Deku Tree, floor B1, behind a bombable wall.</description>
+            </entry>
+            <entry id="skull-lonlon-window" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Lon Lon Ranch, on the window of Talon's house.</description>
+            </entry>
+            <entry id="skull-lonlon-wall" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Lon Lon Ranch, west of the door to the cow house.</description>
+            </entry>
+            <entry id="giantswallet" itemRef="wallet" changeNameID="giant" add="0">
+                <description>In the House of Skulltula after collecting 30 Skulltula Tokens.</description>
+            </entry>
+            <entry id="skull-graveyard-wall" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Kakariko Graveyard, on the south wall.</description>
+            </entry>
+            <entry id="skull-dmtrail-wall" itemRef="skulls">
+                <description>Death Mountain Trail, behind a bombable wall just above Kakariko Village.</description>
+            </entry>
+            <entry id="skull-dodongo-stairs" itemRef="skulls">
+                <description>Dodongo's Cavern, take the elevator up and go to the room with the huge staircase.</description>
+            </entry>
+            <entry id="skull-gerudovalley-waterfall" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Gerudo Valley, on the small waterfall to the right as you enter.</description>
+            </entry>
+            <entry id="skull-hylia-laboratory" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Lake Hylia, on the back of the Lakeside Laboratory.</description>
+            </entry>
+            <entry id="skull-hyrulefield-laboratory" itemRef="skulls">
+                <description>Hyrule Field, bomb the ground by the lone three to the northeast.</description>
+            </entry>
+            <entry id="maskoftruth" itemRef="masks" changeNameID="truth" add="0">
+                <description>Sell the Bunny Hood to the man running around Hyrule Field (he fills up your wallet!) and return to the shop.</description>
+            </entry>
+            <entry id="ocarinaoftime" itemRef="ocarina" changeNameID="ocarinaoftime" add="0" checkbox="0" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="song-time" itemRef="song-time" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="dekunuts-upgrade-maskoftruth" itemRef="dekunuts" changeNameID="40" add="0">
+                <name>Deku Nuts capacity upgrade (40)</name>
+                <description>Enter Lost Woods and go right-left-right-left-left, drop down and use the Mask of Truth. (This will be mentioned later too in case you don't want to interrupt the story now.)</description>
+            </entry>
+            <entry id="mastersword" itemRef="mastersword" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="grownup">
+            <heading>Grown up</heading>
+            <entry id="epona" checkbox="false">
+                <description>Get Epona from Lon Lon Ranch.</description>
+            </entry>
+            <entry id="hp-graveyard-magicbean" itemRef="heartpieces">
+                <description>Kakariko Graveyard, ride the Magic Bean plant.</description>
+            </entry>
+            <entry id="hookshot" itemRef="hookshot" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-windmill" itemRef="heartpieces">
+                <description>In the Windmill just after getting the Hookshot.</description>
+            </entry>
+            <entry id="song-storms" itemRef="song-storms">
+                <description>From the man in the Windmill.</description>
+            </entry>
+            <entry id="hp-dampe-race" itemRef="heartpieces">
+                <description>Race Dampé again and finish in less than one minute (this is easier after you've gotten the {{longshot}}, but still possible now).</description>
+            </entry>
+
+            <entry type="subheading">Biggoron's Sword</entry>
+
+            <entry id="info-biggoron" checkbox="false">
+                <description>This section deals with the trading sequence resulting in you obtaining the Biggoron's Sword, as well as nearby items and collectibles during this quest.</description>
+            </entry>
+            <entry id="bg-pocketegg" itemRef="quest" changeNameID="pocketegg" add="0">
+                <description>From the Cucco Lady in Kakariko Village.</description>
+            </entry>
+            <entry id="bg-pocketcucco" itemRef="quest" changeNameID="pocketcucco" add="0">
+                <description>After the Pocket Egg hatches.</description>
+            </entry>
+            <entry id="bg-cojiro" itemRef="quest" changeNameID="cojiro" add="0">
+                <description>Wake up Talon in Kakariko Village with the Pocket Cucco and return to the Cucco Lady.</description>
+            </entry>
+            <entry id="skull-ganonscastle" itemRef="skulls">
+                <description>In the area outside Ganon's Castle.</description>
+            </entry>
+            <entry id="skull-kokiri-twins" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Kokiri Forest, in a tree by the House of Twins.</description>
+            </entry>
+            <entry id="bg-oddmushroom" itemRef="quest" changeNameID="oddmushroom" add="0">
+                <description>Enter Lost Woods and go left, and show Cojiro to Grog.</description>
+            </entry>
+            <entry id="bg-oddpotion" itemRef="quest" changeNameID="oddpotion" add="0">
+                <appendToName>(Odd Poultice on the 3DS)</appendToName>
+                <description>Give the Odd Mushroom to the old hag in Kakariko Village (behind the normal potion shop).</description>
+            </entry>
+            <entry id="bg-poacherssaw" itemRef="quest" changeNameID="poacherssaw" add="0">
+                <description>Return to where you found Grog and give the Odd Potion/Poultice to Fado.</description>
+            </entry>
+            <entry id="info-scarecrowssong" checkbox="false">
+                <description>Play the Scarecrow's Song in Lake Hylia.</description>
+            </entry>
+            <entry id="goldenscale" itemRef="scale" changeNameID="golden" add="0">
+                <description>Catch a fish weighing at least 15 pounds in the Fishing Pond in Lake Hylia.</description>
+            </entry>
+            <entry id="hp-hylia-magicbean" itemRef="heartpieces">
+                <description>Lake Hylia, ride the Magic Bean plant to the roof of the Lakeside Laboratory.</description>
+            </entry>
+            <entry id="hp-hylia-laboratory" itemRef="heartpieces">
+                <description>Lakeside Laboratory, dive down to the bottom.</description>
+            </entry>
+            <entry id="skull-gerudo-tent" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Gerudo Valley, behind the carpenter's tent.</description>
+            </entry>
+            <entry id="skull-gerudo-pillar" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Gerudo Valley, on a stone pillar before the entrance to Gerudo Fortress.</description>
+            </entry>
+            <entry id="bg-brokensword" itemRef="quest" changeNameID="brokensword" add="0">
+                <description>Give the Poacher's Saw to Mutoh, the leader of the carpenters in Gerudo Valley.</description>
+            </entry>
+            <entry id="hp-dm-magicbean" itemRef="heartpieces">
+                <description>Ride the Magic Bean plant outside Dodongo's Cavern.</description>
+            </entry>
+            <entry id="skull-dodongo-scarecrow" itemRef="skulls">
+                <description>Dodongo's Cavern, in the hallway on floor 1 with Baby Dodongos, play the Scarecrow's Song.</description>
+            </entry>
+            <entry id="skull-goron-pedestal" itemRef="skulls">
+                <description>Goron City, at the back of the hanging pedestal up in the central area.</description>
+            </entry>
+            <entry id="info-goron-tunic" checkbox="false">
+                <description>You can now get the Goron Tunic and/or the Bolero of Fire if you don't want to wait until after the Forest Temple.</description>
+            </entry>
+            <entry id="bg-prescription" itemRef="quest" changeNameID="prescription" add="0">
+                <description>Give the Broken Goron's Sword to Biggoron on the summit of Death Mountain.</description>
+            </entry>
+            <entry id="skull-zorasriver-southwall" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Zora's River, high up on a wall south in the main area.</description>
+            </entry>
+            <entry id="skull-zorasriver-wallbridge" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Zora's River, high up on a wall by the wooden bridge. Stand on the fence.</description>
+            </entry>
+            <entry id="skull-zorasdomain" itemRef="skulls">
+                <description>Zora's Domain at the top of the waterfall.</description>
+            </entry>
+            <entry id="hp-zorasfountain-ice" itemRef="heartpieces">
+                <description>Zora's Fountain, on an ice platform.</description>
+            </entry>
+            <entry id="info-icecavern-early" checkbox="false">
+                <description>If you don't want to wait until after the Fire Temple, you can now get everything listed in the Ice Cavern section.</description>
+            </entry>
+            <entry id="zoratunic" itemRef="zoratunic">
+                <description>Thaw King Zora using Blue Fire (either from Ice Cavern or from Kakariko Village for 300 Rupees).</description>
+            </entry>
+            <entry id="bg-eyeballfrog" itemRef="quest" changeNameID="eyeballfrog" add="0">
+                <description>After thawing King Zora, give him the prescription.</description>
+            </entry>
+            <entry id="bg-eyedrops" itemRef="quest" changeNameID="eyedrops" add="0">
+                <description>Bring the Eyeball Frog to the scientist in the Lakeside Laboratory in Lake Hylia.</description>
+            </entry>
+            <entry id="bg-claimcheck" itemRef="quest" changeNameID="claimcheck" add="0">
+                <description>Bring the Eye Drops to Biggoron.</description>
+            </entry>
+            <entry id="biggoronssword" itemRef="biggoronssword">
+                <description>Show the Claim Check to Biggoron after three days (just play the Sun's Song six times).</description>
+            </entry>
+
+            <entry type="subheading">Going to the Forest Temple</entry>
+
+            <entry id="hp-skulltula" itemRef="heartpieces">
+                <description>In the House of Skulltula after collecting 50 Skulltula Tokens.</description>
+            </entry>
+            <entry id="skull-lostwoods-magicbean" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Enter Lost Woods, go right-left-right-left-left, and ride the Magic Bean plant.</description>
+            </entry>
+            <entry id="skull-meadow-wall" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Sacred Forest Meadow, high up on the east wall.</description>
+            </entry>
+            <entry id="song-forest" itemRef="song-forest" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="foresttemple">
+            <heading>Forest Temple</heading>
+            <entry id="skull-foresttemple-first" itemRef="skulls">
+                <description>In the first room.</description>
+            </entry>
+            <entry id="skull-foresttemple-main" itemRef="skulls">
+                <description>In the main room (with the elevator), by the north exit.</description>
+            </entry>
+            <entry id="foresttemple-dungeonmap" itemRef="dungeonmap">
+                <description>Two rooms after removing the Stone of Time in the main room.</description>
+            </entry>
+            <entry id="skull-foresttemple-corner" itemRef="skulls">
+                <description>In the room after the Dungeon Map, Hookshot to the chest on the corner "island".</description>
+            </entry>
+            <entry id="fairybow" itemRef="bow" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="quiver" itemRef="quiver" checkbox="false" filters="mandatory">
+                <name>Quiver</name>
+                <description>Together with the Fairy Bow.</description>
+            </entry>
+            <entry id="foresttemple-compass" itemRef="compass">
+                <description>After killing the blue Poe Sister (in the room after the Fairy Bow).</description>
+            </entry>
+            <entry id="skull-foresttemple-twist" itemRef="skulls">
+                <description>After untwisting first corridor, dropping down and going to the next room.</description>
+            </entry>
+            <entry id="skull-foresttemple-boss" itemRef="skulls">
+                <description>Before the boss, after taking the elevator down, in one of the small rooms.</description>
+            </entry>
+            <entry id="foresttemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="beforefiretemple">
+            <heading>Gearing up for the Fire Temple</heading>
+            <entry id="song-light" itemRef="song-light">
+                <description>In the Temple of Time.</description>
+            </entry>
+
+            <entry type="subheading">Young Link</entry>
+
+            <entry id="skull-hyrulecastle-hole" itemRef="skulls">
+                <description>In Hyrule Castle, go to the tree where Talon was sleeping (inside the Hyrule Castle fence in a corner) and play the Song of Storms to reveal a hole.</description>
+            </entry>
+            <entry id="hp-frogs-storms" itemRef="heartpieces">
+                <description>In Zora's River, play the Song of Storms for the frogs.</description>
+            </entry>
+            <entry id="hp-frogs-game" itemRef="heartpieces">
+                <description>For the same frogs, play the other non-warp songs you know (you get 50 Rupees for each song) and play their game.</description>
+            </entry>
+            <entry id="info-dekunuts-upgrade" checkbox="false">
+                <description>If you didn't already, now's a good time to get the {{dekunuts-upgrade-maskoftruth}}.</description>
+            </entry>
+            <entry id="info-bottomofthewell-early" checkbox="false">
+                <description>You can now get everything listed in the Bottom of the Well section, as well as {{hp-treasurechestshop}}.</description>
+            </entry>
+
+            <entry type="subheading">Adult Link</entry>
+
+            <entry id="bigquiver" itemRef="quiver" changeNameID="big" add="0">
+                <name>Big Quiver</name>
+                <description>Play the Archery game in Kakariko Village (as adult Link).</description>
+            </entry>
+            <entry id="bottle-bigpoes" itemRef="bottles">
+                <description>Collect the 10 Big Poes in Hyrule Field and sell them in the Poe Shop (the old guardhouse in Hyrule Castle Town). The Big Poe locations are 1) by the sign to Lon Lon Ranch outside of Hyrule Castle, 2) in the bushes west of Hyrule Castle, 3) by the lone tree outside Lon Lon Ranch, 4) in the corner of the stone wall east of Lon Lon Ranch, 5) above/below the ledge south of the entrance to Kakariko Village, 6) by the boulder where the road splits between Lon Lon Ranch and Kokiri Forest, 7) in the trees/bushes south of #6, 8) by a patch of grass between these trees and a lone tree to the west, 9) where the road splits outside Gerudo Valley, and 10) by the lone tree this road split.</description>
+            </entry>
+            <entry id="info-gerudosfortress-early" checkbox="false">
+                <description>You can now get almost everything listed in the Gerudo's Fortress section.</description>
+            </entry>
+            <entry id="gorontunic" itemRef="gorontunic">
+                <description>Stop the rolling Goron in Goron City.</description>
+            </entry>
+            <entry id="song-fire" itemRef="song-fire" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Young Link</entry>
+
+            <entry id="skull-dmcrater-bugs" itemRef="skulls">
+                <description>Drop bugs onto the soft soil in Death Mountain Crater.</description>
+            </entry>
+            <entry id="info-dmcrater-magicbean" checkbox="false" filters="heartpieces">
+                <description>Plant a Magic Bean in the soft soil in Death Mountain Crater (required for {{hp-dmcrater-magicbean-1}} and {{hp-dmcrater-magicbean-2}}).</description>
+            </entry>
+
+            <entry type="subheading">Adult Link</entry>
+
+            <entry id="hp-dmcrater-magicbean-1" itemRef="heartpieces">
+                <description>Ride the Magic Bean plant in Death Mountain Crater.</description>
+            </entry>
+            <entry id="hp-dmcrater-magicbean-2" itemRef="heartpieces">
+                <description>Same as {{hp-dmcrater-magicbean-1}}.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="firetemple">
+            <heading>Fire Temple</heading>
+            <entry id="skull-firetemple-stoneoftime" itemRef="skulls">
+                <description>In the lava room with the bridge, play the Song of Time below the Stone of Time.</description>
+            </entry>
+            <entry id="skull-firetemple-fakewall" itemRef="skulls">
+                <description>In the room with the rolling boulders, in a corner, listen for the Skulltula and blow up the fake wall it's hiding behind.</description>
+            </entry>
+            <entry id="firetemple-dungeonmap" itemRef="dungeonmap">
+                <description>After leaving the room with the rolling boulders through a locked door, shoot the eye and go through the door that opened.</description>
+            </entry>
+            <entry id="skull-firetemple-scarecrow" itemRef="skulls">
+                <description>When emerging at the top of the room with the rolling boulders, play the Scarecrow's Song.</description>
+            </entry>
+            <entry id="skull-firetemple-afterboulders" itemRef="skulls">
+                <description>In the next room after {{skull-firetemple-scarecrow}}.</description>
+            </entry>
+            <entry id="firetemple-compass" itemRef="compass">
+                <description>Through a door in the room with the fire labyrinth.</description>
+            </entry>
+            <entry id="megatonhammer" itemRef="hammer" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="skull-firetemple-miniboss" itemRef="skulls">
+                <description>Before the second mini-boss (in the room with the Like Like).</description>
+            </entry>
+            <entry id="firetemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="icecavern">
+            <heading>Ice Cavern</heading>
+
+            <entry type="subheading">Finishing up Death Mountain</entry>
+
+            <entry id="doublemagic" itemRef="magic" changeNameID="double" add="0">
+                <description>At the top of Death Mountain Crater.</description>
+            </entry>
+            <entry id="skull-dm-valley" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Death Mountain Trail, in the valley just below the summit, smash a boulder with the hammer.</description>
+            </entry>
+            <entry id="skull-dm-city" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Death Mountain Trail, just outside Goron City, smash a boulder with the hammer.</description>
+            </entry>
+
+            <entry type="subheading">Ice Cavern</entry>
+
+            <entry id="skull-icecavern-spinning" itemRef="skulls">
+                <description>In the room with the spinning fan, above some icicles.</description>
+            </entry>
+            <entry id="icecavern-dungeonmap" itemRef="dungeonmap">
+                <description>In the room after the spinning fan.</description>
+            </entry>
+            <entry id="hp-icecavern-spinning" itemRef="heartpieces">
+                <description>South of the spinning fan room.</description>
+            </entry>
+            <entry id="skull-icecavern-room" itemRef="skulls">
+                <description>South of the spinning fan room.</description>
+            </entry>
+            <entry id="icecavern-compass" itemRef="compass">
+                <description>South of the spinning fan room.</description>
+            </entry>
+            <entry id="skull-icecavern-pushblock" itemRef="skulls">
+                <description>In the room where you have to push the ice block around.</description>
+            </entry>
+            <entry id="ironboots" itemRef="ironboots" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="ironboots-3ds" itemRef="ironboots-3ds" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="song-water" itemRef="song-water" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">A few more items</entry>
+            <entry id="hp-zorasfountain-bottom" itemRef="heartpieces">
+                <description>In Zora's Fountain, at the bottom of the lake.</description>
+            </entry>
+            <entry id="hp-hyrulefield-tree-lonlon" itemRef="heartpieces">
+                <description>Bomb the ground near the gold-leaved tree northwest of Lon Lon Ranch.</description>
+            </entry>
+            <entry id="skull-hyrulefield-valley" itemRef="skulls">
+                <description>In Hyrule Field just outside Gerudo Valley, smash a boulder with the hammer and bomb the ground to reveal a hole.</description>
+            </entry>
+            <entry id="skull-laboratory-crate" itemRef="skulls">
+                <description>In the Lakeside Laboratory, use the Iron Boots and smash the crates at the bottom.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="watertemple">
+            <heading>Water Temple</heading>
+            <entry id="watertemple-dungeonmap" itemRef="dungeonmap">
+                <description>After you meet Ruto.</description>
+            </entry>
+            <entry id="skull-watertemple-floor" itemRef="skulls">
+                <description>After returning to the main room after meeting Ruto, go left and bomb the floor.</description>
+            </entry>
+            <entry id="watertemple-compass" itemRef="compass">
+                <description>After raising the water to the middle level, enter the open corridor in the main room.</description>
+            </entry>
+            <entry id="longshot" itemRef="hookshot" changeNameID="longshot" add="0" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="skull-watertemple-afterlongshot" itemRef="skulls">
+                <description>In the room after the one with the Longshot.</description>
+            </entry>
+            <entry id="skull-watertemple-centertower" itemRef="skulls">
+                <description>High up near the ceiling inside the center tower in the main room.</description>
+            </entry>
+            <entry id="skull-watertemple-afterblock" itemRef="skulls">
+                <description>Two rooms after placing a large block onto a switch to raise the water.</description>
+            </entry>
+            <entry id="skull-watertemple-movingplatforms" itemRef="skulls">
+                <description>In the room with the moving platforms (lifts).</description>
+            </entry>
+            <entry id="watertemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="bottomofthewell">
+            <heading>Bottom of the Well</heading>
+
+            <entry type="subheading">Heading for Kakariko</entry>
+
+            <entry id="firearrows" itemRef="firearrows">
+                <description>Shoot the morning sun after you finish the Water Temple.</description>
+            </entry>
+            <entry id="skull-hylia-tree" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>In the tree on the island where you land after finishing the Water Temple.</description>
+            </entry>
+            <entry id="info-gerudo-early-more" checkbox="false" filters="heartpieces">
+                <description>You can now get {{hp-gerudo-longshot}} (and {{skull-gerudo-archery}}, but it won't do you any good) from the Gerudo Fortress section if you don't want to wait.</description>
+            </entry>
+            <entry id="song-shadow" itemRef="song-shadow" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="skull-kakariko-longshot" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>In Kakariko Village, on the wall above Impa's house (Longshot onto the roof).</description>
+            </entry>
+            <entry id="hp-kakariko-roof" itemRef="heartpieces">
+                <description>In Kakariko Village, speak to the man on one of the roofs.</description>
+            </entry>
+            <entry id="info-dampe-longshot" checkbox="false" filters="heartpieces">
+                <description>If you haven't gotten {{hp-dampe-race}} yet, you can now get it by the help of the Longshot.</description>
+            </entry>
+
+            <entry type="subheading">Bottom of the Well</entry>
+
+            <entry id="lensoftruth" itemRef="lensoftruth" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="well-dungeonmap" itemRef="dungeonmap">
+                <description>In the only chest on the bottom floor.</description>
+            </entry>
+            <entry id="well-compass" itemRef="compass">
+                <description>In the "secret" room in the center of the main room, enter from a hidden side passage.</description>
+            </entry>
+
+            <entry id="skull-well-locked-1" itemRef="skulls">
+                <description>In the "secret" room in the center of the main room, through a locked door.</description>
+            </entry>
+            <entry id="skull-well-locked-2" itemRef="skulls">
+                <description>Same as {{skull-well-locked-1}}, but through a different locked door.</description>
+            </entry>
+            <entry id="skull-well-likelike" itemRef="skulls">
+                <description>Next to a Like Like (you get to it by crawling through a hole in the northeast corner of the dungeon).</description>
+            </entry>
+
+            <entry type="subheading">It isn't cheating if no-one notices</entry>
+
+            <entry id="hp-treasurechestshop" itemRef="heartpieces">
+                <description>Play the Treasure Chest Shop game in Hyrule Castle Town (at night) as Young Link.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="shadowtemple">
+            <heading>Shadow Temple</heading>
+            <entry id="shadowtemple-dungeonmap" itemRef="dungeonmap">
+                <description>In the area in the beginning with all the fake walls.</description>
+            </entry>
+            <entry id="hoverboots" itemRef="hoverboots" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hoverboots-3ds" itemRef="hoverboots-3ds" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="shadowtemple-compass" itemRef="compass">
+                <description>After using the hover boots to run across the first gap and down the corridor, take a right by the Beamos.</description>
+            </entry>
+            <entry id="skull-shadowtemple-stalfos" itemRef="skulls">
+                <description>After the guillotines, turn left at the platform with the Stalfos and proceed into the next room.</description>
+            </entry>
+            <entry id="skull-shadowtemple-spikes" itemRef="skulls">
+                <description>In the room with the crate you have to push to avoid falling spike traps.</description>
+            </entry>
+            <entry id="skull-shadowtemple-statue" itemRef="skulls">
+                <description>Behind the giant statue you have to throw a bomb into to get a key.</description>
+            </entry>
+            <entry id="skull-shadowtemple-ship" itemRef="skulls">
+                <description>In the room with the ship.</description>
+            </entry>
+            <entry id="skull-shadowtemple-rotatingstatues" itemRef="skulls">
+                <description>Behind the three rotating statues.</description>
+            </entry>
+            <entry id="shadowtemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="desert">
+            <heading>Heading to the Spirit Temple</heading>
+
+            <entry type="subheading">Gerudo's Fortress</entry>
+
+            <entry id="gerudomembership" itemRef="gerudomembership" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="gerudotoken" itemRef="gerudotoken" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-gerudo-longshot" itemRef="heartpieces">
+                <description>At the top of the fortress, Longshot to the chest.</description>
+            </entry>
+            <entry id="skull-gerudo-back" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>At the back of the fortress.</description>
+            </entry>
+            <entry id="skull-gerudo-archery" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>In the archery game area, on the north target.</description>
+            </entry>
+            <entry id="hp-gerudo-archery" itemRef="heartpieces">
+                <description>Score 1,000 points in the archery game.</description>
+            </entry>
+            <entry id="biggestquiver" itemRef="quiver" changeNameID="biggest" add="0">
+                <name>Biggest Quiver</name>
+                <description>Score 1,500 points in the archery game.</description>
+            </entry>
+            <entry id="skull-wasteland-poe" itemRef="skulls">
+                <description>Haunted Wasteland, in the building below the Phantom Guide.</description>
+            </entry>
+
+            <entry type="subheading">Desert Colossus</entry>
+
+            <entry id="nayruslove" itemRef="nayru">
+                <description>Blow up the wall to the right as you enter the Desert Colossus.</description>
+            </entry>
+            <entry id="song-spirit" itemRef="song-spirit" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="skull-desert-trees" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>On one of the trees to the south.</description>
+            </entry>
+            <entry id="info-desert-magicbean" checkbox="false">
+                <description>Plant a Magic Bean in the soft soil (required for {{hp-desert-magicbean}} and {{skull-desert-magicbean}}).</description>
+            </entry>
+            <entry id="skull-desert-bugs" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Drop bugs onto the soft soil.</description>
+            </entry>
+            <entry id="hp-desert-magicbean" itemRef="heartpieces">
+                <description>Ride the Magic Bean plant to the stone structure in the middle.</description>
+            </entry>
+            <entry id="skull-desert-magicbean" itemRef="skulls">
+                <appendToName>(night)</appendToName>
+                <description>Ride the Magic Bean plant to a rock platform to the north.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="spirittemple">
+            <heading>Spirit Temple</heading>
+
+            <entry type="subheading">Young Link</entry>
+            <entry id="skull-spirittemple-cagedoor" itemRef="skulls">
+                <description>In the room where you make the cage door fall.</description>
+            </entry>
+            <entry id="skull-spirittemple-climb" itemRef="skulls">
+                <description>After the first locked door, turn around after climbing the wall.</description>
+            </entry>
+            <entry id="spirittemple-dungeonmap" itemRef="dungeonmap">
+                <description>Light the torches in front of the giant statue.</description>
+            </entry>
+            <entry id="skull-spirittemple-sunblock" itemRef="skulls">
+                <description>In the room after the block with the sun.</description>
+            </entry>
+            <entry id="silvergauntlets" itemRef="gauntlets" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Adult Link</entry>
+
+            <entry id="spirittemple-compass" itemRef="compass">
+                <description>In one of the first rooms as an adult, play Zelda's Lullaby on a Triforce symbol.</description>
+            </entry>
+            <entry id="skull-spirittemple-stoneoftime" itemRef="skulls">
+                <description>Remove the Stone of Time in the room with the rolling boulders.</description>
+            </entry>
+            <entry id="skull-spirittemple-statue" itemRef="skulls">
+                <description>In the main room with the giant statue.</description>
+            </entry>
+            <entry id="mirrorshield" itemRef="mirrorshield" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="spirittemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+
+        </gameSegment>
+
+        <gameSegment id="finalitems">
+            <heading>Getting ready for the big showdown</heading>
+            <entry id="icearrows" itemRef="icearrows">
+                <description>Gerudo Training Grounds.</description>
+            </entry>
+            <entry id="skull-zorasfountain-boulder" itemRef="skulls">
+                <description>In Zora's Fountain, lift the boulder by the Great Fairy's Fountain.</description>
+            </entry>
+            <entry id="info-skulltula-money" checkbox="false" filters="skulls">
+                <description>After finding all 100 Skulltula Tokens you can get infinite Rupees from the House of Skulltula.</description>
+            </entry>
+            <entry id="lightarrows" itemRef="lightarrows" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="ganonscastle">
+            <heading>Ganon's Castle</heading>
+            <entry id="goldengauntlets" itemRef="gauntlets" changeNameID="golden" add="0">
+                <description>In the Shadow Barrier.</description>
+            </entry>
+            <entry id="doubledefense" itemRef="hearts" changeNameID="doubledefense" add="0">
+                <name>Double defense</name>
+                <description>Outside Ganon's Castle, lift the giant pillar with the Golden Gauntlets and enter the Great Fairy's Fountain.</description>
+            </entry>
+        </gameSegment>
+
+    </gameSegments>
+
+</guide>

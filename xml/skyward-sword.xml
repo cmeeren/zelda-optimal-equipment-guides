@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide>
+
+    <!-- a unique ID which separates this guide from other guides -->
+    <guideID>ss</guideID>
+
+    <!-- Categories to display in summaries after each gameSegment, and their titles -->
+    <summaryLists>
+        <summaryList id="equipment">Equipment</summaryList>
+        <summaryList id="action">Action items</summaryList>
+        <summaryList id="adventure">Adventure Pouch</summaryList>
+        <summaryList id="quest">Quest/other</summaryList>
+    </summaryLists>
+
+    <!-- Filters to to show/hide certain items
+
+            Example usage:
+                <entry filters='mandatory,bugs' ...>
+                <item filters='mandatory,bugs' ...>
+
+            When used in <item> elements, will hide all entries that reference this item.
+     -->
+    <filters>
+        <filter id="oldSummaryItem">Old items in summary sections </filter>  <!-- Don't use this directly -->
+        <filter id="mandatory">Mandatory items (items you get at specific points in the game)</filter>
+        <filter id="heartpieces">Heart Pieces</filter>
+        <filter id="heartcontainers">Heart Containers</filter>
+        <filter id="crystals">Gratitude Crystals</filter>
+        <filter id="medals">Medals</filter>
+        <filter id="upgrades">Upgrades</filter>
+        <filter id="rupees">Rupees (mostly from Goddess Cube Chests)</filter>
+        <filter id="map">Dungeon Maps</filter>
+    </filters>
+
+    <!-- Definition of all items used in this guide -->
+    <items>
+        <!-- Summary type: Action items -->
+        <item id="slingshot" summaryType="action">
+            <name>Slingshot</name>
+            <name id="scatter">Scattershot</name>
+        </item>
+        <item id="bugnet" summaryType="action">
+            <name>Bug Net</name>
+            <name id="big">Big Bug Net</name>
+        </item>
+        <item id="beetle" summaryType="action">
+            <name>Beetle</name>
+            <name id="hook">Hook Beetle</name>
+            <name id="quick">Quick Beetle</name>
+            <name id="tough">Tough Beetle</name>
+        </item>
+        <item id="bombs" summaryType="action">
+            <name>Bombs</name>
+        </item>
+        <item id="gustbellows" summaryType="action">
+            <name>Gust Bellows</name>
+        </item>
+        <item id="whip" summaryType="action">
+            <name>Whip</name>
+        </item>
+        <item id="clawshots" summaryType="action">
+            <name>Clawshots</name>
+        </item>
+        <item id="bow" summaryType="action">
+            <name>Bow</name>
+            <name id="iron">Iron Bow</name>
+            <name id="sacred">Sacred Bow</name>
+        </item>
+
+        <!-- Summary type: Equipment -->
+        <item id="sword" summaryType="equipment">
+            <name>Practice Sword</name>
+            <name id="goddess">Goddess Sword</name>
+            <name id="long">Goddess Longsword</name>
+            <name id="white">Goddess White Sword</name>
+            <name id="master">Master Sword</name>
+            <name id="true">True Master Sword</name>
+        </item>
+        <item id="harp" summaryType="equipment">
+            <name>Goddess's Harp</name>
+        </item>
+        <item id="wallet" summaryType="equipment" startNum="1">
+            <name>Small Wallet</name>
+            <name id="medium">Medium Wallet</name>
+            <name id="big">Big Wallet</name>
+            <name id="giant">Giant Wallet</name>
+            <name id="tycoon">Tycoon Wallet</name>
+        </item>
+        <item id="wallet-extra" summaryType="equipment" unique="false">
+            <name>Extra Wallet</name>
+        </item>
+        <item id="sailcloth" summaryType="equipment">
+            <name>Sailcloth</name>
+        </item>
+        <item id="mitts" summaryType="equipment">
+            <name>Digging Mitts</name>
+            <name id="mogma">Mogma Mitts</name>
+        </item>
+        <item id="adventurepouchslot" summaryType="equipment" unique="false" numParts="1">
+            <name>Adventure Pouch Slot</name>
+        </item>
+        <item id="adventurepouchupgrade" partsOf="adventurepouchslot" unique="false">
+            <name>Adventure Pouch Upgrade</name>
+        </item>
+        <item id="adventurepouch" partsOf="adventurepouchslot">
+            <name>Adventure Pouch</name>
+        </item>
+
+        <!-- Summary type: Adventure Pouch -->
+        <item id="shield-wooden" summaryType="adventure">
+            <name>Wooden Shield</name>
+            <name id="banded">Banded Shield</name>
+            <name id="braced">Braced Shield</name>
+        </item>
+        <item id="shield-iron" summaryType="adventure">
+            <name>Iron Shield</name>
+            <name id="reinforced">Reinforced Shield</name>
+            <name id="fortified">Fortified Shield</name>
+        </item>
+        <item id="shield-sacred" summaryType="adventure">
+            <name>Sacred Shield</name>
+            <name id="divine">Divine Shield</name>
+            <name id="goddess">Goddess Shield</name>
+        </item>
+        <item id="shield-hylian" summaryType="adventure">
+            <name>Hylian Shield</name>
+        </item>
+        <item id="seedsatchel" summaryType="adventure">
+            <name>Small Seed Satchel</name>
+            <name id="medium">Medium Seed Satchel</name>
+            <name id="large">Large Seed Satchel</name>
+        </item>
+        <item id="bombbag" summaryType="adventure">
+            <name>Small Bomb Bag</name>
+            <name id="medium">Medium Bomb Bag</name>
+            <name id="large">Large Bomb Bag</name>
+        </item>
+        <item id="quiver" summaryType="adventure">
+            <name>Small Quiver</name>
+            <name id="medium">Medium Quiver</name>
+            <name id="large">Large Quiver</name>
+        </item>
+        <item id="bottles" unique="false" summaryType="adventure">
+            <name>Bottle</name>
+        </item>
+        <item id="medal-life" summaryType="adventure" unique="false" filters="medals">
+            <name>Life Medal</name>
+        </item>
+        <item id="medal-cursed" summaryType="adventure" filters="medals">
+            <name>Cursed Medal</name>
+        </item>
+        <item id="medal-bug" summaryType="adventure" filters="medals">
+            <name>Bug Medal</name>
+        </item>
+        <item id="medal-treasure" summaryType="adventure" filters="medals">
+            <name>Treasure Medal</name>
+        </item>
+        <item id="medal-heart" summaryType="adventure" unique="false" filters="medals">
+            <name>Heart Medal</name>
+        </item>
+        <item id="medal-rupee" summaryType="adventure" unique="false" filters="medals">
+            <name>Rupee Medal</name>
+        </item>
+        <item id="medal-potion" summaryType="adventure" filters="medals">
+            <name>Potion Medal</name>
+        </item>
+
+        <!-- Summary type: Quest/other -->
+        <item id="hearts" summaryType="quest" unique="false" startNum="6" numParts="4">
+            <name>Heart</name>
+        </item>
+        <item id="heartpieces" partsOf="hearts" unique="false" filters="heartpieces">
+            <!-- Only directly showed in listing ("Piece of Heart #2" etc.), not summaries. -->
+            <name>
+                <singular>Piece of Heart</singular>
+                <plural>Pieces of Heart</plural>
+            </name>
+        </item>
+        <item id="heartcontainer" partsOf="hearts" filters="heartcontainers">
+            <!-- Only directly showed in listing (e.g. "Heart Container: After defeating the boss"), not summaries.
+             We use unique=True (implicit) to hide count (to avoid "Heart Container #2" etc.)-->
+            <name>Heart Container</name>
+        </item>
+        <item id="crystals"  summaryType="quest" unique="false" filters="crystals">
+            <name>Gratitude Crystal</name>
+        </item>
+        <item id="tablet-emerald" summaryType="quest">
+            <name>Emerald Tablet</name>
+        </item>
+        <item id="tablet-ruby" summaryType="quest">
+            <name>Ruby Tablet</name>
+        </item>
+        <item id="tablet-amber" summaryType="quest">
+            <name>Amber Tablet</name>
+        </item>
+        <item id="waterdragonscale" summaryType="quest">
+            <name>Water Dragon Scale</name>
+        </item>
+        <item id="fireshieldearrings" summaryType="quest">
+            <name>Fireshield Earrings</name>
+        </item>
+
+        <!-- Non-summary items -->
+        <item id="dungeonmap" filters="map">
+            <name>Dungeon Map</name>
+        </item>
+        <item id="goddesscubes" unique="false">
+            <name>Goddess Cube</name>
+        </item>
+
+    </items>
+
+    <!-- The game segments containing the actual guide entries -->
+    <gameSegments>
+
+        <gameSegment id="skyloft">
+            <heading>Skyloft</heading>
+            <entry id="sword-practice" itemRef="sword" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="sailcloth" itemRef="sailcloth" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="sword-goddess" itemRef="sword" add="0" changeNameID="goddess" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="tablet-emerald" itemRef="tablet-emerald" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="adventurepouch" itemRef="adventurepouch" add="4" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="shield-wooden" itemRef="shield-wooden">
+                <description>Get it for free from Professor Owlan outside the Academy, or purchase it from the Bazaar (50 Rupees).</description>
+            </entry>
+            <entry id="bottle-potionshop" itemRef="bottles">
+                <description>Speak to the lady in the potion shop.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="faron">
+            <heading>Faron</heading>
+
+            <entry type="subheading">Treasure needed for early upgrades</entry>
+
+            <entry id="info-upgrade-faron" checkbox="false" filters="upgrades">
+                <description>While in Faron, try to find the following items, which are needed for upgrades. Note that you can get the Cursed Medal after returning to Skyloft again, which can help with finding items.</description>
+            </entry>
+            <entry id="upgrade-faron-amberrelics" filters="upgrades">
+                <description>11 Amber Relics (throughout the area)</description>
+            </entry>
+            <entry id="upgrade-faron-hornetlarvae" filters="upgrades">
+                <description>2 Hornet Larvae (Deep Woods)</description>
+            </entry>
+            <entry id="upgrade-faron-blue-bird-feathers" filters="upgrades">
+                <description>2 Blue Bird Feathers (after getting the {{bugnet}})</description>
+            </entry>
+            <entry id="upgrade-faron-ornamentalskulls" filters="upgrades">
+                <description>3 Ornamental Skulls</description>
+            </entry>
+            <entry id="upgrade-faron-goldenskull" filters="upgrades">
+                <description>1 Golden Skull</description>
+            </entry>
+
+            <entry type="subheading">Sealed Temple</entry>
+
+            <entry id="bottle-sealed-temple" itemRef="bottles">
+                <description>In a chest beside the old woman.</description>
+            </entry>
+
+            <entry type="subheading">Faron Woods</entry>
+
+            <entry id="hp-faron-tightrope" itemRef="heartpieces">
+                <description>On the great tree in the north, walk up the south root and across a tightrope.</description>
+            </entry>
+            <entry id="slingshot" itemRef="slingshot" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Some items from Skyloft</entry>
+
+            <entry id="bugnet" itemRef="bugnet">
+                <description>Purchase from Beedle (50 Rupees).</description>
+            </entry>
+            <entry id="wallet-extra-1" itemRef="wallet-extra">
+                <description>Purchase from Beedle (100 Rupees).</description>
+            </entry>
+            <entry id="info-beedle-upgrades" checkbox="false">
+                <description>You can technically purchase two more Extra Wallets, three Adventure Pouch Upgrades, and a Life Medal, but you probably don't have the Rupees. These items will be covered the next time you return to Skyloft (after Skyview Temple).</description>
+            </entry>
+
+            <entry type="subheading">Deep Woods</entry>
+
+            <entry id="gc-gorko" itemRef="goddesscubes">
+                <appendToName>({{adventurepouchupgrade-pumpkin}})</appendToName>
+                <description>By Gorko before the Skyview Temple.</description>
+            </entry>
+            <entry id="gc-skyview-outside" itemRef="goddesscubes" filters="heartpieces">
+                <appendToName>({{hp-pumpkin-west}})</appendToName>
+                <description>In the area just outside Skyview Temple.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="skyviewtemple">
+            <heading>Skyview Temple</heading>
+            <entry id="skyview-map" itemRef="dungeonmap">
+                <description>After the bridge with the two Skulltulas.</description>
+            </entry>
+            <entry id="beetle" itemRef="beetle" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-skyview" itemRef="heartpieces">
+                <description>In the central chamber, use the Beetle to hit a switch high up in the back of the large, central statue.</description>
+            </entry>
+            <entry id="skyview-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="gc-skyview-spring" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-gold-pumpkin}})</appendToName>
+                <description>Behind the altar in Skyview Spring.</description>
+            </entry>
+            <entry id="tablet-ruby" itemRef="tablet-ruby" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="skyloft-afterskyview">
+            <heading>Skyloft</heading>
+            <entry id="info-upgrades-skyloft-afterskyview" checkbox="false">
+                <description>All the possible purchases and upgrades at this time are listed at the bottom of this section. Purchase/upgrade them when you have the money and treasure. Unless you do some grinding (such as catching and selling Blue Bird Feathers) this will probably not be before heading to Eldin. You can get the Cursed Medal later in this section, which makes it easier to find treasure.</description>
+            </entry>
+            <entry id="info-insert-tablet-ruby" checkbox="false">
+                <description>Insert the Ruby Tablet.</description>
+            </entry>
+            <entry id="info-sq-kukiel-prologue" checkbox="false" filters="crystals">
+                <description>Sidequest - Finding Kukiel (optional dialog): Talk to Orielle near the houses to the east and Rusta in the Lumpy Pumpkin.</description>
+            </entry>
+            <entry id="rupee-gold-pumpkin" checkbox="false" filters="rupees">
+                <name>300 Rupees</name>
+                <appendToName>({{gc-skyview-spring}})</appendToName>
+                <description>Pumpkin Landing, on top of the Lumpy Pumpkin.</description>
+            </entry>
+            <entry id="adventurepouchupgrade-pumpkin" itemRef="adventurepouchupgrade">
+                <appendToName>({{gc-gorko}})</appendToName>
+                <description>Pumpkin Landing.</description>
+            </entry>
+            <entry id="hp-pumpkin-chandelier" itemRef="heartpieces">
+                <description>On top of the chandelier in the Lumpy Pumpkin. Roll into the walls upstairs to knock it down.</description>
+            </entry>
+            <entry id="pumpkin-work-1" checkbox="false" filters="heartpieces">
+                <description>Do work for the owner of the Lumpy Pumpkin (required for {{hp-kina}}).</description>
+            </entry>
+            <entry id="hp-pumpkin-west" itemRef="heartpieces">
+                <appendToName>({{gc-skyview-outside}})</appendToName>
+                <description>West of Pumpkin Landing.</description>
+            </entry>
+            <entry id="info-sq-kukiel-findkukiel" checkbox="false" filters="crystals">
+                <description>Sidequest - Finding Kukiel: At night, head over to the graveyard, hit the gravestone nearest the tree and push it, go down the ladder and enter the building.</description>
+            </entry>
+            <entry id="crystal-pumpkinpatch" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Behind a tree near the pumpkin patch next to the eastern houses.</description>
+            </entry>
+            <entry id="crystal-waterfallcave-exit" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Through the Waterfall Cave, as you emerge back outside at the other end.</description>
+            </entry>
+            <entry id="crystal-waterfallcave-loftwing" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Through the Waterfall Cave, in the alcove where your Loftwing was being held.</description>
+            </entry>
+            <entry id="crystal-bazaar" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>On a lower ledge just north of the Bazaar.</description>
+            </entry>
+            <entry id="crystal-knightacademy-plant" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Inside the Knight Academy, in a plant near the upper door.</description>
+            </entry>
+            <entry id="crystal-knightacademy-link" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Inside the Knight Academy, on the desk in Link's room.</description>
+            </entry>
+            <entry id="crystal-sparringhall" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>In the Sparring Hall, up in the rafters. Use the Beetle to get it.</description>
+            </entry>
+            <entry id="crystal-orielle" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Inside Orielle and Parrow's house just south of the Bazaar.</description>
+            </entry>
+            <entry id="crystal-vines" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>West of Orielle and Parrow's house, look off to west and you'll see vines leading down.</description>
+            </entry>
+            <entry id="crystal-lighttower" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Around the back of the Light Tower.</description>
+            </entry>
+            <entry id="info-crystals-night" checkbox="false">
+                <description>There are five more single Gratitude Crystals, but you can only get three of them now ({{crystal-beedle}}, {{crystal-lumpypumpkin-upstairs}}, and {{crystal-pumpkinlanding-storage}}). They won't make any difference until you can obtain the final two individual crystals ({{crystal-zelda}} and {{crystal-skyloft-waterfall}}).</description>
+            </entry>
+            <entry id="wallet-medium" itemRef="wallet" add="0" changeNameID="medium">
+                <description>Return to Batreaux with 5 Gratitude Crystals (or wait until after collecting more crystals below).</description>
+            </entry>
+            <entry id="info-morning-aftercrystalhunt" checkbox="false">
+                <description>Sleep until morning.</description>
+            </entry>
+            <entry id="crystals-sq-kukiel" itemRef="crystals" add="5">
+                <description>Finish the Finding Kukiel sidequest by talking to Wyrna in Kukiel's house.</description>
+            </entry>
+            <entry id="crystals-sq-loftwing" itemRef="crystals" add="10">
+                <description>Complete the Injured Loftwing sidequest (start by speaking to Parrow by the Plaza, then find and talk to Orielle toward Fun Fun Island).</description>
+            </entry>
+            <entry id="bottle-sq-loftwing" itemRef="bottles">
+                <description>During or after the Injured Loftwing sidequest.</description>
+            </entry>
+            <entry id="hp-batreaux" itemRef="heartpieces">
+                <description>Return to Batreaux with 10 Gratitude Crystals (or wait until after collecting more crystals below).</description>
+            </entry>
+            <entry id="crystals-peatrice" itemRef="crystals" add="5">
+                <description>Complete Peatrice's sidequest. (Talk to her in the Bazaar, sleep until the next day and talk to her again, repeat. After she calls you her darling, speak with Peater at night in their house in Skyloft. If he only introduces himself, exit/enter and talk to him again. Sleep until morning, speak to Peatrice again and complete the quest. If you reject her, sleep until next night and talk to her father.)</description>
+            </entry>
+            <entry id="bigwallet" itemRef="wallet" add="0" changeNameID="big">
+                <description>Return to Batreaux with 30 Gratitude Crystals.</description>
+            </entry>
+            <entry id="medal-cursed" itemRef="medal-cursed">
+                <description>In the chest that appears after getting the {{bigwallet}}.</description>
+            </entry>
+
+            <entry type="subheading">Items and upgrades</entry>
+
+            <entry id="shield-iron" itemRef="shield-iron">
+                <description>Purchase from the Bazaar (100 Rupees).</description>
+            </entry>
+            <entry id="seedsatchel" itemRef="seedsatchel">
+                <description>Purchase from the Bazaar (100 Rupees).</description>
+            </entry>
+            <entry id="adventurepouchupgrade-beedle-1" itemRef="adventurepouchupgrade">
+                <description>Purchase from Beedle (300 Rupees).</description>
+            </entry>
+            <entry id="adventurepouchupgrade-beedle-2" itemRef="adventurepouchupgrade">
+                <description>Purchase from Beedle (600 Rupees).</description>
+            </entry>
+            <entry id="adventurepouchupgrade-beedle-3" itemRef="adventurepouchupgrade">
+                <description>Purchase from Beedle (1200 Rupees).</description>
+            </entry>
+            <entry id="wallet-extra-2" itemRef="wallet-extra">
+                <description>Purchase from Beedle (100 Rupees).</description>
+            </entry>
+            <entry id="wallet-extra-3" itemRef="wallet-extra">
+                <description>Purchase from Beedle (100 Rupees).</description>
+            </entry>
+            <entry id="medal-life" itemRef="medal-life">
+                <description>Purchase from Beedle (800 Rupees).</description>
+            </entry>
+            <entry id="medal-bug" itemRef="medal-bug">
+                <description>Purchase from Beedle (1000 Rupees).</description>
+            </entry>
+            <entry id="info-hp-beedle" checkbox="false" filters="heartpieces">
+                <description>You can purchase {{hp-beedle}} now, but this guide will cover it after doing Beedle's side quest later in the game, when you can get it for half the price.</description>
+            </entry>
+            <entry id="seedsatchel-medium" itemRef="seedsatchel" add="0" changeNameID="medium" filters="upgrades">
+                <description>Upgrade (4 Amber Relics, 3 Monster Claws, 3 Ornamental Skulls, 50 Rupees; Monster Claws can be found in the Waterfall Cave, Ornamental Skulls from Bokoblins).</description>
+            </entry>
+            <entry id="seedsatchel-large" itemRef="seedsatchel" add="0" changeNameID="large" filters="upgrades">
+                <description>Upgrade (5 Amber Relics, 3 Monster Claws, 1 Blue Bird Feather, 1 Golden Skull, 100 Rupees).</description>
+            </entry>
+            <entry id="shield-banded" itemRef="shield-wooden" add="0" changeNameID="banded" filters="upgrades">
+                <description>Upgrade (2 Amber Relics, 1 Monster Claw, 1 Jelly Blob, 30 Rupees; Monster Claws and Jelly Blobs can be found in the Waterfall cave).</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="eldinvolcano">
+            <heading>Eldin Volcano</heading>
+            <entry id="shield-reinforced" itemRef="shield-iron" add="0" changeNameID="reinforced" filters="upgrades">
+                <description>Upgrade when you have the materials (2 Eldin Ore, 2 Monster Claws, 2 Ornamental Skulls, 50 Rupees).</description>
+            </entry>
+            <entry id="gc-eldin-start" itemRef="goddesscubes">
+                <appendToName>({{extra-seedsatchel-funfun-west}})</appendToName>
+                <description>At the start, before the fork in the road.</description>
+            </entry>
+            <entry id="gc-eldin-afterbombs" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-silver-beedle-bamboo}})</appendToName>
+                <description>After being taught to use Bombs, head past the next Bird Statue and head north (straight ahead) at the fork.</description>
+            </entry>
+            <entry id="hp-eldin-bonebridge" itemRef="heartpieces">
+                <description>By the bone bridge, climb the ledges to the north.</description>
+            </entry>
+            <entry id="gc-eldin-skydive" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-gold-isleofsongs}})</appendToName>
+                <description>On a ledge in the "volcano" cave where you skydive.</description>
+            </entry>
+            <entry id="diggingmitts" itemRef="mitts" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="gc-eldin-airgeyser-bomb" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-gold-bamboo}})</appendToName>
+                <description>West of the Earth Temple entrance, by the patch of water, dig to reveal an air geyser and send a bomb flower up.</description>
+            </entry>
+            <entry id="gc-eldin-bokoblin" itemRef="goddesscubes" filters="medals">
+                <appendToName>({{medal-treasure}})</appendToName>
+                <description>East of the Bokoblin camp to the east of the temple entrance.</description>
+            </entry>
+            <entry id="gc-eldin-sandslide" itemRef="goddesscubes" filters="heartpieces">
+                <appendToName>({{hp-dive-kukiel}})</appendToName>
+                <description>On the long sand slide from the upper to the lower part of Eldin, head left and hit the air geyser.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="earthtemple">
+            <heading>Earth Temple</heading>
+            <entry id="bombbag" itemRef="bombs" checkbox="false" filters="mandatory">
+                <name>Bomb Bag</name>
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="earthtemple-map" itemRef="dungeonmap">
+                <description>In the room with a bunch of platforms in the lava and a high stone platform on the other side.</description>
+            </entry>
+            <entry id="earthtemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="tablet-amber" itemRef="tablet-amber" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="skyloft-afterearthtemple">
+            <heading>Skyloft</heading>
+            <entry id="info-insert-tablet-amber" checkbox="false">
+                <description>Insert the Amber Tablet.</description>
+            </entry>
+            <entry id="extra-seedsatchel-funfun-west" checkbox="false">
+                <name>Small Seed Satchel</name>
+                <appendToName>({{gc-eldin-start}})</appendToName>
+                <description>West of Fun Fun Island.</description>
+            </entry>
+            <entry id="medal-treasure" itemRef="medal-treasure">
+                <appendToName>({{gc-eldin-bokoblin}})</appendToName>
+                <description>On the easternmost island in the sky.</description>
+            </entry>
+            <entry id="rupee-silver-beedle-bamboo" checkbox="false" filters="rupees">
+                <name>100 Rupees</name>
+                <appendToName>({{gc-eldin-afterbombs}})</appendToName>
+                <description>Between Beedle's Island and Bamboo Island.</description>
+            </entry>
+            <entry id="rupee-gold-bamboo" checkbox="false" filters="rupees">
+                <name>300 Rupees</name>
+                <appendToName>({{gc-eldin-airgeyser-bomb}})</appendToName>
+                <description>On Bamboo Island.</description>
+            </entry>
+            <entry id="pumpkin-work-2" checkbox="false" filters="heartpieces">
+                <description>Do work for the owner of the Lumpy Pumpkin (required for {{hp-kina}}).</description>
+            </entry>
+            <entry id="bombbag-small" itemRef="bombbag">
+                <description>Purchase at the Bazaar (150 Rupees).</description>
+            </entry>
+            <entry id="bombbag-medium" itemRef="bombbag" add="0" changeNameID="medium" filters="upgrades">
+                <description>Upgrade (3 Ornamental Skulls, 1 Blue Bird Feather, 1 Lizard Tail, 50 Rupees).</description>
+            </entry>
+            <entry id="bombbag-large" itemRef="bombbag" add="0" changeNameID="large" filters="upgrades">
+                <description>Upgrade (4 Jelly Blobs, 3 Lizard Tails, 2 Hornet Larvae, 1 Golden Skull, 100 Rupees).</description>
+            </entry>
+            <entry id="hp-faron-bombwall" itemRef="heartpieces">
+                <description>Faron Woods, descend at the "In the Woods" statue and blow up the wall.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="lanayrumine">
+            <heading>Lanayru Mine</heading>
+            <entry id="shield-braced" itemRef="shield-wooden" add="0" changeNameID="braced" filters="upgrades">
+                <description>Upgrade when you get 2 Tumbleweeds (3 Amber Relics, 2 Monster Claws, 2 Tumbleweeds, 1 Ornamental Skull, 50 Rupees).</description>
+            </entry>
+            <entry id="shield-fortified" itemRef="shield-iron" add="0" changeNameID="fortified" filters="upgrades">
+                <description>Upgrade when you get 3 Tumbleweeds, though you can wait with this upgrade since you're probably not using it now anyway (3 Eldin Ore, 3 Monster Claws, 3 Tumbleweeds, 1 Blue Bird Feather, 100 Rupees).</description>
+            </entry>
+            <entry id="gc-lanayru-start" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-silver-beedle-southeast}})</appendToName>
+                <description>At the back of the tower where you start.</description>
+            </entry>
+            <entry id="beetle-hook" itemRef="beetle" add="0" changeNameID="hook" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="beetle-quick" itemRef="beetle" add="0" changeNameID="quick" filters="upgrades">
+                <description>Upgrade (2 Ancient Flower, 2 Hornet Larvae, 1 Golden Skull, 50 Rupees).</description>
+            </entry>
+            <entry id="beetle-tough" itemRef="beetle" add="0" changeNameID="tough" filters="upgrades">
+                <description>Upgrade (4 Amber Relics, 3 Ancient Flowers, 1 Blue Bird Feather, 1 Goddess Plume, 50 Rupees).</description>
+            </entry>
+            <entry id="gc-quicksand" itemRef="goddesscubes" filters="medals">
+                <appendToName>({{medal-heart-lanayru-beacon-east}})</appendToName>
+                <description>In the area with quicksand where you have to use the Ampiluses as "stepping stones" (south in southwest Lanayru Desert).</description>
+            </entry>
+            <entry id="gc-lanayru-cart" itemRef="goddesscubes" filters="heartpieces">
+                <appendToName>({{hp-beedle-island}})</appendToName>
+                <description>While riding a mining cart after meeting Gorko.</description>
+            </entry>
+            <entry id="hp-lanayru-loop" itemRef="heartpieces">
+                <description>In the large, open desert area where the entrance to the Lanayru Mining Facility is, look at the map to see a loop to the northeast. Bomb a crack in the cliff face at the entrance to this loop.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="miningfacility">
+            <heading>Lanayru Mining Facility</heading>
+            <entry id="gustbellows" itemRef="gustbellows" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="miningfacility-map" itemRef="dungeonmap">
+                <description>After defeating an Armos.</description>
+            </entry>
+            <entry id="miningfacility-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="harp" itemRef="harp" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="skyloft-afterminingfacility">
+            <heading>Skyloft</heading>
+            <entry id="info-sealedtemple" checkbox="false">
+                <description>Travel to the Sealed Temple and finish your business there.</description>
+            </entry>
+            <entry id="shield-sacred" itemRef="shield-sacred">
+                <description>Purchase at the Bazaar (500 Rupees).</description>
+            </entry>
+            <entry id="crystals-cawlin" itemRef="crystals" add="5">
+                <description>Do Cawlin's side quest. (Optionally talk to Dovos at the Bazaar and Henya at the Knight Academy kitchen, check out the voice at night, find Cawlin by the wall near the bathroom during the day, choose how to finish the quest.)</description>
+            </entry>
+            <entry id="crystals-pipit" itemRef="crystals" add="5">
+                <description>Clean up Pipit's house.</description>
+            </entry>
+            <entry id="rupee-gold-batreaux" checkbox="false" filters="rupees">
+                <name>300 Rupees</name>
+                <description>Return to Batreaux with 40 Gratitude Crystals.</description>
+            </entry>
+            <entry id="info-fledge-1" checkbox="false" filters="crystals,heartpieces">
+                <description>You can start Fledge's side quest now, find him in his room during the night (required for {{crystals-fledge}} and {{hp-fledge}}).</description>
+            </entry>
+            <entry id="hp-beedle-island" itemRef="heartpieces">
+                <appendToName>({{gc-lanayru-cart}})</appendToName>
+                <description>On Beedle's Island.</description>
+            </entry>
+            <entry id="rupee-silver-beedle-southeast" checkbox="false" filters="rupees">
+                <name>100 Rupees</name>
+                <appendToName>({{gc-lanayru-start}})</appendToName>
+                <description>Southeast of Beedle's Island.</description>
+            </entry>
+            <entry id="hp-kina" itemRef="heartpieces">
+                <description>Finish working at the Lumpy Pumpkin.</description>
+            </entry>
+            <entry id="medal-heart-lanayru-beacon-east" itemRef="medal-heart">
+                <appendToName>({{gc-quicksand}})</appendToName>
+                <description>East of the Lanayru beacon.</description>
+            </entry>
+            <entry id="crystals-funfun" itemRef="crystals" add="5">
+                <description>Fix Fun Fun Island.</description>
+            </entry>
+            <entry id="hp-funfun" itemRef="heartpieces">
+                <description>Win the game at Fun Fun Island.</description>
+            </entry>
+            <entry id="rupees-funfun" checkbox="false" filters="rupees">
+                <name>500 Rupees</name>
+                <description>Win the game at Fun Fun Island.</description>
+            </entry>
+            <entry id="rupee-gold-isleofsongs" checkbox="false" filters="rupees">
+                <name>300 Rupees</name>
+                <appendToName>({{gc-eldin-skydive}})</appendToName>
+                <description>Isle of Songs in Thunderhead.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="trial-farore">
+            <heading>Farore's Trial and Lake Floria</heading>
+
+            <entry type="subheading">Farore's Trial</entry>
+
+            <entry id="waterdragonscale" itemRef="waterdragonscale" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Faron</entry>
+
+            <entry id="gc-greattree-exit" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-silver-skyloft-island}})</appendToName>
+                <description>As you exit the Great Tree for the first time, look down.</description>
+            </entry>
+            <entry id="gc-greattree-exit-southeast" itemRef="goddesscubes" filters="heartpieces">
+                <appendToName>({{hp-volcano-island}})</appendToName>
+                <description>After exiting the Great Tree at the top, drop down to the southeastern root.</description>
+            </entry>
+            <entry id="gc-greattree-top" itemRef="goddesscubes" filters="medals">
+                <appendToName>({{medal-rupee-isleofsongs}})</appendToName>
+                <description>Outside the Great Tree, at the top, drop down to the east and walk across the tightrope.</description>
+            </entry>
+
+            <entry type="subheading">Lake Floria</entry>
+
+            <entry id="gc-floria" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-gold-skyloft-skydive}})</appendToName>
+                <description>In the room after you have to "dolphin jump" over a wall (in the same room as a Bird Statue).</description>
+            </entry>
+
+            <entry type="subheading">A few things from Skyloft</entry>
+
+            <entry id="rupee-silver-skyloft-island" checkbox="false" filters="rupees">
+                <name>100 Rupees</name>
+                <appendToName>({{gc-greattree-exit}})</appendToName>
+                <description>In Skyloft, on a small island just south of the Knight Academy.</description>
+            </entry>
+            <entry id="shield-divine" itemRef="shield-sacred" add="0" changeNameID="divine" filters="upgrades">
+                <description>Upgrade (3 Ornamental Skulls, 2 Bird Feathers, 1 Dusk Relic, 100 Rupees).</description>
+            </entry>
+            <entry id="shield-goddess" itemRef="shield-sacred" add="0" changeNameID="goddess" filters="upgrades">
+                <description>Upgrade (4 Dusk Relics, 3 Bird Feathers, 3 Monster Horns, 1 Blue Bird Feather, 150 Rupees).</description>
+            </entry>
+            <entry id="scattershot" itemRef="slingshot" add="0" changeNameID="scatter" filters="upgrades">
+                <description>Upgrade (3 Jelly Blobs, 2 Amber Relics, 2 Dusk Relics, 50 Rupees).</description>
+            </entry>
+            <entry id="hp-dive-kukiel" itemRef="heartpieces">
+                <appendToName>({{gc-eldin-sandslide}})</appendToName>
+                <description>Dive below Kukiel's house.</description>
+            </entry>
+            <entry id="hp-volcano-island" itemRef="heartpieces">
+                <appendToName>({{gc-greattree-exit-southeast}})</appendToName>
+                <description>On the "volcano" island east of the Lanayru beacon (easier after getting the {{clawshots}}, but entirely possible now).</description>
+            </entry>
+            <entry id="medal-rupee-isleofsongs" itemRef="medal-rupee">
+                <appendToName>({{gc-greattree-top}})</appendToName>
+                <description>On the Isle of Songs in the Thunderhead.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="cistern">
+            <heading>Ancient Cistern</heading>
+            <entry id="whip" itemRef="whip" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="cistern-map" itemRef="dungeonmap">
+                <description>North in the main room, head toward the east door and go up the ledges.</description>
+            </entry>
+            <entry id="cistern-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="sword-long" itemRef="sword" add="0" changeNameID="long" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="trial-nayru">
+            <heading>Nayru's Trial and Lanayru Sand Sea</heading>
+            <entry id="hp-gorko-draw" itemRef="heartpieces">
+                <description>In the Sealed Grounds, speak to Gorko and draw what he wants.</description>
+            </entry>
+
+            <entry type="subheading">Nayru's Trial</entry>
+
+            <entry id="clawshots" itemRef="clawshots" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Lanayru Desert</entry>
+
+            <entry id="gc-lanayru-loop" itemRef="goddesscubes" filters="medals">
+                <appendToName>({{medal-heart-north}})</appendToName>
+                <description>At the western end of the loop northeast in Lanayru Desert.</description>
+            </entry>
+            <entry id="gc-miningfacility-south" itemRef="goddesscubes" filters="medals">
+                <appendToName>({{medal-life-funfun-northwest}})</appendToName>
+                <description>Just south of the Lanayru Mining Facility. Use the Clawshots to get up on the ledge.</description>
+            </entry>
+
+            <entry type="subheading">Lanayru Sand Sea</entry>
+
+            <entry id="gc-sandsea-dock" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-gold-bazaar}})</appendToName>
+                <description>At the dock, climb some crates and use the Clawshots.</description>
+            </entry>
+            <entry id="gc-skippersretreat" itemRef="goddesscubes" filters="medals">
+                <appendToName>({{medal-potion}})</appendToName>
+                <description>When climbing Skipper's Retreat, after fighting a Moblin on a bridge and a Quadro Baba, Clawshot across two stone pillars to get to it.</description>
+            </entry>
+
+            <entry type="subheading">Pirate Stronghold</entry>
+
+            <entry id="gc-piratestronghold" itemRef="goddesscubes" filters="heartpieces">
+                <appendToName>({{hp-skyloft-waterfall}})</appendToName>
+                <description>After completing the Pirate Stronghold, turn around and Clawshot above the door.</description>
+            </entry>
+
+            <entry type="subheading">Faron</entry>
+
+            <entry id="gc-skyview-clawshot" itemRef="goddesscubes" filters="medals">
+                <appendToName>({{medal-rupee-beedle}})</appendToName>
+                <description>Above the entrance to Skyview Temple, Clawshot to the vines to the right of the entrance.</description>
+            </entry>
+            <entry id="gc-floria-waterfall-clawshot" itemRef="goddesscubes" filters="rupees">
+                <appendToName>({{rupee-gold-funfun-below}})</appendToName>
+                <description>At Floria Waterfall, Clawshot to the vines above the Bird Statue.</description>
+            </entry>
+
+            <entry type="subheading">Skyloft</entry>
+
+            <entry id="rupee-gold-bazaar" checkbox="false" filters="rupees">
+                <name>300 Rupees</name>
+                <appendToName>({{gc-sandsea-dock}})</appendToName>
+                <description>In the Scrap Shop in the Bazaar.</description>
+            </entry>
+            <entry id="bugnet-big" itemRef="bugnet" add="0" changeNameID="big" filters="upgrades">
+                <description>Upgrade (3 Tumbleweed, 2 Ancient Flower, 1 Evil Crystal, 100 Rupees).</description>
+            </entry>
+            <entry id="info-fledge-2" checkbox="false" filters="crystals,heartpieces">
+                <description>Give another Stamina Potion to Fledge at night (required for {{crystals-fledge}} and {{hp-fledge}}).</description>
+            </entry>
+            <entry id="crystal-zelda" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>In Zelda's room (Clawshot into the chimney on top of the Knight Academy to get there).</description>
+            </entry>
+            <entry id="hp-zelda" itemRef="heartpieces">
+                <description>In the closet in Zelda's room (Clawshot into the chimney on top of the Knight Academy to get there).</description>
+            </entry>
+            <entry id="crystal-skyloft-waterfall" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>On the top island in Skyloft (with the waterfall), get up by using the Clawshots by the Waterfall Cave entrance.</description>
+            </entry>
+            <entry id="hp-skyloft-waterfall" itemRef="heartpieces">
+                <appendToName>({{gc-piratestronghold}})</appendToName>
+                <description>On top of the waterfall island in Skyloft.</description>
+            </entry>
+            <entry id="rupee-gold-skyloft-skydive" checkbox="false" filters="rupees">
+                <name>300 Rupees</name>
+                <appendToName>({{gc-floria}})</appendToName>
+                <description>Skydive from the waterfall island onto the smaller island to the east.</description>
+            </entry>
+            <entry id="crystals-bertieluv" itemRef="crystals" add="5">
+                <description>Do the baby rattle quest for Bertie and Luv.</description>
+            </entry>
+            <entry id="wallet-giant" itemRef="wallet" add="0" changeNameID="giant">
+                <description>Return to Batreaux with 50 Gratitude Crystals.</description>
+            </entry>
+            <entry id="crystal-beedle" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>Sleep in Beedle's shop, then go outside at night and get it with the Beetle.</description>
+            </entry>
+            <entry id="medal-rupee-beedle" itemRef="medal-rupee">
+                <appendToName>({{gc-skyview-clawshot}})</appendToName>
+                <description>On Beedle's Island at night, climb the shop and enter the nearby structure.</description>
+            </entry>
+            <entry id="crystal-lumpypumpkin-upstairs" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>In the Lumpy Pumpkin, on the counter upstairs.</description>
+            </entry>
+            <entry id="crystal-pumpkinlanding-storage" itemRef="crystals">
+                <appendToName>(night)</appendToName>
+                <description>On Pumpkin Landing, where you have to bring the pumpkins when helping Kina.</description>
+            </entry>
+            <entry id="medal-heart-north" itemRef="medal-heart">
+                <appendToName>({{gc-lanayru-loop}})</appendToName>
+                <description>On the northernmost island east in the sky.</description>
+            </entry>
+            <entry id="medal-life-funfun-northwest" itemRef="medal-life">
+                <appendToName>({{gc-miningfacility-south}})</appendToName>
+                <description>Northwest of Fun Fun Island.</description>
+            </entry>
+            <entry id="medal-potion" itemRef="medal-potion">
+                <appendToName>({{gc-skippersretreat}})</appendToName>
+                <description>Northwest of Fun Fun Island.</description>
+            </entry>
+            <entry id="rupee-gold-funfun-below" checkbox="false" filters="rupees">
+                <name>300 Rupees</name>
+                <appendToName>({{gc-floria-waterfall-clawshot}})</appendToName>
+                <description>On the small island below Fun Fun Island.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="sandship">
+            <heading>The Sandship</heading>
+            <entry id="bow" itemRef="bow" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-sandship" itemRef="heartpieces">
+                <description>Off the stern of the ship. Get there using the ziplines on top of the masts.</description>
+            </entry>
+            <entry id="sandship-map" itemRef="dungeonmap">
+                <description>In the room below deck with the Technoblins.</description>
+            </entry>
+            <entry id="sandship-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="sword-white" itemRef="sword" add="0" changeNameID="white" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="trial-din">
+            <heading>Din's Trial and Volcano Summit</heading>
+
+            <entry type="subheading">Lanayru Shipyard</entry>
+
+            <entry id="hp-coaster" itemRef="heartpieces">
+                <description>Win the "Heart Stopping!" course on the Rickety Coaster.</description>
+            </entry>
+            <entry id="info-shipyard-lizardtails" checkbox="false" filters="upgrades">
+                <description>You need 3 Lizard Tails for the final bow upgrade, so kill a few Lizalfos in the Shipyard if you don't have enough.</description>
+            </entry>
+            <entry id="info-lanayru-tumbleweed" checkbox="false" filters="upgrades">
+                <description>You need 8 Tumbleweeds for the bow upgrades, so collect a few before leaving Lanayru if you don't have enough.</description>
+            </entry>
+
+            <entry type="subheading">Skyloft</entry>
+
+            <entry id="info-skyloft-aftersandship" checkbox="false">
+                <description>Unless you want to upgrade the bow or purchase a quiver right now, you can wait with this section until just before the Fire Sanctuary, when you'll return to Skyloft anyway for {{hp-bugisland}}.</description>
+            </entry>
+            <entry id="bow-iron" itemRef="bow" add="0" changeNameID="iron" filters="upgrades">
+                <description>Upgrade (3 Monster Claws, 3 Tumbleweeds, 2 Eldin Ore, 1 Evil Crystal, 50 Rupees).</description>
+            </entry>
+            <entry id="bow-sacred" itemRef="bow" add="0" changeNameID="sacred" filters="upgrades">
+                <description>Upgrade (5 Tumbleweed, 3 Lizard Tail, 2 Evil Crystal, 1 Goddess Plume, 100 Rupees).</description>
+            </entry>
+            <entry id="quiver-small" itemRef="quiver">
+                <description>Purchase at the Bazaar (150 Rupees).</description>
+            </entry>
+            <entry id="quiver-medium" itemRef="quiver" add="0" changeNameID="medium" filters="upgrades">
+                <description>Upgrade (5 Amber Relics, 3 Dusk Relics, 3 Monster Horns, 50 Rupees).</description>
+            </entry>
+            <entry id="quiver-large" itemRef="quiver" add="0" changeNameID="large" filters="upgrades">
+                <description>Upgrade (3 Dusk Relics, 2 Monster Horns, 1 Goddess Plume, 1 Golden Skull, 100 Rupees).</description>
+            </entry>
+            <entry id="info-upgrades-complete" checkbox="false" filters="upgrades">
+                <description>Congratulations, this was the last of the upgrades!</description>
+            </entry>
+            <entry id="crystals-fledge" itemRef="crystals" add="5">
+                <description>Talk to Fledge in his room at night.</description>
+            </entry>
+            <entry id="hp-fledge" itemRef="heartpieces">
+                <description>Talk to Fledge in front of the Sparring Hall and win his mini-game (600 points).</description>
+            </entry>
+
+            <entry type="subheading">Din's Trial</entry>
+
+            <entry id="fireshieldearrings" itemRef="fireshieldearrings" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Volcano Summit</entry>
+
+            <entry id="gc-summit-skydive" itemRef="goddesscubes" filters="heartpieces">
+                <appendToName>({{hp-bugisland}})</appendToName>
+                <description>After meeting Gorko and filling a bottle with water, skydive towards the north (confirm the cube location using dowsing first - it's behind a pillar).</description>
+            </entry>
+            <entry id="gc-firesanctuary-outside" itemRef="goddesscubes">
+                <appendToName>({{extra-bombbag-isleofsongs}})</appendToName>
+                <description>After you get to the Fire Sanctuary entrance, head out of the window in the west tower.</description>
+            </entry>
+
+            <entry type="subheading">Skyloft</entry>
+
+            <entry id="hp-bugisland" itemRef="heartpieces">
+                <appendToName>({{gc-summit-skydive}})</appendToName>
+                <description>On the Bug Island in the Thunderhead.</description>
+            </entry>
+            <entry id="extra-bombbag-isleofsongs" checkbox="false">
+                <name>Small Bomb Bag</name>
+                <appendToName>({{gc-firesanctuary-outside}})</appendToName>
+                <description>On the Isle of Songs in the Thunderhead.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="firesanctuary">
+            <heading>Fire Sanctuary</heading>
+            <entry id="mogmamitts" itemRef="mitts" add="0" changeNameID="mogma" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bottle-firesanctuary" itemRef="bottles">
+                <description>After defeating the single Magmanos (the lava hand).</description>
+            </entry>
+            <entry id="firesanctuary-map" itemRef="dungeonmap">
+                <description>In a chest dug up by a Mogma.</description>
+            </entry>
+            <entry id="hp-firesanctuary" itemRef="heartpieces">
+                <description>In a chest dug up by a Mogma.</description>
+            </entry>
+            <entry id="firesanctuary-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="sword-master" itemRef="sword" add="0" changeNameID="master" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="levias">
+            <heading>Song of the Hero</heading>
+            <entry id="hp-summit-underground" itemRef="heartpieces">
+                <description>Dig with the Mogma Mitts near the Blessed Butterflies in the area before entering the Fire Sanctuary (where you first had to douse the flames).</description>
+            </entry>
+            <entry id="sword-true" itemRef="sword" add="0" changeNameID="true" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Skyloft</entry>
+
+            <entry id="info-beedle-discount" checkbox="false" filters="heartpieces">
+                <description>If you haven't yet purchased the Heart Piece from Beedle, make sure it's accessible in the shop (purchase all other health-related items from him). You'll get your next purchase at 50% discount after doing his sidequest and getting {{crystals-beedle}}.</description>
+            </entry>
+            <entry id="crystals-beedle" itemRef="crystals" add="5">
+                <description>Do Beedle's side quest. (Optionally speak to Parrow by the Plaza, speak to Stritch on Bug Island, speak to Beedle during the night, and win Stritch's game on Bug Island.)</description>
+            </entry>
+            <entry id="hp-beedle" itemRef="heartpieces">
+                <description>Purchase from Beedle (800 Rupees with the discount, 1600 Rupees without). If you need money, you'll get 600 Rupees from Batreaux later in this section when you have 70 Gratitude Crystals.</description>
+            </entry>
+            <entry id="info-levias" checkbox="false">
+                <description>Go see Levias.</description>
+            </entry>
+
+            <entry type="subheading">Faron</entry>
+
+            <entry id="info-quest-owlan" checkbox="false" filters="crystals">
+                <description>For efficiency, start instructor Owlan's side quest before heading to Faron.</description>
+            </entry>
+            <entry id="info-song-hero-faron" checkbox="false">
+                <description>Get the Faron part of the Song of the Hero.</description>
+            </entry>
+            <entry id="crystals-owlan" itemRef="crystals" add="5">
+                <description>Finish Instructor Owlan's side quest.</description>
+            </entry>
+            <entry id="rupee-gold-x2-batreaux" checkbox="false" filters="rupees">
+                <name>600 Rupees</name>
+                <description>Return to Batreaux with 70 Gratitude Crystals.</description>
+            </entry>
+
+            <entry type="subheading">Eldin</entry>
+
+            <entry id="info-quest-sparrot" checkbox="false" filters="crystals">
+                <description>For efficiency, start Sparrot's side quest before heading to Eldin (optionally talk to the locals at the Bazaar, find Sparrot in his house).</description>
+            </entry>
+            <entry id="info-song-hero-eldin" checkbox="false">
+                <description>Get the Eldin part of the Song of the Hero.</description>
+            </entry>
+            <entry id="gc-summit-dragon" itemRef="goddesscubes">
+                <appendToName>({{bottle-smallisland-thunderhead}})</appendToName>
+                <description>In the room just before the Fire Dragon.</description>
+            </entry>
+            <entry id="crystals-sparrot" itemRef="crystals" add="5">
+                <description>Find and return Sparrot's crystal ball.</description>
+            </entry>
+            <entry id="crystals-kina" itemRef="crystals" add="5">
+                <description>Help Kina at Pumpkin Landing. (Bring her Guld from Eldin. He's inside the "volcano" cave where you skydive, close to the "Volcano East" bird statue, on the top right pillar as you start skydiving.)</description>
+            </entry>
+            <entry id="wallet-tycoon" itemRef="wallet" add="0" changeNameID="tycoon">
+                <description>Return to Batreaux with 80 Gratitude Crystals.</description>
+            </entry>
+            <entry id="bottle-smallisland-thunderhead" itemRef="bottles">
+                <appendToName>({{gc-summit-dragon}})</appendToName>
+                <description>On a small island in the Thunderhead.</description>
+            </entry>
+
+            <entry type="subheading">Lanayru</entry>
+
+            <entry id="info-song-hero-lanayru" checkbox="false">
+                <description>Get the Lanayru part of the Song of the Hero.</description>
+            </entry>
+            <entry id="gc-lifetree" itemRef="goddesscubes">
+                <appendToName>({{extra-quiver-thunderhead}})</appendToName>
+                <description>By the Life Tree in Lanayru Gorge.</description>
+            </entry>
+            <entry id="extra-quiver-thunderhead" checkbox="false">
+                <name>Small Quiver</name>
+                <appendToName>({{gc-lifetree}})</appendToName>
+                <description>On a small island in the Thunderhead.</description>
+            </entry>
+
+            <entry type="subheading">The Thunder Dragon's Lightning Round</entry>
+
+            <entry id="info-song-hero-complete" checkbox="false">
+                <description>Complete the Song of the Hero quest.</description>
+            </entry>
+            <entry id="hp-dragonchallenge" itemRef="heartpieces">
+                <description>Do the Thunder Dragon's Lightning Round and quit after four bosses.</description>
+            </entry>
+            <entry id="shield-hylian" itemRef="shield-hylian">
+                <description>Do the Thunder Dragon's Lightning Round and quit after eight bosses.</description>
+            </entry>
+
+        </gameSegment>
+
+    </gameSegments>
+
+</guide>

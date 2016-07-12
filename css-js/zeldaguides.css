@@ -1,0 +1,119 @@
+/*
+ * START ZELDAGUIDE STYLES
+ */
+
+#zeldaguide h2 {
+	margin-top: 2em !important;
+	border-bottom: 1px solid;
+}
+
+.zeldaguide-gameSegment h3 {
+	margin-top: 0 !important;
+	margin-bottom: 0.25em !important;
+}
+
+#zeldaguide ul {
+	padding-left: 1em;
+	margin-left: 0;
+}
+
+.zeldaguide-settingsLabel {
+    margin-bottom: 0.3em;
+}
+
+select#zeldaguide-gameSelector {
+    margin-bottom: 1em;
+}
+
+ul#zeldaguide-filtercontrols {
+    margin-bottom: 1em;
+}
+
+/* positioning of labels and inputs: http://stackoverflow.com/questions/306252/how-to-align-checkboxes-and-their-labels-consistently-cross-browsers#306593 */
+#zeldaguide label {
+    display: block;
+    padding-left: 1.5em;
+    padding-right: 0.5em;
+    text-indent: -1.3em;
+}
+#zeldaguide input[type="checkbox"] {
+    width: 1em;
+    height: 1em;
+    padding: 0;
+    margin: 0;
+    margin-right: 0.3em;
+    vertical-align: bottom;
+    position: relative;
+    top: -0.4em;
+}
+
+.zeldaguide-checkbox label {
+	cursor: pointer;
+}
+#zeldaguide label:hover {
+	background-color: #eee;
+	border-radius: 0.5em;
+}
+
+.zeldaguide-checkbox, .zeldaguide-no-checkbox, .zeldaguide-settings li {
+	list-style-type: none;
+	margin-left: -1em;
+}
+
+.zeldaguide-summary {
+	background-color: #eee;
+	border-radius: 1em;
+	font-size: 90%;
+}
+.zeldaguide-summary h3 {
+	margin-bottom: 0.5em;
+	font-size: 120%;
+}
+.zeldaguide-summary ul {
+	margin-bottom: 0;
+}
+.zeldaguide-summary-list {
+	padding: 0.8em;
+}
+.zeldaguide-filter-oldSummaryItem {
+	color: #aaa;
+}
+
+.zeldaguide-permalink {
+	margin-left: 0.3em;
+	font-size: 80%;
+	visibility: hidden;
+}
+#zeldaguide label:hover .zeldaguide-permalink {
+	visibility: visible;
+}
+.zeldaguide-permalink-top {
+    font-size: 80%;
+    margin-top: -2em;
+    margin-bottom: 1em;
+}
+
+.zeldaguide-crossref {
+    color: inherit !important;
+}
+
+.zeldaguide-footer {
+	margin-top: 2em;
+}
+
+.zeldaguide-summary-list {
+    float: left;
+}
+.zeldaguide-summary {
+    display: table;  /* to constrain the width/background to the content */
+}
+/* clearfix */
+.zeldaguide-summary:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*
+ * END ZELDAGUIDE STYLES
+ */

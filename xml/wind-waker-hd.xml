@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide>
+
+    <!-- a unique ID which separates this guide from other guides -->
+    <guideID>wwhd</guideID>
+
+    <!-- Extra description to be shown in the intro -->
+    <guideDescription>Islands are identified with both names and coordinates. When viewing the map screen, imagine the letters A-E along the top edge (identifying the columns) and the numbers 1-7 along the left edge (identifying the rows). For example, Outset Island is [B7] (column B, row 7). Great Sea map squares (which you get from the Fishmen) is not covered in this guide. All Treasure Maps will be shown in the guide, but only the Piece of Heart rewards are directly included in the guide (you can get the Rupee chests whenever you need them and come across them, and the special charts are pointless since you're following this guide).</guideDescription>
+
+    <!-- Categories to display in summaries after each gameSegment, and their titles -->
+    <summaryLists>
+        <summaryList id="quest">Equipment/Quest</summaryList>
+        <summaryList id="action">Action items</summaryList>
+        <summaryList id="upgrades">Upgrades</summaryList>
+    </summaryLists>
+
+    <!-- Filters to to show/hide certain items
+
+            Example usage:
+                <entry filters='mandatory,bugs' ...>
+                <item filters='mandatory,bugs' ...>
+
+            When used in <item> elements, will hide all entries that reference this item.
+     -->
+    <filters>
+        <filter id="oldSummaryItem">Old items in summary sections </filter>  <!-- Don't use this directly -->
+        <filter id="mandatory">Mandatory items (items you get at specific points in the game)</filter>
+        <filter id="heartpieces">Heart Pieces and associated Treasure Charts</filter>
+        <filter id="heartcontainers">Heart Containers</filter>
+        <filter id="specialcharts">Special charts and associated Treasure Charts</filter>
+        <filter id="rupeecharts">Treasure Charts leading to Rupees</filter>
+        <filter id="mapcompass">Dungeon Map and Compass</filter>
+    </filters>
+
+    <!-- Definition of all items used in this guide -->
+    <items>
+        <!-- Summary type: Action items -->
+        <item id="bottles" unique="false" summaryType="action">
+            <name>Bottle</name>
+        </item>
+        <item id="telescope" summaryType="action">
+            <name>Telescope</name>
+        </item>
+        <item id="tinglebottle" summaryType="action">
+            <name>Tingle Bottle</name>
+        </item>
+        <item id="pictobox" summaryType="action">
+            <name>Picto Box</name>
+            <name id="deluxe">Deluxe Picto Box</name>
+        </item>
+        <item id="bag-spoils" summaryType="action">
+            <name>Spoils Bag</name>
+        </item>
+        <item id="bag-bait" summaryType="action">
+            <name>Bait Bag</name>
+        </item>
+        <item id="bag-delivery" summaryType="action">
+            <name>Delivery Bag</name>
+        </item>
+        <item id="hook" summaryType="action">
+            <name>Grappling Hook</name>
+        </item>
+        <item id="dekuleaf" summaryType="action">
+            <name>Deku Leaf</name>
+        </item>
+        <item id="boomerang" summaryType="action">
+            <name>Boomerang</name>
+        </item>
+        <item id="bombs" summaryType="action">
+            <name>Bombs</name>
+        </item>
+        <item id="magicarmor" summaryType="action">
+            <name>Magic Armor</name>
+        </item>
+        <item id="bow" summaryType="action">
+            <name>Hero's Bow</name>
+        </item>
+        <item id="fireicearrows" summaryType="action">
+            <name>Fire and Ice Arrows</name>
+        </item>
+        <item id="skullhammer" summaryType="action">
+            <name>Skull Hammer</name>
+        </item>
+        <item id="ironboots" summaryType="action">
+            <name>Iron Boots</name>
+        </item>
+        <item id="hookshot" summaryType="action">
+            <name>Hookshot</name>
+        </item>
+
+        <!-- Summary type: Quest -->
+        <item id="sword" summaryType="quest">
+            <name>Hero's Sword</name>
+            <name id="master">Master Sword</name>
+        </item>
+        <item id="shield" summaryType="quest">
+            <name>Hero's Shield</name>
+            <name id="mirror">Mirror Shield</name>
+        </item>
+        <item id="piratescharm" summaryType="quest">
+            <name>Pirate's Charm</name>
+        </item>
+        <item id="sail" summaryType="quest">
+            <name>Sail</name>
+            <name id="swift">Swift Sail</name>
+        </item>
+        <item id="windwaker" summaryType="quest">
+            <name>Wind Waker</name>
+        </item>
+        <item id="powerbracelets" summaryType="quest">
+            <name>Power Bracelets</name>
+        </item>
+        <item id="heroscharm" summaryType="quest">
+            <name>Hero's Charm</name>
+        </item>
+        <item id="pearl-din" summaryType="quest">
+            <name>Din's Pearl</name>
+        </item>
+        <item id="pearl-farore" summaryType="quest">
+            <name>Farore's Pearl</name>
+        </item>
+        <item id="pearl-nayru" summaryType="quest">
+            <name>Nayru's Pearl</name>
+        </item>
+        <item id="triforce" summaryType="quest">
+            <name>Triforce of Courage</name>
+        </item>
+        <item id="song-wind" summaryType="quest">
+            <name>Wind's Requiem</name>
+        </item>
+        <item id="song-passing" summaryType="quest">
+            <name>Song of Passing</name>
+        </item>
+        <item id="song-command" summaryType="quest">
+            <name>Command Melody</name>
+        </item>
+        <item id="song-gales" summaryType="quest">
+            <name>Ballad of Gales</name>
+        </item>
+        <item id="song-earthgod" summaryType="quest">
+            <name>Earth God's Lyric</name>
+        </item>
+        <item id="song-windgod" summaryType="quest">
+            <name>Wind God's Aria</name>
+        </item>
+
+        <!-- Summary type: Upgrades -->
+        <item id="hearts" summaryType="upgrades" unique="false" startNum="3" numParts="4">
+            <name>Heart</name>
+        </item>
+        <item id="heartpieces" partsOf="hearts" unique="false" filters="heartpieces">
+            <!-- Only directly showed in listing ("Piece of Heart #2" etc.), not summaries. -->
+            <name>
+                <singular>Piece of Heart</singular>
+                <plural>Pieces of Heart</plural>
+            </name>
+        </item>
+        <item id="heartcontainer" partsOf="hearts" filters="heartcontainers">
+            <!-- Only directly showed in listing (e.g. "Heart Container: After defeating the boss"), not summaries.
+             We use unique=True (implicit) to hide count (to avoid "Heart Container #2" etc.)-->
+            <name>Heart Container</name>
+        </item>
+        <item id="doublemagic" summaryType="upgrades">
+            <name>Double Magic Meter</name>
+        </item>
+        <item id="wallet" summaryType="upgrades">
+            <name>Bigger Wallet</name>
+            <name id="biggest">Biggest Wallet</name>
+        </item>
+        <item id="bombbag" summaryType="upgrades">
+            <name>Bigger Bomb Bag</name>
+            <name id="biggest">Biggest Bomb Bag</name>
+        </item>
+        <item id="quiver" summaryType="upgrades">
+            <name>Bigger Quiver</name>
+            <name id="biggest">Biggest Quiver</name>
+        </item>
+        <item id="hurricanespin" summaryType="upgrades">
+            <name>Hurricane Spin</name>
+        </item>
+
+        <!-- charts -->
+        <item id="chart-1" filters="rupeecharts">
+            <name>Treasure Chart #1</name>
+        </item>
+        <item id="chart-2" filters="heartpieces">
+            <name>Treasure Chart #2</name>
+        </item>
+        <item id="chart-3" filters="rupeecharts">
+            <name>Treasure Chart #3</name>
+        </item>
+        <item id="chart-4" filters="heartpieces">
+            <name>Treasure Chart #4</name>
+        </item>
+        <item id="chart-5" filters="heartpieces">
+            <name>Treasure Chart #5</name>
+        </item>
+        <item id="chart-6" filters="rupeecharts">
+            <name>Treasure Chart #6</name>
+        </item>
+        <item id="chart-7" filters="rupeecharts">
+            <name>Treasure Chart #7</name>
+        </item>
+        <item id="chart-8" filters="rupeecharts">
+            <name>Treasure Chart #8</name>
+        </item>
+        <item id="chart-9" filters="rupeecharts">
+            <name>Treasure Chart #9</name>
+        </item>
+        <item id="chart-10" filters="rupeecharts">
+            <name>Treasure Chart #10</name>
+        </item>
+        <item id="chart-11" filters="heartpieces">
+            <name>Treasure Chart #11</name>
+        </item>
+        <item id="chart-12" filters="rupeecharts">
+            <name>Treasure Chart #12</name>
+        </item>
+        <item id="chart-13" filters="specialcharts">
+            <name>Treasure Chart #13</name>
+        </item>
+        <item id="chart-14" filters="rupeecharts">
+            <name>Treasure Chart #14</name>
+        </item>
+        <item id="chart-15" filters="heartpieces">
+            <name>Treasure Chart #15</name>
+        </item>
+        <item id="chart-16" filters="rupeecharts">
+            <name>Treasure Chart #16</name>
+        </item>
+        <item id="chart-17" filters="rupeecharts">
+            <name>Treasure Chart #17</name>
+        </item>
+        <item id="chart-18" filters="rupeecharts">
+            <name>Treasure Chart #18</name>
+        </item>
+        <item id="chart-19" filters="specialcharts">
+            <name>Treasure Chart #19</name>
+        </item>
+        <item id="chart-20" filters="heartpieces">
+            <name>Treasure Chart #20</name>
+        </item>
+        <item id="chart-21" filters="specialcharts">
+            <name>Treasure Chart #21</name>
+        </item>
+        <item id="chart-22" filters="rupeecharts">
+            <name>Treasure Chart #22</name>
+        </item>
+        <item id="chart-23" filters="heartpieces">
+            <name>Treasure Chart #23</name>
+        </item>
+        <item id="chart-24" filters="rupeecharts">
+            <name>Treasure Chart #24</name>
+        </item>
+        <item id="chart-25" filters="rupeecharts">
+            <name>Treasure Chart #25</name>
+        </item>
+        <item id="chart-26" filters="specialcharts">
+            <name>Treasure Chart #26</name>
+        </item>
+        <item id="chart-27" filters="rupeecharts">
+            <name>Treasure Chart #27</name>
+        </item>
+        <item id="chart-28" filters="rupeecharts">
+            <name>Treasure Chart #28</name>
+        </item>
+        <item id="chart-29" filters="rupeecharts">
+            <name>Treasure Chart #29</name>
+        </item>
+        <item id="chart-30" filters="heartpieces">
+            <name>Treasure Chart #30</name>
+        </item>
+        <item id="chart-31" filters="heartpieces">
+            <name>Treasure Chart #31</name>
+        </item>
+        <item id="chart-32" filters="specialcharts">
+            <name>Treasure Chart #32</name>
+        </item>
+        <item id="chart-33" filters="heartpieces">
+            <name>Treasure Chart #33</name>
+        </item>
+        <item id="chart-34" filters="rupeecharts">
+            <name>Treasure Chart #34</name>
+        </item>
+        <item id="chart-35" filters="rupeecharts">
+            <name>Treasure Chart #35</name>
+        </item>
+        <item id="chart-36" filters="rupeecharts">
+            <name>Treasure Chart #36</name>
+        </item>
+        <item id="chart-37" filters="rupeecharts">
+            <name>Treasure Chart #37</name>
+        </item>
+        <item id="chart-38" filters="heartpieces">
+            <name>Treasure Chart #38</name>
+        </item>
+        <item id="chart-39" filters="rupeecharts">
+            <name>Treasure Chart #39</name>
+        </item>
+        <item id="chart-40" filters="rupeecharts">
+            <name>Treasure Chart #40</name>
+        </item>
+        <item id="chart-41" filters="specialcharts">
+            <name>Treasure Chart #41</name>
+        </item>
+        <item id="chart-42" filters="rupeecharts">
+            <name>Treasure Chart #42</name>
+        </item>
+        <item id="chart-43" filters="rupeecharts">
+            <name>Treasure Chart #43</name>
+        </item>
+        <item id="chart-44" filters="rupeecharts">
+            <name>Treasure Chart #44</name>
+        </item>
+        <item id="chart-45" filters="rupeecharts">
+            <name>Treasure Chart #45</name>
+        </item>
+        <item id="chart-46" filters="heartpieces">
+            <name>Treasure Chart #46</name>
+        </item>
+        <!-- FIXME: chart ordering -->
+        <item id="chart-tingle" filters="specialcharts">
+            <name>Tingle's Chart</name>
+        </item>
+        <item id="chart-beedle" filters="specialcharts">
+            <name>Beedle's Chart</name>
+        </item>
+        <item id="chart-submarine" filters="specialcharts">
+            <name>Submarine Chart</name>
+        </item>
+        <item id="chart-platform" filters="specialcharts">
+            <name>Platform Chart</name>
+        </item>
+        <item id="chart-incredible" filters="specialcharts">
+            <name>IN-credible Chart</name>
+        </item>
+        <item id="chart-ghostship" filters="specialcharts">
+            <name>Ghost Ship Chart</name>
+        </item>
+        <item id="chart-triforce-1" filters="specialcharts">
+            <name>Triforce Chart #1</name>
+        </item>
+        <item id="chart-triforce-2" filters="specialcharts">
+            <name>Triforce Chart #2</name>
+        </item>
+        <item id="chart-triforce-3" filters="specialcharts">
+            <name>Triforce Chart #3</name>
+        </item>
+        <item id="chart-seahearts" filters="specialcharts">
+            <name>Sea Hearts Chart</name>
+        </item>
+        <item id="chart-islandhearts" filters="specialcharts">
+            <name>Island Hearts Chart</name>
+        </item>
+        <item id="chart-lightring" filters="specialcharts">
+            <name>Light Ring Chart</name>
+        </item>
+        <item id="chart-octo" filters="specialcharts">
+            <name>Octo Chart</name>
+        </item>
+        <item id="chart-secretcave" filters="specialcharts">
+            <name>Secret Cave Chart</name>
+        </item>
+        <item id="chart-greatfairy" filters="specialcharts">
+            <name>Great Fairy Chart</name>
+        </item>
+
+        <!-- Non-summary items -->
+        <item id="dungeonmap" filters="mapcompass">
+            <name>Dungeon Map</name>
+        </item>
+        <item id="compass" filters="mapcompass">
+            <name>Compass</name>
+        </item>
+        <item id="triforceshard" unique="false">
+            <name>Triforce Shard</name>
+        </item>
+
+    </items>
+
+    <!-- The game segments containing the actual guide entries -->
+    <gameSegments>
+
+        <gameSegment id="outset">
+            <heading>Outset Island</heading>
+            <entry id="rupee-100-home" checkbox="false">
+                <name>100 Rupees</name>
+                <description>Below the porch of your house.</description>
+            </entry>
+            <entry id="info-rose-pigs" checkbox="false" filters="heartpieces">
+                <description>Bring Rose three pigs (required for {{hp-pig}}, though you can do it later too).</description>
+            </entry>
+            <entry id="telescope" itemRef="telescope" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="herossword" itemRef="sword" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="herosshield" itemRef="shield" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bag-bait" itemRef="bag-bait">
+                <description>Purchase from Beedle before you leave (20 Rupees). You should purchase some All-Purpose Bait too, and preferably a Hyoi Pear or two.</description>
+            </entry>
+
+            <entry type="subheading">Pirate Ship</entry>
+
+            <entry id="bag-spoils" itemRef="bag-spoils" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="forsakenfortress">
+            <heading>Forsaken Fortress</heading>
+            <entry id="piratescharm" itemRef="piratescharm" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="forsakenfortress-map" itemRef="dungeonmap">
+                <description>Southwest on the second floor, down the slope from the prison cell.</description>
+            </entry>
+            <entry id="hp-forsakenfortress" itemRef="heartpieces">
+                <description>Southwest on the first floor (in the same room as the Dungeon Map). Step on the switch behind the barrels in the corner.</description>
+            </entry>
+            <entry id="forsakenfortress-compass" itemRef="compass">
+                <description>Southeast on the second floor.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="windfallisland">
+            <heading>Windfall Island</heading>
+
+            <entry type="subheading">Arrival and important stuff</entry>
+
+            <entry id="tinglebottle" itemRef="tinglebottle" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="chart-tingle" itemRef="chart-tingle" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="pictobox" itemRef="pictobox">
+                <description>After getting the Tingle Bottle, crawl into the hole behind the crate and get it from the chest at the end (left, right, left, right, right at the end, straight until you get out).</description>
+            </entry>
+            <entry id="sail" itemRef="sail" checkbox="false" filters="mandatory">
+                <description>Mandatory (at some point), purchase from Zunari (80 Rupees).</description>
+            </entry>
+
+            <entry type="subheading">Side Quests</entry>
+            <entry id="hp-squidgame" itemRef="heartpieces">
+                <description>Beat Salvatore's Sinking Ships.</description>
+            </entry>
+            <entry id="chart-7" itemRef="chart-7">
+                <appendToName>(200 Rupees, Star Island [B1])</appendToName>
+                <description>Beat Salvatore's Sinking Ships for the second time.</description>
+            </entry>
+            <entry id="chart-23" itemRef="chart-23">
+                <appendToName>({{hp-chart-23}})</appendToName>
+                <description>Beat Salvatore's Sinking Ships using at most 20 cannonballs.</description>
+            </entry>
+            <entry id="hp-killerbees" itemRef="heartpieces">
+                <appendToName>(and 50 Rupees)</appendToName>
+                <description>Speak to Mrs. Marie inside the school and play hide-and-seek with the Killer Bees (the kids). Their locations are: 1) Across from where Linda is standing, outside the archway, behind some bushes. 2) In the big tree near the docks. 3) Behind the gravestone near Windfall Island Jail. 4) Behind the Bomb Shop at the docks.</description>
+            </entry>
+            <entry id="deluxepictobox" itemRef="pictobox" add="0" changeNameID="deluxe">
+                <description>Take the three pictures Lenzo wants: 1) Garrickson mailing a letter. He's the guy with red clothes and a moustache who starts walking from outside Lenzo's house when you exit. You can hide near the Postbox by the docks and wait for him. 2) Gossack being frightened. Walk into the bar and knock down a jar or cup to scare him. 3) Anton and Linda looking at each other. Just stand outside Lenzo's shop and wait for Anton to come and look at Linda, who's standing outside Salvatore's Game Shop. Note that the Killer Bees may block the view and ruin the shot.</description>
+            </entry>
+            <entry id="chart-33" itemRef="chart-33">
+                <appendToName>({{hp-chart-33}})</appendToName>
+                <description>Take a picture of Minenco (the lady outside the Chu Jelly Juice Shop during the day) and show her the picture.</description>
+            </entry>
+
+            <entry type="subheading">Pawprint Isle [E2]</entry>
+
+            <entry id="chart-34" itemRef="chart-34">
+                <appendToName>(200 Rupees, Eastern Triangle Island [F4])</appendToName>
+                <description>Speak to the divers near the island.</description>
+            </entry>
+            <entry id="hp-pawprint" itemRef="heartpieces">
+                <description>In the dome at the center of the island.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="dragonroostisland">
+            <heading>Dragon Roost Island</heading>
+            <entry id="windwaker" itemRef="windwaker" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bag-delivery" itemRef="bag-delivery" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-lettersorting" itemRef="heartpieces">
+                <description>Play the letter sorting game with Koboli and manage at least 25 letters. Repeat with Baito later (you might have to push the block down by the beach to allow Baito to get inside the island). Deliver his Note to Mom and you'll get the Piece of Heart in a reply later.</description>
+            </entry>
+            <entry id="bottle-dragonroost" itemRef="bottles" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="dragonroostcavern">
+            <heading>Dragon Roost Cavern</heading>
+            <entry id="dragonroostcavern-map" itemRef="dungeonmap">
+                <description>Hard to miss. In the room where you first have to throw water urns in the lava.</description>
+            </entry>
+            <entry id="dragonroostcavern-compass" itemRef="compass">
+                <description>Hard to miss. When you first get to the second floor, in the room with the rats.</description>
+            </entry>
+            <entry id="chart-39" itemRef="chart-39">
+                <appendToName>(200 Rupees, Dragon Roost Island [F2])</appendToName>
+                <description>On the second floor, in a small room with many pots that you get to after having walked across a bridge in the large main room. Light the torch using a Boko Stick.</description>
+            </entry>
+            <entry id="grapplinghook" itemRef="hook" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="chart-11" itemRef="chart-11">
+                <appendToName>({{hp-chart-11}})</appendToName>
+                <description>In a western room on the first floor with several Red ChuChus. Throw a burning Boko Stick to remove the boards across a lava pit, and swing across with your Grappling Hook.</description>
+            </entry>
+            <entry id="info-grind-goldenfeathers" checkbox="false" filters="heartpieces">
+                <description>You need 20 Golden Feathers to get {{hp-goldenfeathers}} and 100 Rupees. If you want, you can farm Golden Feathers at the northern end of the second floor. Exit outside, use the Grappling Hook to grab a Golden Feather from the Kargaroc, go inside again, and repeat.</description>
+            </entry>
+            <entry id="dragonroostcavern-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="pearl-din" itemRef="pearl-din" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="afterdragonroost">
+            <heading>After Dragon Roost Cavern</heading>
+            <entry id="info-afterdragonroost" checkbox="false">
+                <description>You have to point the wind south before you can board the King of Red Lions, but you can change the direction afterwards. You are, however, limited to visiting the islands in the straight lines between Windfall Island [D2], Dragon Roost Island [F2] and Forest Haven [F6].</description>
+            </entry>
+
+            <entry type="subheading">Dragon Roost Island</entry>
+
+            <entry id="song-wind" itemRef="song-wind" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-goldenfeathers" itemRef="heartpieces">
+                <appendToName>(and 100 Rupees)</appendToName>
+                <description>Bring 20 Golden Feathers to Hoskit (the guard outside the Chieftain's cave). You get 100 Rupees now and the Piece of Heart in a Postbox later.</description>
+            </entry>
+
+            <entry type="subheading">Windfall Island [D2]</entry>
+
+            <entry id="song-passing" itemRef="song-passing">
+                <description>Show the Wind Waker to Tott (the dancer by the gravestone) and follow his moves.</description>
+            </entry>
+            <entry id="hp-antonlinda" itemRef="heartpieces">
+                <description>Talk to Anton and Linda a couple of times, take the picture Linda asks and give it to Anton, then talk to them in the café the next day.</description>
+            </entry>
+            <entry id="chart-31" itemRef="chart-31">
+                <appendToName>({{hp-chart-31}})</appendToName>
+                <description>Show a color picture of the full moon to the man sitting on the steps outside the House of Wealth.</description>
+            </entry>
+            <entry id="sail-swift" itemRef="sail" add="0" changeNameID="swift">
+                <description>Random item in the auction at night in the House of Wealth (200-300 Rupees).</description>
+            </entry>
+            <entry id="hp-auction" itemRef="heartpieces">
+                <description>Random item in the auction at night in the House of Wealth (160-180 Rupees).</description>
+            </entry>
+            <entry id="chart-38" itemRef="chart-38">
+                <appendToName>({{hp-chart-38}})</appendToName>
+                <description>Random item in the auction at night in the House of Wealth (110-130 Rupees).</description>
+            </entry>
+            <entry id="chart-18" itemRef="chart-18">
+                <appendToName>(50 Rupees, Windfall Island [D2])</appendToName>
+                <description>Random item in the auction at night in the House of Wealth (110-130 Rupees).</description>
+            </entry>
+            <entry id="hp-townflowers" itemRef="heartpieces">
+                <description>Place Town Flowers (or anything else) from Zunari's shop on all the 14 Joy Pedestals all over the island (requires 130 Rupees) and talk to the guy at the bench by the three Joy Pedestals. There are two pedestals by the shop, three by the bench near the shop, two on the wooden platform overlooking the Auction House, one by the Chu Jelly shop, and six on the white arch/wall by the entrance to the village.</description>
+            </entry>
+            <entry id="info-tradingsequence-townflower" checkbox="false">
+                <description>Purchase another Town Flower for the trading sequence later (required for {{magicarmor}} and {{hp-tradingsequence}}).</description>
+            </entry>
+
+            <entry type="subheading">Bomb Island [F5]</entry>
+
+            <entry id="bottle-bombisland" itemRef="bottles">
+                <description>In the submarine southwest of the island.</description>
+            </entry>
+
+            <entry type="subheading">Forest Haven [F6]</entry>
+
+            <entry id="hp-chart-31" itemRef="heartpieces">
+                <appendToName>({{chart-31}})</appendToName>
+                <description>In the waters outside Forest Haven.</description>
+            </entry>
+            <entry id="dekuleaf" itemRef="dekuleaf" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="forbiddenwoods">
+            <heading>Forbidden Woods</heading>
+            <entry id="forbiddenwoods-map" itemRef="dungeonmap">
+                <description>Hard to miss. In the first room.</description>
+            </entry>
+            <entry id="forbiddenwoods-compass" itemRef="compass">
+                <description>Hard to miss. In the spiky tentacle maze room.</description>
+            </entry>
+            <entry id="boomerang" itemRef="boomerang" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="chart-1" itemRef="chart-1">
+                <appendToName>(200 Rupees, Private Oasis [E5])</appendToName>
+                <description>In the upper floor of the tall second room of the dungeon, to the south.</description>
+            </entry>
+            <entry id="chart-15" itemRef="chart-15">
+                <appendToName>({{hp-chart-15}})</appendToName>
+                <description>In the northern room in the basement.</description>
+            </entry>
+            <entry id="forbidenwoods-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+            <entry id="pearl-farore" itemRef="pearl-farore" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="pearl-nayru-goodies">
+            <heading>Nayru's Pearl and lots of Great Sea goodies</heading>
+            <entry id="info-greatsea-opened" checkbox="false">
+                <description>The whole Great Sea is now opened to you, and there is a LOT of stuff you can get. This guide will follow the story just a bit more until you get the Bombs, which allows you to get the two wallet upgrades, which are very helpful in the rest of this section.</description>
+            </entry>
+
+            <entry type="subheading">Forest Haven [F6]</entry>
+
+            <entry id="info-bluepotion" checkbox="false">
+                <description>You can get a Blue Potion (which fully restores hearts and magic) if you show Boko Baba Seeds to Hollo inside his Potion Shop.</description>
+            </entry>
+            <entry id="chart-3" itemRef="chart-3">
+                <appendToName>(200 Rupees, Eastern Fairy Island [E3])</appendToName>
+                <description>On an island to the southeast of the upper exit from Forest Haven. Float with the Deku Leaf.</description>
+            </entry>
+            <entry id="hp-postbox-afterforbiddenwoods" itemRef="heartpieces">
+                <description>In the Postbox.</description>
+            </entry>
+            <entry id="info-bait-afterforbiddenwoods" checkbox="false">
+                <description>Don't forget to stock up on All-Purpose Bait and unlock the Great Sea Map as you travel.</description>
+            </entry>
+
+            <entry type="subheading">Via Greatfish to Windfall</entry>
+            <entry id="bigocto-privateoasis">
+                <name>100 Rupees</name>
+                <description>Private Oasis [E5], defeat the Big Octo.</description>
+            </entry>
+            <entry id="hp-sixeyereef-3" itemRef="heartpieces">
+                <description>Six-Eye Reef [D4], In the submarine to the southeast.</description>
+            </entry>
+            <entry id="hp-greatfish" itemRef="heartpieces">
+                <description>Greatfish Isle [B4], climb the spiraling mountain to the southeast and float northwest.</description>
+            </entry>
+            <entry id="info-tradingsequence-exoticflower" checkbox="false">
+                <description>While on Greatfish Isle [B4], trade the Town Flower for a Sea Flower, and trade it back for an Exotic Flower (required for the {{magicarmor}} and {{hp-tradingsequence}}).</description>
+            </entry>
+            <entry id="info-bottle-rockspire" checkbox="false">
+                <description>Rock Spire Isle [B3]: If you have 500 Rupees now, you can purchase {{bottle-beedle}} from Beedle. It will be covered properly later in this section, when you should have a lot more Rupees.</description>
+            </entry>
+            <entry id="hp-bigocto-tingle" itemRef="heartpieces">
+                <description>Tingle Island [C3], defeat the Big Octo north of the island.</description>
+            </entry>
+
+            <entry type="subheading">Windfall Island [D2]</entry>
+
+            <entry id="chart-29" itemRef="chart-29">
+                <appendToName>(200 Rupees, Mother and Child Isles [B2])</appendToName>
+                <description>Activate the Ferris Wheel, then use it to float to the balcony of the Picto Shop. The chart is in a chest inside.</description>
+            </entry>
+            <entry id="info-picture-chart-24" checkbox="false" filters="rupeecharts">
+                <description>After having entered the Picto Shop through the balcony, take a picture of the couple on the first floor. Take care not to be seen. (Required for {{chart-24}} leading to 200 Rupees.)</description>
+            </entry>
+            <entry id="bombs" itemRef="bombs" checkbox="false" filters="mandatory">
+                <description>Mandatory (at some point).</description>
+            </entry>
+            <entry id="chart-beedle" itemRef="chart-beedle">
+                <description>In the Postbox after getting the Bombs.</description>
+            </entry>
+
+            <entry type="subheading">Toward Outset Island</entry>
+
+            <entry id="wallet-bigger" itemRef="wallet">
+                <description>From the Great Fairy on Northern Fairy Island [C1].</description>
+            </entry>
+            <entry id="chart-22" itemRef="chart-22">
+                <appendToName>(200 Rupees, Spectacle Island [C2])</appendToName>
+                <description>Northern Fairy Island [C1], inside the sub to the northwest of the island. You can swing across without fighting the enemies.</description>
+            </entry>
+            <entry id="hp-starisland" itemRef="heartpieces">
+                <description>Star Island [B1], bomb the rock to the southwest, drop down and defeat the enemies.</description>
+            </entry>
+            <entry id="info-beedle-special" checkbox="false">
+                <description>If you can afford anything from Beedle's special shop at Rock Spire Isle [B3], feel free to purchase it now. The items will be covered properly at the end of this section, when you should have a lot more Rupees. {{bottle-beedle}} costs 500 Rupees, {{chart-4}} (leading to {{hp-chart-4}}) costs 900 Rupees, and {{hp-beedle}} costs 950 Rupees.</description>
+            </entry>
+            <entry id="chart-37" itemRef="chart-37">
+                <appendToName>(200 Rupees, Fire Mountain [F3])</appendToName>
+                <description>Inside the cave on Rock Spire Isle [B3].</description>
+            </entry>
+            <entry id="hp-rockspire-enemies" itemRef="heartpieces">
+                <description>Rock Spire Isle [B3], destroy the two ships south of the island.</description>
+            </entry>
+            <entry id="hp-chart-38" itemRef="heartpieces">
+                <appendToName>({{chart-38}})</appendToName>
+                <description>In the waters outside Three-Eye Reef [A4].</description>
+            </entry>
+            <entry id="hp-needlerock-seagull" itemRef="heartpieces">
+                <description>Needle Rock Isle [A5], use a Hyoi Pear to navigate a seagull to the top of the tower and hit the switch. (If the Kargarocs are to annoying, return here after you've gotten the {{fireicearrows}} and try to shoot the top of the tower using a Fire Arrow.)</description>
+            </entry>
+            <entry id="hp-chart-23" itemRef="heartpieces">
+                <appendToName>({{chart-23}})</appendToName>
+                <description>In the waters outside Diamond Steppe Island [A6].</description>
+            </entry>
+            <entry id="bigocto-diamondsteppe">
+                <name>100 Rupees</name>
+                <description>Diamond Steppe Island [A6], defeat the Big Octo.</description>
+            </entry>
+            <entry id="chart-8" itemRef="chart-8">
+                <appendToName>(200 Rupees, Western Fairy Island [A3])</appendToName>
+                <description>Horseshoe Island [A7], in the cave at the top of the island.</description>
+            </entry>
+            <entry id="chart-28" itemRef="chart-28">
+                <appendToName>(200 Rupees, Needle Rock Isle [A5])</appendToName>
+                <description>Horseshoe Island [A7], on the rock in the center of the island.</description>
+            </entry>
+            <entry id="chart-43" itemRef="chart-43">
+                <appendToName>(200 Rupees, Outset Island [B7])</appendToName>
+                <description>Horseshoe Island [A7], step on the switches on the platforms east of the island.</description>
+            </entry>
+
+            <entry type="subheading">Outset Island [B7]</entry>
+
+            <entry id="wallet-biggest" itemRef="wallet" add="0" changeNameID="biggest">
+                <description>In the Forest of Fairies (where you found Tetra), blow up the big rock.</description>
+            </entry>
+            <entry id="info-elixirsoup" checkbox="false">
+                <description>Capture a Fairy where you got the {{wallet-biggest}} and heal your Grandmother with it to get access to Elixir Soup.</description>
+            </entry>
+            <entry id="hp-orca" itemRef="heartpieces">
+                <description>Train with Orca and hit him 500 times (you only get Rupees for 100 and 300 hits).</description>
+            </entry>
+            <entry id="pearl-nayru" itemRef="pearl-nayru" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+
+            <entry type="subheading">Lots and lots of goodies</entry>
+
+            <entry id="hp-headstone" itemRef="heartpieces">
+                <description>Headstone Island [C7], use a Hyoi Pear and get it from the top of the island.</description>
+            </entry>
+            <entry id="chart-14" itemRef="chart-14">
+                <appendToName>(200 Rupees, Tower of the Gods [E4])</appendToName>
+                <description>Headstone Island [C7], in the submarine northwest of the island.</description>
+            </entry>
+            <entry id="doublemagic" itemRef="doublemagic">
+                <description>Two-Eye Reef [D7], defeat the Big Octo.</description>
+            </entry>
+            <entry id="chart-40" itemRef="chart-40">
+                <appendToName>(200 Rupees, Headstone Island [C7])</appendToName>
+                <description>Southern Fairy Island [D6], in the chest that appears after destroying the cannons on the western platform.</description>
+            </entry>
+            <entry id="bombbag-bigger" itemRef="bombbag">
+                <description>From the Great Fairy on Southern Fairy Island [D6].</description>
+            </entry>
+            <entry id="hp-chart-15" itemRef="heartpieces">
+                <appendToName>({{chart-15}})</appendToName>
+                <description>In the waters outside Angular Isles [E7].</description>
+            </entry>
+            <entry id="hp-angular" itemRef="heartpieces">
+                <description>Angular Isles [E7], in a chest on the top of the island.</description>
+            </entry>
+            <entry id="chart-submarine" itemRef="chart-submarine">
+                <description>Boating Course [F7], in the cave on the north side of the banner.</description>
+            </entry>
+            <entry id="hp-chart-33" itemRef="heartpieces">
+                <appendToName>({{chart-33}})</appendToName>
+                <description>In the waters outside Five-Star Isles [G6].</description>
+            </entry>
+            <entry id="hp-fivestar-submarine" itemRef="heartpieces">
+                <description>Five-Star Isles [G6], in the submarine south of the island.</description>
+            </entry>
+            <entry id="chart-25" itemRef="chart-25">
+                <appendToName>(200 Rupees, Forsaken Fortress [A1])</appendToName>
+                <description>Cliff Plateau Isles [G6], on the top of the tallest plateau.</description>
+            </entry>
+            <entry id="chart-44" itemRef="chart-44">
+                <appendToName>(100 Rupees, Southern Triangle Island [D5])</appendToName>
+                <description>Star Belt Archipelago [G3], on top of the platform guarded by Bokoblins.</description>
+            </entry>
+            <entry id="chart-platform" itemRef="chart-platform">
+                <description>Flight Control Platform [G2], defeat all the Red Wizzrobes inside the submarine southeast of the platform. (It's possible now with bombs, but easier if you wait until you have the {{bow}}.)</description>
+            </entry>
+            <entry id="hp-flightplatform" itemRef="heartpieces">
+                <description>Flight Control Platform [G2], pass the champion's mark on the flying test. (Fly as straight as possible, only turning slightly to hit one updraft.)</description>
+            </entry>
+            <entry id="hp-bigocto-sevenstar" itemRef="heartpieces">
+                <description>Seven-Star Isles [F1], defeat the Big Octo southwest of the isles.</description>
+            </entry>
+            <entry id="chart-16" itemRef="chart-16">
+                <appendToName>(200 Rupees, Shark Island [C6])</appendToName>
+                <description>Seven-Star Isles [F1], defeat the Wizzrobes on the platforms south of the isles. (It's possible now with bombs, but easier if you wait until you have the {{bow}}.)</description>
+            </entry>
+            <entry id="chart-9" itemRef="chart-9">
+                <appendToName>(200 Rupees, Horseshoe Island [A7])</appendToName>
+                <description>Crescent Moon Island [E1], in the submarine north of the island.</description>
+            </entry>
+            <entry id="hp-chart-11" itemRef="heartpieces">
+                <appendToName>({{chart-11}})</appendToName>
+                <description>In the waters outside Crescent Moon Island [E1].</description>
+            </entry>
+            <entry id="chart-10" itemRef="chart-10">
+                <appendToName>(200 Rupees, Tingle Island [C3])</appendToName>
+                <description>Crescent Moon Island [E1], in a chest in plain sight.</description>
+            </entry>
+
+            <entry type="subheading">Windfall Island [D2]</entry>
+
+            <entry id="chart-42" itemRef="chart-42">
+                <appendToName>(100 Rupees, Gale Isle [D1])</appendToName>
+                <description>Give three Skull Necklaces to the man standing near the Bomb Shop and play his game.</description>
+            </entry>
+            <entry id="info-joypendants" checkbox="false" filters="mandatory,rupeecharts">
+                <description>If you have 20 or 40 Joy Pendants now, you can give them to Mrs. Marie for the {{cabanadeed}} and {{chart-45}} (leading to 200 Rupees), respectively. They will be covered later.</description>
+            </entry>
+            <entry id="chart-24" itemRef="chart-24">
+                <appendToName>(200 Rupees, Northern Fairy Island [C1])</appendToName>
+                <description>Show Pompie and Vera (the gossips) the picture you took of Lenzo and the woman the last time you were here.</description>
+            </entry>
+            <entry id="magicarmor" itemRef="magicarmor">
+                <description>Given to you by Zunari (after obtaining the Sea Flower and the Exotic Flower earlier).</description>
+            </entry>
+
+            <entry type="subheading">More Great Sea Goodies</entry>
+
+            <entry id="info-place-pearl-din" checkbox="false">
+                <description>Place Din's Pearl in the statue at Northern Triangle Isle.</description>
+            </entry>
+            <entry id="bombbag-biggest" itemRef="bombbag" add="0" changeNameID="biggest">
+                <description>From the Great Fairy on Eastern Fairy Island [E3].</description>
+            </entry>
+            <entry id="bigocto-firemountain">
+                <name>100 Rupees</name>
+                <description>Fire Mountain [F3], defeat the Big Octo.</description>
+            </entry>
+            <entry id="info-place-pearl-farore" checkbox="false">
+                <description>Place Farore's Pearl in the statue at Eastern Triangle Isle.</description>
+            </entry>
+            <entry id="info-tradingsequence-fountainidol" checkbox="false" filters="heartpieces">
+                <description>Bomb Island [F5]: Trade the Exotic Flower for a Sickle Moon Flag, and trade it back for a Fountain Idol (required for {{hp-tradingsequence}}).</description>
+            </entry>
+            <entry id="hp-bombisland" itemRef="heartpieces">
+                <description>Bomb Island [F5], in the cave below the boulder on top of the island.</description>
+            </entry>
+            <entry id="info-place-pearl-nayru" checkbox="false">
+                <description>Place Nayru's Pearl in the statue at Southern Triangle Isle.</description>
+            </entry>
+            <entry id="hp-stonewatcher-platforms" itemRef="heartpieces">
+                <description>Stone Watcher Island [C5], destroy all eight cannons on the platform east of the island.</description>
+            </entry>
+            <entry id="hp-barrelshoot" itemRef="heartpieces">
+                <description>Spectacle Island [C2], beat the Barrel Shoot game.</description>
+            </entry>
+            <entry id="chart-17" itemRef="chart-17">
+                <appendToName>(200 Rupees, Ice Ring Isle [E6])</appendToName>
+                <description>Spectacle Island [C2], beat the Barrel Shoot game for the second time.</description>
+            </entry>
+            <entry id="info-tradingsequence-bigsaleflag" checkbox="false" filters="heartpieces">
+                <description>Mother and Child Isles [B2]: Trade the Fountain Idol for a Big Sale Flag (required for {{hp-tradingsequence}}).</description>
+            </entry>
+            <entry id="bottle-beedle" itemRef="bottles">
+                <description>Rock Spire Isle [B3], purchase from Beedle for 500 Rupees.</description>
+            </entry>
+            <entry id="hp-beedle" itemRef="heartpieces">
+                <description>Rock Spire Isle [B3], purchase from Beedle for 950 Rupees.</description>
+            </entry>
+            <entry id="chart-4" itemRef="chart-4">
+                <appendToName>({{hp-chart-4}})</appendToName>
+                <description>Rock Spire Isle [B3], purchase from Beedle for 900 Rupees.</description>
+            </entry>
+            <entry id="info-rupees" checkbox="false">
+                <description>After having purchased the expensive items from Beedle's special shop, the only large expense left is 1200 Rupees at the end of the game. So if you don't really care about Treasure Charts that lead to Rupees, it's safe to hide them now using the settings at the top of the guide.</description>
+            </entry>
+            <entry id="info-tradingsequence-postmanstatue" checkbox="false" filters="heartpieces">
+                <description>Greatfish Isle [B4]: Trade the Big Sale Flag for a Hero's Flag, and trade it back for the Postman Statue (required for {{hp-tradingsequence}}).</description>
+            </entry>
+            <entry id="info-tradingsequence-shopgurustatue" checkbox="false" filters="heartpieces">
+                <description>Mother and Child Isles [B2]: Trade the Postman Statue for the Shop Guru Statue (required for {{hp-tradingsequence}}).</description>
+            </entry>
+            <entry id="hp-tradingsequence" itemRef="heartpieces">
+                <description>Greatfish Isle [B4], give the Shop Guru Statue to the merchant.</description>
+            </entry>
+            <entry id="cabanadeed" checkbox="false" filters="mandatory">
+                <name>Cabana Deed</name>
+                <appendToName>(stored in your Delivery Bag)</appendToName>
+                <description>Windfall Island [D2], give 20 Joy Pendants to Mrs. Marie (mandatory at some point in the game).</description>
+            </entry>
+            <entry id="chart-45" itemRef="chart-45">
+                <appendToName>(200 Rupees, Seven-Star Isles [F1])</appendToName>
+                <description>Windfall Island [D2], give 40 Joy Pendants to Mrs. Marie.</description>
+            </entry>
+            <entry id="hp-chart-4" itemRef="heartpieces">
+                <appendToName>({{chart-4}})</appendToName>
+                <description>In the waters outside Southern Fairy Island [D6].</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="towerofthegods">
+            <heading>Tower of the Gods</heading>
+            <entry id="towerofthegods-map" itemRef="dungeonmap">
+                <description>Through the southeastern door in the first room while the water is low, behind a cracked wall.</description>
+            </entry>
+            <entry id="towerofthegods-compass" itemRef="compass">
+                <description>West of the first room.</description>
+            </entry>
+            <entry id="song-command" itemRef="song-command" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bow" itemRef="bow" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="chart-6" itemRef="chart-6">
+                <appendToName>(200 Rupees, Six-Eye Reef [D4])</appendToName>
+                <description>In the northwestern room on the first floor.</description>
+            </entry>
+            <entry id="chart-30" itemRef="chart-30">
+                <appendToName>({{hp-chart-30}})</appendToName>
+                <description>On the second floor, in the room with the scales that you need to weight down using statues, bomb the west wall and play the Wind's Requiem on the stand.</description>
+            </entry>
+            <entry id="towerofthegods-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="greatsea-aftertowerofthegods">
+            <heading>More Great Sea goodies</heading>
+            <entry id="sword-master" itemRef="sword" add="0" changeNameID="master" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="info-knightscrests" checkbox="false">
+                <description>Remember to get Knight's Crests from the Darknuts (you're guaranteed to get them if you remove their helmets and use the Grappling Hook). You need 10 to get the {{hurricanespin}}.</description>
+            </entry>
+            <entry id="song-gales" itemRef="song-gales" checkbox="false" filters="mandatory">
+                <description>Mandatory (at some point), shoot down Cyclos (for example at Northern Triangle Isle).</description>
+            </entry>
+            <entry id="hp-chart-30" itemRef="heartpieces">
+                <appendToName>({{chart-30}})</appendToName>
+                <description>In the waters outside Pawprint Isle [E2].</description>
+            </entry>
+            <entry id="hurricanespin" itemRef="hurricanespin">
+                <description>Outset Island [B7], give 10 Knight's Crests to Orca.</description>
+            </entry>
+            <entry id="hp-dekutrees" itemRef="heartpieces">
+                <description>Speak to the Great Deku Tree in Forest Haven [F6] and water the eight withered Deku Trees: 1) Cliff Plateau Isles [G6] (sail east from Forest Haven and go through the cave). 2) Shark Island [C6] (warp to Southern Fairy Island [D6] and sail west). 3) Greatfish Isle [B4] (warp here and follow the corkscrew path up to the top of the hill). 4) Needle Rock Isle [A5] (sail southwest from Greatfish Isle). 5) Private Oasis [E5] (warp to Tower of the Gods [E4] and sail south). 6) Eastern Fairy Island [E3] (warp to Tower of the Gods again and sail north). 7) Mother and Child Isles [B2] (don't warp there - warp to Tingle Island [C3] and sail northwest). 8) Star Island [B1] (sail north from Mother and Child Isles).</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="forsakenfortressrevisited">
+            <heading>Forsaken Fortress revisited</heading>
+            <entry id="skullhammer" itemRef="skullhammer" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="forsakenfortress-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="find-earthtemple">
+            <heading>Finding the Earth Temple</heading>
+
+            <entry id="fireicearrows" itemRef="fireicearrows" checkbox="false" filters="mandatory">
+                <description>Mandatory (at some point), warp to Mother and Child Isles [B2].</description>
+            </entry>
+
+            <entry type="subheading">Windfall Island [D2]</entry>
+
+            <entry id="chart-incredible" itemRef="chart-incredible">
+                <description>In any Postbox after rescuing the girls from the Forsaken Fortress.</description>
+            </entry>
+            <entry id="chart-2" itemRef="chart-2">
+                <appendToName>({{hp-chart-2}})</appendToName>
+                <description>Bring 20 Skull Necklaces to Maggie's Father in the House of Wealth.</description>
+            </entry>
+            <entry id="hp-maggie" itemRef="heartpieces">
+                <description>Speak to Maggie in the House of Wealth an deliver her letter. Come back later and follow the postman to the café. Take his letter and deliver it to Maggie.</description>
+            </entry>
+            <entry id="hp-lighthouse" itemRef="heartpieces">
+                <description>At night, point the wind north, ride the Ferris Wheel and shoot a Fire Arrow into the center of the rotating beacon. Speak to the guy near the Ferris Wheel.</description>
+            </entry>
+            <entry id="hp-lighthouse-chest" itemRef="heartpieces">
+                <description>After igniting the lighthouse beacon, point the wind southwest and glide from the top of the Ferris wheel to the chest that appeared on the small island just outside the Bomb Shop.</description>
+            </entry>
+            <entry id="bottle-mila" itemRef="bottles">
+                <description>Follow Mila at night and catch her in the act of breaking into Zunari's safe. Select the default responses.</description>
+            </entry>
+
+            <entry type="subheading">The Great Sea</entry>
+
+            <entry id="chart-32" itemRef="chart-32">
+                <appendToName>(Sea Hearts Chart, Boating Course [F7])</appendToName>
+                <description>In Three-Eye Reef [A4], destroy all the cannons on the walls of the reef.</description>
+            </entry>
+            <entry id="quiver-bigger" itemRef="quiver">
+                <description>From the Great Fairy on Western Fairy Island [A3].</description>
+            </entry>
+            <entry id="hp-chart-2" itemRef="heartpieces">
+                <appendToName>({{chart-2}})</appendToName>
+                <description>In the waters outside Rock Spire Isle [B3].</description>
+            </entry>
+            <entry id="chart-19" itemRef="chart-19">
+                <appendToName>(Island Hearts Chart, Flight Control Platform [G2])</appendToName>
+                <description>In Four-Eye Reef [A2], destroy all the cannons on the walls of the reef.</description>
+            </entry>
+            <entry id="chart-21" itemRef="chart-21">
+                <appendToName>(Light Ring Chart, Cyclops Reef [C4])</appendToName>
+                <description>In Cyclops Reef [C4], destroy all the cannons.</description>
+            </entry>
+            <entry id="chart-26" itemRef="chart-26">
+                <appendToName>(Octo Chart, Northern Triangle Island [D3])</appendToName>
+                <description>In Six-Eye Reef [D4], destroy all the cannons on the walls of the reef.</description>
+            </entry>
+            <entry id="powerbracelets" itemRef="powerbracelets" checkbox="false" filters="mandatory">
+                <description>Mandatory (at some point), on Fire Island.</description>
+            </entry>
+            <entry id="quiver-biggest" itemRef="quiver" add="0" changeNameID="biggest">
+                <description>From the Great Fairy on Thorned Fairy Island [G4].</description>
+            </entry>
+            <entry id="chart-36" itemRef="chart-36">
+                <appendToName>(200 Rupees, Bird's Peak Rock [G5])</appendToName>
+                <description>Ice Ring Isle [E6], on the east side of the island.</description>
+            </entry>
+            <entry id="ironboots" itemRef="ironboots" checkbox="false" filters="mandatory">
+                <description>Mandatory (at some point), on Ice Ring Isle [E6].</description>
+            </entry>
+            <entry id="chart-13" itemRef="chart-13">
+                <appendToName>(Secret Cave Chart, Overlook Island [G1])</appendToName>
+                <description>In Two Eye Reef, destroy all the cannons on the walls of the reef.</description>
+            </entry>
+            <entry id="hp-pig" itemRef="heartpieces">
+                <description>Outset Island [B7], carry Rose's huge pig across the bridge to the black patch of dirt and throw some All-Purpose Bait on the dirt.</description>
+            </entry>
+            <entry id="chart-41" itemRef="chart-41">
+                <appendToName>(Great Fairy Chart, Four-Eye Reef [A2])</appendToName>
+                <description>In Two-Eye Reef [D7], destroy all the cannons on the walls of the reef.</description>
+            </entry>
+            <entry id="song-earthgod" itemRef="song-earthgod" checkbox="false" filters="mandatory">
+                <description>Mandatory (Headstone Island [C7]).</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="earthtemple">
+            <heading>Earth Temple</heading>
+            <entry id="earthtemple-map" itemRef="dungeonmap">
+                <description>Hard to miss. In the room with the first Warp Pot and the ChuChus.</description>
+            </entry>
+            <entry id="earthtemple-compass" itemRef="compass">
+                <description>Hard to miss. In the room with the Floormaster where you have to pull around small boxes.</description>
+            </entry>
+            <entry id="mirrorshield" itemRef="shield" add="0" changeNameID="mirror" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="chart-20" itemRef="chart-20">
+                <appendToName>({{hp-chart-20}})</appendToName>
+                <description>In the room in the first basement with lots of mist on the floor, kill all the Floor Masters.</description>
+            </entry>
+            <entry id="chart-12" itemRef="chart-12">
+                <appendToName>(200 Rupees, Five-Eye Reef [B6])</appendToName>
+                <description>In the westernmost room in the second basement.</description>
+            </entry>
+            <entry id="earthtemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="find-windtemple">
+            <heading>Finding the Wind Temple</heading>
+            <entry id="info-savagelabyrinth" checkbox="false">
+                <description>You can now finish the Savage Labyrinth and get the {{heroscharm}} as well as {{triforce-shard-savagelabyrinth}}. These items are covered later, when you are actually supposed to look for the Triforce Shards.</description>
+            </entry>
+            <entry id="hp-chart-20" itemRef="heartpieces">
+                <appendToName>({{chart-20}})</appendToName>
+                <description>In the waters outside Bomb Island [F5].</description>
+            </entry>
+            <entry id="song-windgod" itemRef="song-windgod" checkbox="false" filters="mandatory">
+                <description>Mandatory (Gale Isle [D1]).</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="windtemple">
+            <heading>Wind Temple</heading>
+            <entry id="windtemple-map" itemRef="dungeonmap">
+                <description>In the big/long room on the first floor with all the updrafts and large fences.</description>
+            </entry>
+            <entry id="windtemple-compass" itemRef="compass">
+                <description>Halfway down the large shaft between the first floor and the basement.</description>
+            </entry>
+            <entry id="chart-35" itemRef="chart-35">
+                <appendToName>(200 Rupees, Islet of Steel [B5])</appendToName>
+                <description>In the basement, in the room with the thrusting spikes, drop through each of the five holes with the Iron Boots.</description>
+            </entry>
+            <entry id="hookshot" itemRef="hookshot" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="chart-5" itemRef="chart-5">
+                <appendToName>({{hp-chart-5}})</appendToName>
+                <description>Shortly before the boss, in the room with a Yellow Wizzrobe and two Stalfoses, pull down all the stone faces on the walls and defeat all the enemies.</description>
+            </entry>
+            <entry id="windtemple-heartcontainer" itemRef="heartcontainer" add="4">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="thetriforce">
+            <heading>The Triforce of Courage</heading>
+            <entry id="triforce-shard-savagelabyrinth" itemRef="triforceshard" filters="mandatory">
+                <description>Outset Island [B7], on floor 30 of the Savage Labyrinth.</description>
+            </entry>
+            <entry id="heroscharm" itemRef="heroscharm">
+                <description>Outset Island [B7], on floor 50 of the Savage Labyrinth.</description>
+            </entry>
+            <entry id="chart-ghostship" itemRef="chart-ghostship">
+                <description>Diamond Steppe Island [A6], in the cave.</description>
+            </entry>
+            <entry id="chart-triforce-3" itemRef="chart-triforce-3" filters="mandatory">
+                <appendToName>({{triforce-shard-cliffplateau}})</appendToName>
+                <description>By Needle Rock Isle [A5], shoot down the golden ship.</description>
+            </entry>
+            <entry id="chart-triforce-1" itemRef="chart-triforce-1" filters="mandatory">
+                <appendToName>({{triforce-shard-greatfish}})</appendToName>
+                <description>Inside the Islet of Steel [B5].</description>
+            </entry>
+            <entry id="chart-triforce-2" itemRef="chart-triforce-2" filters="mandatory">
+                <appendToName>({{triforce-shard-stonewatcher}})</appendToName>
+                <description>On Bird's Peak Rock [G5].</description>
+            </entry>
+            <entry id="hp-chart-5" itemRef="heartpieces">
+                <appendToName>({{chart-5}})</appendToName>
+                <description>In the waters outside Thorned Fairy Island [G4].</description>
+            </entry>
+            <entry id="info-tingle-decipher" checkbox="false" filters="mandatory">
+                <description>Let Tingle (on Tingle Island [C3]) decipher the Triforce Charts (1200 Rupees total).</description>
+            </entry>
+            <entry id="chart-46" itemRef="chart-46">
+                <appendToName>({{hp-chart-46}})</appendToName>
+                <description>Pawprint Isle [E2], inside the cave.</description>
+            </entry>
+            <entry id="triforce-shard-greatfish" itemRef="triforceshard" filters="mandatory">
+                <appendToName>({{chart-triforce-1}})</appendToName>
+                <description>In the waters outside Greatfish Isle [B4].</description>
+            </entry>
+            <entry id="triforce-shard-stonewatcher" itemRef="triforceshard" filters="mandatory">
+                <appendToName>({{chart-triforce-2}})</appendToName>
+                <description>In the waters outside Stone Watcher Island [C5].</description>
+            </entry>
+            <entry id="triforce-shard-stonewatcher-cave" itemRef="triforceshard" filters="mandatory">
+                <description>Inside the cave on Stone Watcher Island [C5].</description>
+            </entry>
+            <entry id="triforce-shard-privateoasis" itemRef="triforceshard" filters="mandatory">
+                <description>Private Oasis [E5], find and complete the maze.</description>
+            </entry>
+            <entry id="chart-27" itemRef="chart-27">
+                <appendToName>(200 Rupees, Star Belt Archipelago [G3])</appendToName>
+                <description>Private Oasis [E5], Hookshot to the tree on the ledge from the back of the cabana.</description>
+            </entry>
+            <entry id="hp-chart-46" itemRef="heartpieces">
+                <appendToName>({{chart-46}})</appendToName>
+                <description>In the waters outside Two-Eye Reef [D7].</description>
+            </entry>
+            <entry id="triforce-shard-cliffplateau" itemRef="triforceshard" filters="mandatory">
+                <appendToName>({{chart-triforce-3}})</appendToName>
+                <description>In the waters outside Cliff Plateau Isles [G6].</description>
+            </entry>
+            <entry id="triforce-shard-overlook" itemRef="triforceshard" filters="mandatory">
+                <description>In the cave on Overlook Island [G1].</description>
+            </entry>
+            <entry id="triforce-shard-ghostship" itemRef="triforceshard" filters="mandatory">
+                <description>In the Ghost Ship.</description>
+            </entry>
+            <entry id="triforce" itemRef="triforce" checkbox="false" filters="mandatory">
+                <description>Mandatory (you get it when you have collected all the Triforce Shards).</description>
+            </entry>
+        </gameSegment>
+
+    </gameSegments>
+
+    <!-- FIXME: the descriptions should't be too detailed -->
+
+</guide>

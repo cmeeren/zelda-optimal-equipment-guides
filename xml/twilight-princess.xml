@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide>
+
+    <!-- Categories to display in summaries after each gameSegment, and their titles -->
+    <summaryLists>
+        <summaryList id="action">Action items</summaryList>
+        <summaryList id="collectibles">Collectibles</summaryList>
+        <summaryList id="other">Other</summaryList>
+    </summaryLists>
+
+    <!-- Game variations to show correct entry <description>s
+
+            Example definition:
+                <gameVariation id="wiiUNormal">Wii U Normal Mode</gameVariation>
+
+            Example usage:
+                <description gameVariations='gc,wiiUNormal'>
+                <item gameVariations='gc,wiiUNormal'>
+
+            When used on <item> elements, all related entries as well as the summary section item will be hidden
+            when selecting another game variation in the guide.
+
+            You cannot use 'all' as an id (reserved for internal use in the Java application).
+    -->
+    <gameVariations>
+        <gameVariation id="gc">GameCube</gameVariation>
+        <gameVariation id="wii">Wii</gameVariation>
+        <gameVariation id="wiiUNormal">Wii U Normal Mode</gameVariation>
+        <gameVariation id="wiiUHero">Wii U Hero Mode</gameVariation>
+    </gameVariations>
+
+    <!-- Filters to to show/hide certain items
+
+            Example usage:
+                <entry filters='mandatory,bugs' ...>
+                <item filters='mandatory,bugs' ...>
+
+            When used in <item> elements, will hide all entries that reference this item.
+     -->
+    <filters>
+        <filter id="oldSummaryItem">Old items in summary sections </filter>  <!-- Don't use this directly -->
+        <filter id="mandatory">Mandatory items (items you get at specific points in the game)</filter>
+        <filter id="heartpieces">Hearts Pieces</filter>
+        <filter id="heartcontainers">Heart Containers</filter>
+        <filter id="bugs">Golden Bugs</filter>
+        <filter id="souls">Poe Souls</filter>
+        <filter id="howlstone">Howling Stones</filter>
+        <filter id="skills">Hidden Skills</filter>
+        <filter id="ooccoo">Ooccoo</filter>
+        <filter id="mapcompass">Dungeon Map/Compass</filter>
+    </filters>
+
+    <!-- Definition of all items used in this guide -->
+    <items>
+        <!-- Summary type: Action Items -->
+        <item id="fishingrod" summaryType="action">
+            <name>Fishing Rod</name>
+        </item>
+        <item id="bottles" unique="false" summaryType="action">
+            <name>Bottle</name>
+        </item>
+        <item id="slingshot" summaryType="action">
+            <name>Slingshot</name>
+        </item>
+        <item id="lantern" summaryType="action">
+            <name>Lantern</name>
+        </item>
+        <item id="boomerang" summaryType="action">
+            <name>Gale Boomerang</name>
+        </item>
+        <item id="ironboots" summaryType="action">
+            <name>Iron Boots</name>
+        </item>
+        <item id="bow" summaryType="action">
+            <name>Hero's Bow</name>
+        </item>
+        <item id="bombbags" unique="false" summaryType="action">
+            <name>Bomb Bag</name>
+            <name id="giantbombbag">Giant Bomb Bag</name>
+        </item>
+        <item id="hawkeye" summaryType="action">
+            <name>Hawkeye</name>
+        </item>
+        <item id="clawshot" summaryType="action">
+            <name>Clawshot</name>
+            <name id="doubleclawshots">Double Clawshots</name>
+        </item>
+        <item id="ghostlantern" summaryType="action" gameVariations="wiiUNormal,wiiUHero">
+            <name>Ghost Lantern</name>
+        </item>
+        <item id="spinner" summaryType="action">
+            <name>Spinner</name>
+        </item>
+        <item id="ballandchain" summaryType="action">
+            <name>Ball and Chain</name>
+        </item>
+        <item id="dominionrod" summaryType="action">
+            <name>Dominion Rod</name>
+        </item>
+        <item id="horsecall" summaryType="action">
+            <name>Horse Call</name>
+        </item>
+
+        <!-- Summary type: Collectibles -->
+        <item id="woodensword" summaryType="collectibles">
+            <name>Wooden Sword</name>
+        </item>
+        <item id="ordonsword" summaryType="collectibles">
+            <name>Ordon Sword</name>
+        </item>
+        <item id="mastersword" summaryType="collectibles">
+            <name>Master Sword</name>
+        </item>
+        <item id="ordonshield" summaryType="collectibles">
+            <name>Ordon Shield</name>
+        </item>
+        <item id="hylianshield" summaryType="collectibles">
+            <name>Hylian Shield</name>
+        </item>
+        <item id="herosclothes" summaryType="collectibles">
+            <name>Hero's Clothes</name>
+        </item>
+        <item id="zoraarmor" summaryType="collectibles">
+            <name>Zora Armor</name>
+        </item>
+        <item id="magicarmor" summaryType="collectibles">
+            <name>Magic Armor</name>
+        </item>
+        <item id="quiver" summaryType="collectibles">
+            <name>Big Quiver</name>
+            <name id="giantquiver">Giant Quiver</name>
+        </item>
+        <item id="wallet" summaryType="collectibles" startNum="1">
+            <name>Wallet</name>
+            <name id="bigwallet">Big Wallet</name>
+            <name id="giantwallet">Giant Wallet</name>
+        </item>
+
+
+        <!-- Summary type: Other -->
+        <item id="hearts" summaryType="other" unique="false" startNum="3" numParts="5">
+            <name>Heart</name>
+        </item>
+        <item id="heartpieces" partsOf="hearts" unique="false" filters="heartpieces">
+            <!-- Only directly showed in listing ("Piece of Heart #2" etc.), not summaries. -->
+            <name>
+                <singular>Piece of Heart</singular>
+                <plural>Pieces of Heart</plural>
+            </name>
+        </item>
+        <item id="heartcontainer" partsOf="hearts" filters="heartcontainers">
+            <!-- Only directly showed in listing (e.g. "Heart Container: After the boss"), not summaries.
+             We use unique=True (implicit) to hide count (to avoid "Heart Container #2" etc.)-->
+            <name>Heart Container</name>
+        </item>
+        <item id="skills" summaryType="other" unique="false" filters="skills">
+            <name>Hidden Skill</name>
+        </item>
+        <item id="bugs" summaryType="other" unique="false" filters="bugs">
+            <name>Golden Bug</name>
+        </item>
+        <item id="souls" summaryType="other" unique="false" filters="souls">
+            <name>Poe Soul</name>
+        </item>
+
+        <!-- Non-summary items -->
+        <item id="dungeonmap" filters="mapcompass">
+            <name>Dungeon Map</name>
+        </item>
+        <item id="compass" filters="mapcompass">
+            <name>Compass</name>
+        </item>
+        <item id="ooccoo" filters="ooccoo">
+            <name>Ooccoo</name>
+        </item>
+        <item id="howlstone" unique="false" filters="howlstone">
+            <name>Howling Stone</name>
+        </item>
+        
+    </items>
+
+    <!-- The game segments containing the actual guide entries -->
+    <gameSegments>
+
+        <gameSegment id="ordonvillage">
+            <heading>Ordon Village and Faron Woods</heading>
+            <entry id="fishingrod" itemRef="fishingrod" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bottle-ordon" itemRef="bottles" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="slingshot" itemRef="slingshot" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="woodensword" itemRef="woodensword" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="lantern" itemRef="lantern" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-faron-bog-cavekey" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">Faron Woods, in the cave with the small key northeast in the bog area.</description>
+                <description gameVariations="wii,wiiUHero">Faron Woods, in the cave with the small key northwest in the bog area.</description>
+            </entry>
+            <entry id="woodensword-giveaway" itemRef="woodensword" add="-1" checkbox="false" filters="mandatory">
+                <name>Give away Wooden Sword</name>
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="ordonshield" itemRef="ordonshield" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="ordonsword" itemRef="ordonsword" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="herosclothes" itemRef="herosclothes" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bottle-coro" itemRef="bottles">
+                <description>Buy it from Coro after he gives you the key to the gate (100 Rupees).</description>
+            </entry>
+            <entry id="skill-endingblow" itemRef="skills" checkbox="false" filters="mandatory">
+                <appendToName>(Ending Blow)</appendToName>
+                <description>Mandatory.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="foresttemple">
+            <heading>Forest Temple</heading>
+            <entry id="foresttemple-dungeonmap" itemRef="dungeonmap">
+                <description>In the main hall (north of the entrance).</description>
+            </entry>
+            <entry id="foresttemple-ooccoo" itemRef="ooccoo">
+                <description gameVariations="gc,wiiUNormal">In the watery cavern (east of the main hall).</description>
+                <description gameVariations="wii,wiiUHero">In the watery cavern (west of the main hall).</description>
+            </entry>
+            <entry id="hp-foresttemple-grassycavern" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the grassy cavern (just west of the main hall).</description>
+                <description gameVariations="wii,wiiUHero">In the grassy cavern (just east of the main hall).</description>
+            </entry>
+            <entry id="boomerang" itemRef="boomerang" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-foresttemple-cageroom" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the western cage room (west of the grassy cavern).</description>
+                <description gameVariations="wii,wiiUHero">In the eastern cage room (east of the grassy cavern).</description>
+            </entry>
+            <entry id="foresttemple-compass" itemRef="compass">
+                <description>In the main hall (north of the entrance).</description>
+            </entry>
+            <entry id="foresttemple-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="restorelight-eldin">
+            <heading>Eldin Province and Death Mountain</heading>
+
+            <entry type="subheading">Going to Eldin</entry>
+
+            <entry id="bug-beetle-m" itemRef="bugs">
+                <appendToName>(Beetle♂)</appendToName>
+                <description gameVariations="gc,wiiUNormal">South Hyrule Field, in a tree southwest of the bridge.</description>
+                <description gameVariations="wii,wiiUHero">South Hyrule Field, in a tree southeast of the bridge.</description>
+            </entry>
+            <entry id="bug-beetle-f" itemRef="bugs">
+                <appendToName>(Beetle♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">South Hyrule Field, northeast of the lake, on some trees high up.</description>
+                <description gameVariations="wii,wiiUHero">South Hyrule Field, northwest of the lake, on some trees high up.</description>
+            </entry>
+            <entry id="hp-southhyrule-bridge-tree" itemRef="heartpieces">
+                <description>South Hyrule Field, in a tree south of the bridge.</description>
+            </entry>
+
+            <entry type="subheading">Collecting Light Tears</entry>
+
+            <entry id="howl-deathmountain" itemRef="howlstone">
+                <description>While collecting Light Tears on Death Mountain.</description>
+            </entry>
+
+            <entry type="subheading">Gearing up for Goron Mines</entry>
+
+            <entry id="bug-ant-m" itemRef="bugs">
+                <appendToName>(Ant♂)</appendToName>
+                <description>Kakariko Village, at the back of the graveyard.</description>
+            </entry>
+            <entry id="bug-ant-f" itemRef="bugs">
+                <appendToName>(Ant♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Kakariko Village, in the third house to the east.</description>
+                <description gameVariations="wii,wiiUHero">Kakariko Village, in the third house to the west.</description>
+            </entry>
+            <entry id="bug-pill-m" itemRef="bugs">
+                <appendToName>(Pill Bug♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Kakariko Gorge, at the south end east of the gorge.</description>
+                <description gameVariations="wii,wiiUHero">Kakariko Gorge, at the south end west of the gorge.</description>
+            </entry>
+            <entry id="bug-pill-f" itemRef="bugs">
+                <appendToName>(Pill Bug♂)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Kakariko Gorge, just west of the bridge.</description>
+                <description gameVariations="wii,wiiUHero">Kakariko Gorge, just east of the bridge.</description>
+            </entry>
+            <entry id="hp-kakarikogorge-rock" itemRef="heartpieces">
+                <description>Kakariko Gorge, on the large rock in the gorge.</description>
+            </entry>
+            <entry id="skill-shieldattack" itemRef="skills">
+                <appendToName>(Shield Attack)</appendToName>
+                <description>In Ordon Spring.</description>
+            </entry>
+            <entry id="ironboots" itemRef="ironboots" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-goatherding" itemRef="heartpieces">
+                <description>Herd goats at Ordon Ranch.</description>
+            </entry>
+            <entry id="hylianshield" itemRef="hylianshield">
+                <description>After defeating King Bulblin, buy it from the store in Kakariko Village (200 Rupees).</description>
+            </entry>
+            <entry id="bug-grasshopper-m" itemRef="bugs">
+                <appendToName>(Grasshopper♂)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Eldin Bridge area, on the ground to the southeast.</description>
+                <description gameVariations="wii,wiiUHero">Eldin Bridge area, on the ground to the southwest.</description>
+            </entry>
+            <entry id="bug-grasshopper-f" itemRef="bugs">
+                <appendToName>(Grasshopper♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Eldin Bridge area, on the ground in the northwest corner.</description>
+                <description gameVariations="wii,wiiUHero">Eldin Bridge area, on the ground in the northeast corner.</description>
+            </entry>
+            <entry id="bug-phasmid-m" itemRef="bugs">
+                <appendToName>(Phasmid♂)</appendToName>
+                <description>On the wall on the south side of Eldin Bridge.</description>
+            </entry>
+            <entry id="bug-phasmid-f" itemRef="bugs">
+                <appendToName>(Phasmid♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">North of Eldin Bridge, high up on the east wall.</description>
+                <description gameVariations="wii,wiiUHero">North of Eldin Bridge, high up on the west wall.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="goronmines">
+            <heading>Goron Mines</heading>
+            <entry id="goronmines-dungeonmap" itemRef="dungeonmap">
+                <description>In Gor Amoto's room (the first Elder).</description>
+            </entry>
+            <entry id="goronmines-ooccoo" itemRef="ooccoo">
+                <description>In the same room, in a pot on the upper floor.</description>
+            </entry>
+            <entry id="hp-goronmines-firstceiling" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">When first walking on the ceiling, go to the northeast section and drop down.</description>
+                <description gameVariations="wii,wiiUHero">When first walking on the ceiling, go to the northwest section and drop down.</description>
+            </entry>
+            <entry id="hp-goronmines-beamos" itemRef="heartpieces">
+                <description>In the room with the first two Beamos.</description>
+            </entry>
+            <entry id="bow" itemRef="bow" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="goronmines-compass" itemRef="compass">
+                <description gameVariations="gc,wiiUNormal">In the circular Beamos room, behind the western Beamos.</description>
+                <description gameVariations="wii,wiiUHero">In the circular Beamos room, behind the eastern Beamos.</description>
+            </entry>
+            <entry id="goronmines-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="restorelight-lanayru">
+            <heading>Lanayru Province</heading>
+
+            <entry type="subheading">After Goron Mines</entry>
+
+            <entry id="bombbag-barnes" itemRef="bombbags">
+                <description>Purchase the "Premium Kit" at Barnes' Bomb Shop (120 Rupees).</description>
+            </entry>
+            <entry id="hp-malo-targetshooting" itemRef="heartpieces">
+                <description>Talk to Talo on top of the Watchtower and play his target practice game.</description>
+            </entry>
+            <entry id="hawkeye" itemRef="hawkeye">
+                <description>Buy it from Malo's shop after playing Talo's target practice game (100 Rupees).</description>
+            </entry>
+            <entry id="hp-kakariko-bombarrow" itemRef="heartpieces">
+                <description>In the rocks up above the south entrance to Kakariko Village.</description>
+            </entry>
+            <entry id="hp-kakariko-water" itemRef="heartpieces">
+                <description>At the bottom of Lanayru Spring (enter below {{hp-kakariko-bombarrow}}).</description>
+            </entry>
+            <entry id="hp-deathmountain-launchgoron" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">At the second Goron up Death Mountain, launch west. It's in a cave to the north.</description>
+                <description gameVariations="wii,wiiUHero">At the second Goron up Death Mountain, launch east. It's in a cave to the north.</description>
+            </entry>
+            <entry id="hp-kakarikogorge-cave" itemRef="heartpieces">
+                <description>In the cave accessible from Kakariko Gorge.</description>
+            </entry>
+            <entry id="bomb-passage-eldinbridge-kakarikogorge" checkbox="false">
+                <description>You can now clear the passage between Kakariko Gorge and the Eldin Bridge area.</description>
+            </entry>
+            <entry id="hp-eldinbridge-climb" itemRef="heartpieces">
+                <description>Eldin Bridge area, by the Kakariko Village entrance. Blow up the rock and climb up.</description>
+            </entry>
+
+            <entry type="subheading">Collecting Light Tears</entry>
+
+            <entry id="howl-upperzorasriver" itemRef="howlstone">
+                <description>While collecting Light Tears in Upper Zora's River.</description>
+            </entry>
+
+            <entry type="subheading">Gearing up for Lakebed Temple</entry>
+
+            <entry id="hp-cuckooflight" itemRef="heartpieces">
+                <description>Play Falbi's Flight by Fowl and land on the top stationary platform.</description>
+            </entry>
+            <entry id="hp-hylia-cave" itemRef="heartpieces">
+                <description>In the cave above the ladder by Lake Hylia's warp point. (This is a deep cave with many Rupees, so you might want to wait until getting the {{bigwallet}}, which is covered later in this section. Also, you'll visit this cave again after the next temple to hunt Poes - you'll get a reminder then.)</description>
+            </entry>
+            <entry id="bug-mantis-m" itemRef="bugs">
+                <appendToName>(Mantis♂)</appendToName>
+                <description>At the north end of the Great Bridge of Hylia.</description>
+            </entry>
+            <entry id="bug-mantis-f" itemRef="bugs">
+                <appendToName>(Mantis♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">At the south end of the Great Bridge of Hylia, on the wall to the west of the giant tree-like overhang.</description>
+                <description gameVariations="wii,wiiUHero">At the south end of the Great Bridge of Hylia, on the wall to the east of the giant tree-like overhang.</description>
+            </entry>
+            <entry id="open-path-hylia-hyrulefield" checkbox="false">
+                <description gameVariations="gc,wiiUNormal">You can now open up the path between Lake Hylia and north-west Hyrule Field.</description>
+                <description gameVariations="wii,wiiUHero">You can now open up the path between Lake Hylia and north-east Hyrule Field.</description>
+            </entry>
+            <entry id="bug-butterfly-m" itemRef="bugs">
+                <appendToName>(Butterfly♂)</appendToName>
+                <description gameVariations="gc,wiiUNormal">West Hyrule Field, at the south end by some flowers.</description>
+                <description gameVariations="wii,wiiUHero">East Hyrule Field, at the south end, by some flowers.</description>
+            </entry>
+            <entry id="bug-butterfly-f" itemRef="bugs">
+                <appendToName>(Butterfly♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">West Hyrule Field, high up at the west end of this area.</description>
+                <description gameVariations="wii,wiiUHero">East Hyrule Field, high up at the east end of this area.</description>
+            </entry>
+            <entry id="skill-backslice" itemRef="skills">
+                <appendToName>(Back Slice)</appendToName>
+                <description gameVariations="gc,wiiUNormal">West Hyrule Field.</description>
+                <description gameVariations="wii,wiiUHero">East Hyrule Field.</description>
+            </entry>
+            <entry id="bug-stagbeetle-m" itemRef="bugs">
+                <appendToName>(Stag Beetle♂)</appendToName>
+                <description gameVariations="gc,wiiUNormal">North Hyrule Field, on a lone tree west of the river.</description>
+                <description gameVariations="wii,wiiUHero">North Hyrule Field, on a lone tree east of the river.</description>
+            </entry>
+            <entry id="bug-stagbeetle-f" itemRef="bugs">
+                <appendToName>(Stag Beetle♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">North Hyrule Field, in the rocky area to the north, to the left of the bombable wall (not the one to Zora's Domain).</description>
+                <description gameVariations="wii,wiiUHero">North Hyrule Field, in the rocky area to the north, to the right of the bombable wall (not the one to Zora's Domain).</description>
+            </entry>
+            <entry id="open-path-hyrule-zora" checkbox="false">
+                <description>You can now open up the path between north Hyrule Field and Zora's Domain.</description>
+            </entry>
+            <entry id="bug-dragonfly-m" itemRef="bugs">
+                <appendToName>(Dragonfly♂)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Zora's Domain, eastern part of the lower area, just up the hill.</description>
+                <description gameVariations="wii,wiiUHero">Zora's Domain, western part of the lower area, just up the hill.</description>
+            </entry>
+            <entry id="bug-dragonfly-f" itemRef="bugs">
+                <appendToName>(Dragonfly♀)</appendToName>
+                <description>Upper Zora's River, floating around Iza's Boat Shop.</description>
+            </entry>
+            <entry id="bottle-hena-fishing" itemRef="bottles">
+                <description gameVariations="gc,wiiUNormal">In Hena's Fishing Hole, in the small pond by the bridge to the east. Fish until you get the bottle.</description>
+                <description gameVariations="wii,wiiUHero">In Hena's Fishing Hole, in the small pond by the bridge to the west. Fish until you get the bottle.</description>
+            </entry>
+            <entry id="hp-hena-fishing" itemRef="heartpieces">
+                <description>Up in the rock formation in the middle of Hena's Fishing Hole.</description>
+            </entry>
+            <entry id="bombbag-iza" itemRef="bombbags">
+                <description>Help Iza's Boat Shop by clearing out the boulders.</description>
+            </entry>
+            <entry id="giantbombbags" itemRef="bombbags" changeNameID="giantbombbag" add="0">
+                <description>Score 25 points in Iza's Boat Ride game.</description>
+            </entry>
+            <entry id="hp-town-donate" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the western area of Hyrule Castle Town, donate a total of 1000 Rupees (donate what you have now and go to Agitha to get more Rupees and a bigger wallet).</description>
+                <description gameVariations="wii,wiiUHero">In the eastern area of Hyrule Castle Town, donate a total of 1000 Rupees (donate what you have now and go to Agitha to get more Rupees and a bigger wallet).</description>
+            </entry>
+            <entry id="bigwallet" itemRef="wallet" changeNameID="bigwallet" add="0">
+                <description>Give a Golden Bug to Agitha in Hyrule Castle Town.</description>
+            </entry>
+            <entry id="zoraarmor" itemRef="zoraarmor" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="waterbombs" checkbox="false">
+                <description>Purchase some Water Bombs from Barnes' Bomb Shop.</description>
+            </entry>
+            <entry id="bombbag-zora" itemRef="bombbags">
+                <description>In Zora's Domain, plant a water bomb by the lava rock. The Goron will give it to you.</description>
+            </entry>
+            <entry id="bug-ladybug-f" itemRef="bugs">
+                <appendToName>(Ladybug♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">South Hyrule Field, by a small group of trees at the west side of the steps to town.</description>
+                <description gameVariations="wii,wiiUHero">South Hyrule Field, by a small group of trees at the east side of the steps to town.</description>
+            </entry>
+            <entry id="bug-ladybug-m" itemRef="bugs">
+                <appendToName>(Ladybug♂)</appendToName>
+                <description>South Hyrule Field, in a patch of flowers at the base of a tall rock.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="lakebedtemple">
+            <heading>Lakebed Temple</heading>
+            <entry id="lakebed-ooccoo" itemRef="ooccoo">
+                <description>In the rotating staircase room.</description>
+            </entry>
+            <entry id="lakebed-dungeonmap" itemRef="dungeonmap">
+                <description>In the rotating staircase room.</description>
+            </entry>
+            <entry id="clawshot" itemRef="clawshot" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-lakebed-chandelier" itemRef="heartpieces">
+                <description>On the chandelier at the top of the rotating staircase room.</description>
+            </entry>
+            <entry id="lakebed-compass" itemRef="compass">
+                <description gameVariations="gc,wiiUNormal">On the top of the western tower.</description>
+                <description gameVariations="wii,wiiUHero">On the top of the eastern tower.</description>
+            </entry>
+            <entry id="hp-lakebed-gearroom" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">Eastern gear room (the floor below the gears). Requires water flowing into the room.</description>
+                <description gameVariations="wii,wiiUHero">Western gear room (the floor below the gears). Requires water flowing into the room.</description>
+            </entry>
+            <entry id="lakebed-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="aftermastersword">
+            <heading>Master Sword and hunting Poes</heading>
+            <entry id="poe-jovani" itemRef="souls" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="howl-faronwoods" itemRef="howlstone">
+                <description>Faron Woods, before entering the Sacred Grove.</description>
+            </entry>
+            <entry id="mastersword" itemRef="mastersword" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="bug-snail-m" itemRef="bugs">
+                <appendToName>(Snail♂)</appendToName>
+                <description>In a small room south in the area with the statue puzzle.</description>
+            </entry>
+            <entry id="poe-skullkid-fight" itemRef="souls">
+                <description>Blow up the center rock where you fought the Skull Kid.</description>
+            </entry>
+            <entry id="hp-skullkid-cave" itemRef="heartpieces">
+                <description>After blowing up the rock where you fought the Skull Kid, dig to find a cave. Defeat all enemies.</description>
+            </entry>
+            <entry id="poe-faronwoods-bog-center" itemRef="souls">
+                <description>In the Faron Woods bog area, floating up in the center of the poison fog area.</description>
+            </entry>
+            <entry id="poe-southhyrule-bridgenorth" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>South Hyrule Field, north of the bridge.</description>
+            </entry>
+            <entry id="poe-southbridgehylia-clawshot" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>South of the Great Bridge of Hylia, just south of the wooden bridge, up on a ledge.</description>
+            </entry>
+            <entry id="poe-kakarikogorge-tree" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Kakariko Gorge, next to the tree above the bridge.</description>
+            </entry>
+            <entry id="poe-kakarikogorge-cave" itemRef="souls">
+                <description>In the cave accessible from Kakariko Gorge.</description>
+            </entry>
+            <entry id="poe-graveyard-center" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Kakariko Village, in the graveyard.</description>
+            </entry>
+            <entry id="poe-graveyard-tombstone" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Also in the graveyard, push the first tombstone on the right to reveal it.</description>
+                <description gameVariations="wii,wiiUHero">Also in the graveyard, push the first tombstone on the left to reveal it.</description>
+            </entry>
+            <entry id="bomblings" checkbox="false">
+                <description>You can now purchase Bomblings from Barnes' Bomb Shop. (You don't need them to get anything in this guide.)</description>
+            </entry>
+            <entry id="poe-kakariko-barnes" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Kakariko Village, in Barnes' burnt-down supply shed above his store.</description>
+            </entry>
+            <entry id="poe-kakariko-watchtower" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Kakariko Village, in front of the watchtower building.</description>
+            </entry>
+            <entry id="poe-deathmountain-goronlaunch" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">On the road to Death Mountain, have the second Goron launch you west.</description>
+                <description gameVariations="wii,wiiUHero">On the road to Death Mountain, have the second Goron launch you east.</description>
+            </entry>
+            <entry id="malomartdonate" checkbox="false">
+                <description>It's a good idea to start donating money to the Goron inside Malo Mart.</description>
+            </entry>
+            <entry id="hp-eldinbridge-cave" itemRef="heartpieces">
+                <description>In the cave on the cliff north of the Bridge of Eldin. (It's a bit of a ride to get there, you can do this during the day to kill some time while waiting for night to hunt more Poes.)</description>
+            </entry>
+            <entry id="hp-lanayru-spring" itemRef="heartpieces">
+                <description>Lanayru's spring, in the room at the back.</description>
+            </entry>
+            <entry id="poe-hylia-shore" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">East edge of Lake Hylia, on the shore.</description>
+                <description gameVariations="wii,wiiUHero">West edge of Lake Hylia, on the shore.</description>
+            </entry>
+            <entry id="poe-hylia-south" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Lake Hylia, up the rocky paths south of the warp point.</description>
+            </entry>
+            <entry id="howl-hylia" itemRef="howlstone">
+                <description>Lake Hylia, on top of the ladder by the warp point.</description>
+            </entry>
+            <entry id="poe-hylia-aurustower" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Lake Hylia, next to Auru's tower.</description>
+            </entry>
+            <entry id="poe-hylia-cave" itemRef="souls" add="3">
+                <description>Lake Hylia, in the deep cave south of the Howling Stone.</description>
+            </entry>
+            <entry id="info-hp-hylia-cave" checkbox="false" filters="heartpieces">
+                <description>Now's a good time to get {{hp-hylia-cave}} if you haven't already.</description>
+            </entry>
+            <entry id="poe-hylia-cuckoo-turnaround" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Lake Hylia, play Falbi's Flight by Fowl and turn 180 degrees. It's on a little ledge.</description>
+            </entry>
+            <entry id="poe-hylia-cuckoo-platform" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Lake Hylia, on one of the platforms on the Isle of Riches. Play Falbi's Flight by Fowl to get there.</description>
+            </entry>
+            <entry id="hp-parrot" itemRef="heartpieces">
+                <description>Speak to the parrot in Lake Hylia and beat his game.</description>
+            </entry>
+            <entry id="poe-zorasdomain-lower" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Zora's Domain, east of the basin.</description>
+                <description gameVariations="wii,wiiUHero">Zora's Domain, west of the basin.</description>
+            </entry>
+            <entry id="poe-zorasdomain-upper" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Zora's Domain, go to the west side and leap upwards.</description>
+                <description gameVariations="wii,wiiUHero">Zora's Domain, go to the east side and leap upwards.</description>
+            </entry>
+            <entry id="poe-upperzorasriver-between" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Upper Zora's River, between the two river outlets.</description>
+            </entry>
+            <entry id="poe-hyrulenorth-bridge" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>North Hyrule Field, on the bridge crossing the river.</description>
+            </entry>
+            <entry id="poe-hyrulenorth-trees" itemRef="souls" add="2">
+                <description gameVariations="gc,wiiUNormal">North Hyrule Field, dig in a circle of grass between the trees to the west.</description>
+                <description gameVariations="wii,wiiUHero">North Hyrule Field, dig in a circle of grass between the trees to the east.</description>
+            </entry>
+            <entry id="poe-hyrule-ruins" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">West Hyrule Field, in the ruins to the south.</description>
+                <description gameVariations="wii,wiiUHero">East Hyrule Field, in the ruins to the south.</description>
+            </entry>
+            <entry id="poe-hyrule-townsteps" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Hyrule Field, south of the town, on the stairs.</description>
+            </entry>
+            <entry id="skill-helmsplitter" itemRef="skills">
+                <appendToName>(Helm Splitter)</appendToName>
+                <description>Hyrule Field, south of the town.</description>
+            </entry>
+            <entry id="poe-eldin-town" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Leave Hyrule Castle Town by the east gate.</description>
+                <description gameVariations="wii,wiiUHero">Leave Hyrule Castle Town by the west gate.</description>
+            </entry>
+            <entry id="bottle-jovani" itemRef="bottles">
+                <description>Return to Jovani with at least 20 Poe Souls.</description>
+            </entry>
+            <entry id="ghostlantern" itemRef="ghostlantern">
+                <description>Return to Jovani with at least 20 Poe Souls.</description>
+            </entry>
+            <entry id="bigquiver" itemRef="quiver">
+                <description>Beat the STAR game in Hyrule Castle Town.</description>
+            </entry>
+            <entry id="hp-hot-springwater" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">Donate 1000 Rupees to the Goron in front of Malo Mart, then speak to the Goron in front of the store. Speak to the Goron east of Hyrule Castle Town, speak to the one in front of Malo Mart again, and bring the Hot Springwater to the one east of Hyrule Castle Town.</description>
+                <description gameVariations="wii,wiiUHero">Donate 1000 Rupees to the Goron in front of Malo Mart, then speak to the Goron in front of the store. Speak to the Goron west of Hyrule Castle Town, speak to the one in front of Malo Mart again, and bring the Hot Springwater to the one west of Hyrule Castle Town.</description>
+            </entry>
+            <entry id="open-path-southhyrule-townsouth" checkbox="false">
+                <description>You can now open the path between South Hyrule Field and the area south of Hyrule Castle Town.</description>
+            </entry>
+            <entry id="magicarmor" itemRef="magicarmor">
+                <description>Purchase Hot Springwater in Hyrule Castle Town and bring it to the Goron south of town. Then contribute 200 Rupees to Malo Mart. Purchase it at the new shop in Hyrule Castle Town.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="gerudodesert">
+            <heading>Gerudo Desert</heading>
+            <entry id="poe-gerudo-south" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Just south of where you arrive, at the end of the map.</description>
+            </entry>
+            <entry id="bug-dayfly-m" itemRef="bugs">
+                <appendToName>(Dayfly♂)</appendToName>
+                <description gameVariations="gc,wiiUNormal">Just east of the southern chasm seen on the map.</description>
+                <description gameVariations="wii,wiiUHero">Just west of the southern chasm seen on the map.</description>
+            </entry>
+            <entry id="bug-dayfly-f" itemRef="bugs">
+                <appendToName>(Dayfly♀)</appendToName>
+                <description gameVariations="gc,wiiUNormal">East of the bridge segment, in one of the trenches.</description>
+                <description gameVariations="wii,wiiUHero">West of the bridge segment, in one of the trenches.</description>
+            </entry>
+            <entry id="poe-gerudo-bridgesegment" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>By the bridge segment (easier to spot when it is warped away).</description>
+            </entry>
+            <entry id="warp-eldinbridge-segment" checkbox="false">
+                <description>Warp back the Eldin Bridge segment.</description>
+            </entry>
+            <entry id="poe-gerudo-camp" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">East of the watchtower camp, up on a hill.</description>
+                <description gameVariations="wii,wiiUHero">West of the watchtower camp, up on a hill.</description>
+            </entry>
+            <entry id="poe-gerudo-cave" itemRef="souls" add="2">
+                <description>Dig below {{poe-gerudo-camp}}.</description>
+            </entry>
+            <entry id="skill-mortaldraw" itemRef="skills">
+                <appendToName>(Mortal Draw)</appendToName>
+                <description>Between the desert watchtower camp and Bulblin Fortress.</description>
+            </entry>
+            <entry id="poe-before-bulblin-fortress" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Between the desert watchtower camp and Bulblin Fortress.</description>
+            </entry>
+            <entry id="hp-roastingpig" itemRef="heartpieces">
+                <description>Bulblin Fortress, slash open the roasting pig.</description>
+            </entry>
+            <entry id="poe-bulblin-fortress-burned" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>In the Bulblin Fortress, in the burned-down pen after the fight.</description>
+            </entry>
+            <entry id="poe-outside-arbiter" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Just outside the entrance to Arbiter's Grounds.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="arbitersgrounds">
+            <heading>Arbiter's Grounds</heading>
+            <entry id="poe-arbiter" itemRef="souls" checkbox="false" filters="mandatory" add="4">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-arbiter-firstpoe" itemRef="heartpieces">
+                <description>In the same room as the first Poe.</description>
+            </entry>
+            <entry id="arbiter-dungeonmap" itemRef="dungeonmap">
+                <description>In the same room as the first Poe.</description>
+            </entry>
+            <entry id="arbiter-compass" itemRef="compass">
+                <description>Hard to miss. After lifting a chandelier and running below it.</description>
+            </entry>
+            <entry id="arbiter-ooccoo" itemRef="ooccoo">
+                <description gameVariations="gc,wiiUNormal">After the first two pairs of Walltraps, in a pot to the left.</description>
+                <description gameVariations="wii,wiiUHero">After the first two pairs of Walltraps, in a pot to the right.</description>
+            </entry>
+            <entry id="spinner" itemRef="spinner" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-arbiter-spinnertracks" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the room with all the Spinner tracks, ride the tracks upwards to the east.</description>
+                <description gameVariations="wii,wiiUHero">In the room with all the Spinner tracks, ride the tracks upwards to the west.</description>
+            </entry>
+            <entry id="arbiter-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="snowpeak">
+            <heading>Snowpeak</heading>
+            <entry id="hp-hyrule-hylia-spinnertracks" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the far western path between Lake Hylia and North Hyrule Field, ride the Spinner tracks.</description>
+                <description gameVariations="wii,wiiUHero">In the far eastern path between Lake Hylia and North Hyrule Field, ride the Spinner tracks.</description>
+            </entry>
+            <entry id="hp-eldinbridge-spinnertracks" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">North of Eldin Bridge, by the wooden bridge, ride the Spinner tracks to the east and dig down.</description>
+                <description gameVariations="wii,wiiUHero">North of Eldin Bridge, by the wooden bridge, ride the Spinner tracks to the west and dig down.</description>
+            </entry>
+            <entry id="poe-snowpeak-ascent-rocks" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Floating by several rocks as you start climbing Snowpeak.</description>
+            </entry>
+            <entry id="poe-snowpeak-ascent-ledges" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Just before climbing up several ledges, take a path south to a lone tree.</description>
+            </entry>
+            <entry id="poe-snowpeak-ascent-trees" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>About halfway up Snowpeak, by some trees.</description>
+            </entry>
+            <entry id="howl-snowpeak-ascent" itemRef="howlstone">
+                <description>On the way up to Snowpeak (it's right in the scent path).</description>
+            </entry>
+            <entry id="skill-jumpstrike" itemRef="skills">
+                <appendToName>(Jump Strike)</appendToName>
+                <description>In the Kakariko Village graveyard. Get it after unlocking the warp point at Snowpeak.</description>
+            </entry>
+            <entry id="poe-snowpeak-spiralpath" itemRef="souls">
+                <description>After following Yeto all the way down, turn into a wolf and go back a little and up the spiral path.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="snowpeakruins">
+            <heading>Snowpeak Ruins</heading>
+            <entry id="poe-snowpeakruins-entrance" itemRef="souls">
+                <description>In front of you as you enter.</description>
+            </entry>
+            <entry id="snowpeakruins-dungeonmap" itemRef="dungeonmap" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="snowpeakruins-ooccoo" itemRef="ooccoo">
+                <description>In the kitchen.</description>
+            </entry>
+            <entry id="snowpeakruins-compass" itemRef="compass">
+                <description gameVariations="gc,wiiUNormal">In the southwest corner of the room with the wooden beams/rafters you must walk on.</description>
+                <description gameVariations="wii,wiiUHero">In the southeast corner of the room with the wooden beams/rafters you must walk on.</description>
+            </entry>
+            <entry id="ballandchain" itemRef="ballandchain" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="hp-snowpeakruins-crushfloor" itemRef="heartpieces">
+                <description>After revealing the cannon hidden in ice, crush the floor to the south, by the red carpet.</description>
+            </entry>
+            <entry id="hp-snowpeakruins-chandeliers" itemRef="heartpieces">
+                <description>On the upper floor of the first room, to the south.</description>
+            </entry>
+            <entry id="poe-snowpeakruins-armor" itemRef="souls">
+                <description>On the ground floor of the first room, behind one of the armors.</description>
+            </entry>
+            <entry id="poe-snowpeakruins-iceroom" itemRef="souls">
+                <description>In the room on the second floor completely covered in ice.</description>
+            </entry>
+            <entry id="snowpeakruins-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="sacredgrove">
+            <heading>Sacred Grove</heading>
+            <entry id="hp-yetirace" itemRef="heartpieces">
+                <description>After finishing Snowpeak Ruins, race and beat both Yeto and Yeta.</description>
+            </entry>
+            <entry id="poe-cave-below-snowpeak" itemRef="souls">
+                <description>In the cave leading up to Snowpeak (by the warp point). Smash the ice to reveal it.</description>
+            </entry>
+            <entry id="hp-hyrulenorth-icepuzzle" itemRef="heartpieces">
+                <description>In the cave accessible from North Hyrule Field (north of the river).</description>
+            </entry>
+            <entry id="poe-sacredgrove-waterfall" itemRef="souls">
+                <description>Sacred Grove, behind the waterfall in one of the areas.</description>
+            </entry>
+            <entry id="poe-mastersword" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description>Floating around the Master Sword's pedestal.</description>
+            </entry>
+            <entry id="bug-snail-f" itemRef="bugs">
+                <appendToName>(Snail♀)</appendToName>
+                <description>After entering the "timeless" area, on the side of the stairs leading down from the door.</description>
+            </entry>
+            <entry id="giantwallet" itemRef="wallet" changeNameID="giantwallet" add="0">
+                <description>Warp to Hyrule Castle Town and give the last bug to Agitha (or wait until after the temple).</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="templeoftime">
+            <heading>Temple of Time</heading>
+            <entry id="templeoftime-ooccoo" itemRef="ooccoo" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="templeoftime-dungeonmap" itemRef="dungeonmap">
+                <description>In the second floor corridor, take out the three Lizalfos and the Armos.</description>
+            </entry>
+            <entry id="templeoftime-compass" itemRef="compass">
+                <description>In the room on the fifth floor where you have to shoot a switch multiple times to move some walls.</description>
+            </entry>
+            <entry id="dominionrod" itemRef="dominionrod" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="poe-templeoftime-balance" itemRef="souls">
+                <description>In the room with the giant scales, just outside the room with the Big Key.</description>
+            </entry>
+            <entry id="hp-templeoftime-electricfield" itemRef="heartpieces">
+                <description>On your way down with the statue, on the fifth floor, in the room with the movable walls and electric fence.</description>
+            </entry>
+            <entry id="hp-templeoftime-chandeliers" itemRef="heartpieces">
+                <description>On the fifth floor, south of the main room.</description>
+            </entry>
+            <entry id="poe-templeoftime-thirdfloor" itemRef="souls">
+                <description gameVariations="gc,wiiUNormal">After taking the statue down the elevator to the third floor, break the east gate.</description>
+                <description gameVariations="wii,wiiUHero">After taking the statue down the elevator to the third floor, break the west gate.</description>
+            </entry>
+            <entry id="templeoftime-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="aftertempleoftime">
+            <heading>Going to the City in the Sky</heading>
+            <entry id="hp-timeless-owlstatue" itemRef="heartpieces">
+                <description>Before leaving the "timeless" area, behind one of the owl statues by the stairs.</description>
+            </entry>
+            <entry id="poe-timeless-owlstatue" itemRef="souls">
+                <description>Before leaving the "timeless" area, behind one of the owl statues by the stairs.</description>
+            </entry>
+            <entry id="horsecall" itemRef="horsecall" checkbox="false" filters="mandatory">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="howl-hiddenvillage" itemRef="howlstone">
+                <description>In the Hidden Village.</description>
+            </entry>
+            <entry id="hp-hiddenvillage-cats" itemRef="heartpieces">
+                <description>Find all the cats in the Hidden Village.</description>
+            </entry>
+            <entry id="poe-hiddenvillage" itemRef="souls">
+                <appendToName>(night)</appendToName>
+                <description gameVariations="gc,wiiUNormal">In the Hidden Village, up on the first building on your right.</description>
+                <description gameVariations="wii,wiiUHero">In the Hidden Village, up on the first building on your left.</description>
+            </entry>
+            <entry id="skill-greatspin" itemRef="skills">
+                <appendToName>(Great Spin)</appendToName>
+                <description>Outside the entrance to Hyrule Castle.</description>
+            </entry>
+            <entry id="hp-coro-statue" itemRef="heartpieces">
+                <description>In Faron Woods, blow up the rocks by Coro's house, move the statue into the hole and leap up.</description>
+            </entry>
+            <entry id="hp-eldinbridge-watchtower" itemRef="heartpieces">
+                <description>Eldin Bridge, move the owl statue to the other end of the bridge and get into the watchtower.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="cityinthesky">
+            <heading>City in the Sky</heading>
+            <entry id="cityinthesky-ooccoo" itemRef="ooccoo">
+                <description>In the shop near the beginning.</description>
+            </entry>
+            <entry id="cityinthesky-dungeonmap" itemRef="dungeonmap">
+                <description gameVariations="gc,wiiUNormal">In the eastern shaft, east of the eastern pillar room.</description>
+                <description gameVariations="wii,wiiUHero">In the western shaft, west of the western pillar room.</description>
+            </entry>
+            <entry id="doubleclawshots" itemRef="clawshot" checkbox="false" filters="mandatory" changeNameID="doubleclawshots">
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="cityinthesky-compass" itemRef="compass">
+                <description>Hard to miss. After using the Double Clawshots to get across a series of falling pillars.</description>
+            </entry>
+            <entry id="hp-cityinthesky-shaft" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the western shaft, below the door leading out at the top.</description>
+                <description gameVariations="wii,wiiUHero">In the eastern shaft, below the door leading out at the top.</description>
+            </entry>
+            <entry id="poe-cityinthesky-peahat" itemRef="souls">
+                <description>On the rooftop, on a small floating island to the north.</description>
+            </entry>
+            <entry id="hp-cityinthesky-peahat" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the next room (after going through a door), when hanging from the fourth Peahat, hook to the southwest Peahat (not the east one).</description>
+                <description gameVariations="wii,wiiUHero">In the next room (after going through a door), when hanging from the fourth Peahat, hook to the southeast Peahat (not the west one).</description>
+            </entry>
+            <entry id="poe-cityinthesky-central-rooftop" itemRef="souls">
+                <description>On the rooftop of the central building, on one of the pillars you have to cross ropes to get to.</description>
+            </entry>
+            <entry id="cityinthesky-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="aftercityinthesky">
+            <heading>A few last items</heading>
+            <entry id="hp-kakarikogorge-clawshots" itemRef="heartpieces">
+                <description>In Kakariko Gorge, by the large rock in the gorge.</description>
+            </entry>
+            <entry id="giantquiver" itemRef="quiver" changeNameID="giantquiver">
+                <description>Beat the STAR game again in Hyrule Castle Town.</description>
+            </entry>
+            <entry id="poe-caveofordeals" itemRef="souls" add="3">
+                <description>Cave of Ordeals, floors 17, 33, and 44.</description>
+            </entry>
+            <entry id="jovani-finished" checkbox="false">
+                <description>After getting all 60 Poe Souls you can visit Jovani again to get 200 Rupees. If you speak to him in Telma's Bar, you can return to Jovani's house and speak with his cat to get 200 Rupees as many times as you like.</description>
+            </entry>
+        </gameSegment>
+
+        <gameSegment id="palaceoftwilight">
+            <heading>Palace of Twilight</heading>
+            <entry id="twilight-compass" itemRef="compass">
+                <description>In one of the chests that appears after first fighting a Zant mask in black fog.</description>
+            </entry>
+            <entry id="hp-twilight-sol" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">When carrying the first Sol, in the first area of the building, head into the southernmost of the two rooms to the west covered by dark fog.</description>
+                <description gameVariations="wii,wiiUHero">When carrying the first Sol, in the first area of the building, head into the southernmost of the two rooms to the east covered by dark fog.</description>
+            </entry>
+            <entry id="twilight-dungeonmap" itemRef="dungeonmap">
+                <description gameVariations="gc,wiiUNormal">Before the second Sol room, where you fight the Zant masks, up west in the room.</description>
+                <description gameVariations="wii,wiiUHero">Before the second Sol room, where you fight the Zant masks, up east in the room.</description>
+            </entry>
+            <entry id="hp-twilight-platform-alcove" itemRef="heartpieces">
+                <description gameVariations="gc,wiiUNormal">In the first room in the eastern building, ride up the platform on the east side and jump into an alcove in the wall.</description>
+                <description gameVariations="wii,wiiUHero">In the first room in the western building, ride up the platform on the west side and jump into an alcove in the wall.</description>
+            </entry>
+            <entry id="mastersword-glow" checkbox="false" filters="mandatory">
+                <name>Golden Butt-Kicking Sacred Evil-Banishing Master Sword of Epic Glowiness</name>
+                <description>Mandatory.</description>
+            </entry>
+            <entry id="twilight-heartcontainer" itemRef="heartcontainer" add="5">
+                <description>After defeating the boss.</description>
+            </entry>
+        </gameSegment>
+
+    </gameSegments>
+
+</guide>
