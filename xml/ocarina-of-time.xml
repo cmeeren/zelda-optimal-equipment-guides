@@ -381,7 +381,6 @@
                 <description>It's possible to get {{hp-treasurechestshop}} from the Treasure Chest Shop now, but without the Lens of Truth you only have 3% chance of winning.</description>
             </entry>
             <entry id="skull-hyrulecastle-tree" itemRef="skulls">
-                <appendToName>(night)</appendToName>
                 <description>Hyrule Castle, roll into the first tree.</description>
             </entry>
             <entry id="cucco" itemRef="quest" changeNameID="cucco" add="0" checkbox="false" filters="mandatory">
@@ -396,6 +395,9 @@
 
             <entry type="subheading">Kakariko Village</entry>
 
+            <entry id="skull-kakariko-tree" itemRef="skulls">
+                <description>Roll into the tree by the entrance to Kakariko Village.</description>
+            </entry>
             <entry id="bottle-kakariko" itemRef="bottles">
                 <description>Talk to the Cucco Lady and find all her Cuccos.</description>
             </entry>
@@ -413,10 +415,6 @@
             </entry>
             <entry id="skull-graveyard-bugs" itemRef="skulls">
                 <description>Drop bugs onto the soft soil in the graveyard.</description>
-            </entry>
-            <entry id="skull-kakariko-tree" itemRef="skulls">
-                <appendToName>(night)</appendToName>
-                <description>Roll into the tree by the entrance to Kakariko Village.</description>
             </entry>
             <entry id="skull-kakariko-tower" itemRef="skulls">
                 <appendToName>(night)</appendToName>
