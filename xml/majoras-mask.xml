@@ -343,6 +343,9 @@
             <entry id="magic" itemRef="magic">
                 <description>Rescue the Stray Fairy in Laundry Pool (day) or East Clock Town (night) and take it to the Great Fairy in North Clock Town.</description>
             </entry>
+            <entry id="wallet-adult" itemRef="wallet">
+                <description>Deposit 200 Rupees in the bank in West Clock Town. You can work on this throughout the three days (or do it later).</description>
+            </entry>
             <entry id="dekuscrubplayground-day1" checkbox="false" filters="heartpieces">
                 <prefix>D1</prefix>
                 <description>Play the first part of the game at the Deku Scrub Playground in North Clock Town (needed for {{hp-dekuscrubplayground}}).</description>
@@ -432,9 +435,6 @@
             </entry>
             <entry id="info-deed-town" checkbox="false" filters="heartpieces">
                 <description>Get the {{deed-town}} again (needed for {{hp-dekuscrub-deed-town}}).</description>
-            </entry>
-            <entry id="wallet-adult" itemRef="wallet">
-                <description>Deposit 200 Rupees in the bank in West Clock Town.</description>
             </entry>
             <entry id="hp-dekuscrub-deed-town" itemRef="heartpieces">
                 <description>In the Observatory, look for the flying Deku Scrub (who traded you the Town Land Title Deed). Exit Clock Town and find the hole it entered. Purchase it from him for 100 Rupees.</description>
