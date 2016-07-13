@@ -433,6 +433,9 @@
                 <prefix>DN12 10AM–8PM</prefix>
                 <description>In the Mayor's Residence in East Clock Town.</description>
             </entry>
+            <entry id="info-anjukafei-early" checkbox="false">
+                <description>Already now it's possible to do much of the Anju and Kafei quest and obtain the {{mask-keaton}} and {{hp-keaton}}, as well as either {{bottle-aroma}} or the {{mask-postman}} and {{hp-mailbox}} (or all three of them, if you do it twice). However, in the interest of preserving this touching questline until you can actually complete it properly (i.e., obtain the {{mask-couple}}), it will be deferred until later in the game.</description>
+            </entry>
             <entry id="info-deed-town" checkbox="false" filters="heartpieces">
                 <description>Get the {{deed-town}} again (needed for {{hp-dekuscrub-deed-town}}).</description>
             </entry>
