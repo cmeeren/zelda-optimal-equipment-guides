@@ -20,6 +20,10 @@ public class GuideCreator {
 
             String xml_file_in = file.getName();
 
+            if (!xml_file_in.endsWith(".xml")) {
+                continue;
+            }
+
             System.out.println("\n#############################\n" + xml_file_in + "\n#############################\n");
 
             String basename = xml_file_in.substring(0, xml_file_in.lastIndexOf("."));
