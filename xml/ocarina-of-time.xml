@@ -736,7 +736,8 @@
             </entry>
             <entry id="dekunuts-upgrade-maskoftruth" itemRef="dekunuts" changeNameID="40" add="0">
                 <name>Deku Nuts capacity upgrade (40)</name>
-                <description>Enter Lost Woods and go right-left-right-left-left, drop down and use the Mask of Truth. (This will be mentioned later too in case you don't want to interrupt the story now.)</description>
+                <description gameVariations='n64'>Enter Lost Woods and go right-left-right-left-left, drop down and use the Mask of Truth. (On the N64 version, you have to get this before getting the {{bg-poacherssaw}} in the Biggoron's Sword trading sequence, which is covered in this guide right after becoming an adult. Thus, if you're following this guide, now's the only time to get this upgrade if you want it.)</description>
+                <description gameVariations='3ds'>Enter Lost Woods and go right-left-right-left-left, drop down and use the Mask of Truth. (This will be mentioned later too in case you don't want to interrupt the story now.)</description>
             </entry>
             <entry id="mastersword" itemRef="mastersword" checkbox="false" filters="mandatory">
                 <description>Mandatory.</description>
@@ -938,7 +939,7 @@
                 <description>For the same frogs, play the other non-warp songs you know (you get 50 Rupees for each song) and play their game.</description>
             </entry>
             <entry id="info-dekunuts-upgrade" checkbox="false">
-                <description>If you didn't already, now's a good time to get the {{dekunuts-upgrade-maskoftruth}}.</description>
+                <description>If you're playing the 3DS version, now's a good time to get the {{dekunuts-upgrade-maskoftruth}} if you haven't already. (If you're playing the N64 version, it's not possible to get this upgrade after getting the Poacher's Saw in the Biggoron's Sword trading sequence.)</description>
             </entry>
             <entry id="info-bottomofthewell-early" checkbox="false">
                 <description>You can now get everything listed in the Bottom of the Well section, as well as {{hp-treasurechestshop}}.</description>
