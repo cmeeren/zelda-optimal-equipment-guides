@@ -487,7 +487,7 @@
             </entry>
             <entry id="hp-doggyracetrack" itemRef="heartpieces">
                 <prefix>DN3 6AM–8PM</prefix>
-                <description>Romani Ranch, Doggy Racetrack. Win at least 150 Rupees without losing. This can be done in one race by betting 50 Rupees and winning, or betting 80 Rupees and getting 2nd place. It's much easier after getting the {{mask-truth}} after Snowhead Temple (you'll get a reminder then). With the Mask of Truth, you can speak to the dogs, and the dogs that say "Ruff" (as opposed to "Rrr-Ruff" or "Hoo-whine") have a good chance of winning. If the golden dog says "Ruff" it's guaranteed to finish 1st or 2nd (mostly 1st), and the black dog always loses no matter what it says.</description>
+                <description>Romani Ranch, Doggy Racetrack. Win at least 150 Rupees without losing. This can be done in one race by betting 50 Rupees and winning, or betting 80 Rupees and getting 2nd place. It's much easier after getting the {{mask-truth}} (you'll get a reminder then). With the Mask of Truth, you can speak to the dogs, and the dogs that say "Ruff" (as opposed to "Rrr-Ruff" or "Hoo-whine") have a good chance of winning. If the golden dog says "Ruff" it's guaranteed to finish 1st or 2nd (mostly 1st), and the black dog always loses no matter what it says.</description>
             </entry>
             <entry id="hp-swampentrance" itemRef="heartpieces">
                 <description>On the road between Termina Field and Southern Swamp, climb to the top of the tree.</description>
@@ -526,7 +526,7 @@
                 <description>Through the left-hand door as you enter the Deku Palace, at the end of the maze.</description>
             </entry>
             <entry id="magicbeans" itemRef="magicbeans" checkbox="false" filters="mandatory">
-                <description>Mandatory.</description>
+                <description>Mandatory. Purchase two extra for the Swamp Spider House (required for the {{mask-truth}}).</description>
             </entry>
             <entry id="song-sonata" itemRef="song-sonata" checkbox="false" filters="mandatory">
                 <description>Mandatory.</description>
@@ -623,6 +623,12 @@
             </entry>
             <entry id="hp-swamptourist-archery" itemRef="heartpieces">
                 <description>Play the archery game in the Swamp Tourist Center.</description>
+            </entry>
+            <entry id="mask-truth" itemRef="mask-truth">
+                <description>Complete the Swamp Spider House. You need two Magic Beans. For the Skulltulas that are moving up and down on the walls, kill them when they have reached the bottom, otherwise you might not be able to get the tokens. (You can also complete this after getting the {{hookshot}} later in the game.)</description>
+            </entry>
+            <entry id="info-hp-doggyracetrack" checkbox="false" filters="heartpieces">
+                <description>Now that you have the Mask of Truth you can more easily get {{hp-doggyracetrack}}.</description>
             </entry>
             <entry id="info-songoftime-beforesnowhead" checkbox="false">
                 <description>Play the Song of Time to return to the first day.</description>
@@ -904,12 +910,6 @@
             </entry>
             <entry id="hp-beavers" itemRef="heartpieces">
                 <description>Waterfall Rapids, challenge the beaver to a race after getting {{bottle-beavers}}. Win both races.</description>
-            </entry>
-            <entry id="mask-truth" itemRef="mask-truth">
-                <description>Complete the Swamp Spider House.</description>
-            </entry>
-            <entry id="info-hp-doggyracetrack" checkbox="false" filters="heartpieces">
-                <description>Now that you have the Mask of Truth you can more easily get {{hp-doggyracetrack}}.</description>
             </entry>
             <entry id="mask-allnight" itemRef="mask-allnight">
                 <prefix>N3</prefix>
