@@ -843,6 +843,7 @@
                 <description>Zora's River, high up on a wall by the wooden bridge. Stand on the fence.</description>
             </entry>
             <entry id="skull-zorasdomain" itemRef="skulls">
+                <appendToName>(night)</appendToName>
                 <description>Zora's Domain at the top of the waterfall.</description>
             </entry>
             <entry id="hp-zorasfountain-ice" itemRef="heartpieces">
