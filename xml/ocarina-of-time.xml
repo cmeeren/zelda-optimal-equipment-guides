@@ -800,7 +800,7 @@
                 <description>Play the Scarecrow's Song in Lake Hylia.</description>
             </entry>
             <entry id="goldenscale" itemRef="scale" changeNameID="golden" add="0">
-                <description>Catch a fish weighing at least 15 pounds in the Fishing Pond in Lake Hylia.</description>
+                <description>Catch a fish weighing at least 13 pounds in the Fishing Pond in Lake Hylia.</description>
             </entry>
             <entry id="hp-hylia-magicbean" itemRef="heartpieces">
                 <description>Lake Hylia, ride the Magic Bean plant to the roof of the Lakeside Laboratory.</description>
