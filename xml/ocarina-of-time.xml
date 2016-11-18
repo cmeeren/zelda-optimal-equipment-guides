@@ -1022,7 +1022,7 @@
             <entry type="subheading">Finishing up Death Mountain</entry>
 
             <entry id="doublemagic" itemRef="magic" changeNameID="double" add="0">
-                <description>At the top of Death Mountain Crater.</description>
+                <description>In Death Mountain Crater.</description>
             </entry>
             <entry id="skull-dm-valley" itemRef="skulls">
                 <appendToName>(night)</appendToName>
