@@ -54,7 +54,13 @@ jQuery(document).ready(function(){
         $("#zeldaguide-filtercontrols input").each(function() {
             var filterID = $(this).prop("name");
             if (!this.checked) {
-                $(".zeldaguide-filter-" + filterID).show();
+                $(".zeldaguide-filtered").each(function() {
+                    if ($(this).hasPartialClass("zeldaguide-gameVariation-")
+                        && !$(this).hasClass("zeldaGuide-gameVariation-" + $("#zeldaguide-gameSelector").val())) {
+                        return;
+                    }
+                    if ($(this).hasClass("zeldaguide-filter-" + filterID)) $(this).show();
+                });
             }
         });
     }
