@@ -381,7 +381,7 @@
                 <description>In the rocks up above the south entrance to Kakariko Village.</description>
             </entry>
             <entry id="hp-kakariko-water" itemRef="heartpieces">
-                <description>At the bottom of Lanayru Spring (enter below {{hp-kakariko-bombarrow}}).</description>
+                <description>At the bottom of Eldin Spring (enter below {{hp-kakariko-bombarrow}}).</description>
             </entry>
             <entry id="hp-deathmountain-launchgoron" itemRef="heartpieces">
                 <description gameVariations="gc,wiiUNormal">At the second Goron up Death Mountain, launch west. It's in a cave to the north.</description>
