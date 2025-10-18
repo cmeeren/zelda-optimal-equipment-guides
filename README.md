@@ -1,7 +1,7 @@
 Legend of Zelda optimal equipment guides
 ========================================
 
-This is the source code on which my [Legend of Zelda optimal equipment guides](http://www.relativisticramblings.com/the-legend-of-zelda-optimal-equipment-guides/)
+This is the source code on which my [Legend of Zelda optimal equipment guides](https://zelda-optimal-equipment-guides.pages.dev)
 are based.
 
 In the "xml" directory you will find the actual guide information, licensed under CC-BY-SA-4.0.
